@@ -1,0 +1,124 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixin";
+
+.mobile-navigation-innermenu {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: all 0.2s;
+  background-color: rgba($primary, 0.85);
+  padding-inline: 3.5rem;
+
+  &__closelisticon-container {
+    .closelisticon {
+      @include btn-reset();
+      margin-left: auto;
+      height: 6.5rem;
+      @include flex-all-center();
+    }
+
+    img {
+      display: block;
+      height: 2.3rem;
+    }
+  }
+
+  &__leftcareticon-container {
+    .leftcareticon {
+      @include btn-reset();
+      font-family: inherit;
+      margin-right: auto;
+      gap: 1.4rem;
+      padding: 5rem 0 4rem;
+      @include flex-all-center;
+    }
+
+    span,
+    img {
+      display: block;
+    }
+
+    span {
+      font-size: 1.8rem;
+      color: $white;
+    }
+
+    img {
+      height: 1.6rem;
+    }
+  }
+
+  &__list-of-options {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+
+    &__heading,
+    &__single-option,
+    &__single-option--main-list {
+      a:link,
+      a:visited {
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+
+      // for <span> css rules see below
+
+      span,
+      a:link,
+      a:visited {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        letter-spacing: 0.18rem;
+        text-transform: capitalize;
+      }
+    }
+
+    &__heading {
+      span,
+      a:link,
+      a:visited {
+        font-size: 2.4rem;
+        text-transform: capitalize;
+        display: inline-block;
+        color: $white;
+        border-bottom: 0.2rem solid $white;
+      }
+    }
+
+    &__single-option {
+      span,
+      a:link,
+      a:visited {
+        font-size: 1.45rem;
+        color: $white;
+      }
+
+      &--main-list {
+        span,
+        a:link,
+        a:visited {
+          color: $white;
+          font-size: 2rem;
+        }
+      }
+    }
+    img {
+      height: 2rem;
+    }
+  }
+}
+
+.show {
+  transform: translateX(0%) !important;
+}
+
+.previously-shown {
+  transform: translateX(-100%) !important;
+}

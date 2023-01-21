@@ -1,0 +1,18 @@
+.hamburger-menu {
+  display: inline-block;
+  background-color: #fff;
+  width: 3rem;
+  padding: 0.75rem;
+  aspect-ratio: 16/16;
+  border-radius: 50%;
+  transition: all 0.3s; }
+  .hamburger-menu:hover, .hamburger-menu:active {
+    background-color: gray; }
+  .hamburger-menu__button {
+    background: none;
+    border: none;
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+/*# sourceMappingURL=HamburgerMenu.module.css.map */

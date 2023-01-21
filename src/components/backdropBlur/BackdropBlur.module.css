@@ -1,0 +1,34 @@
+.backdrop-blur-long {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.36);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s, visibility 0s linear 0.25s; }
+
+.backdrop-blur-short {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 70vh;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.36);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s, visibility 0s linear 0.25s; }
+
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: opacity 0.8s ease, visibility 0s; }
+
+/*# sourceMappingURL=BackdropBlur.module.css.map */

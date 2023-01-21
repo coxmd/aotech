@@ -1,0 +1,35 @@
+//heading-desc-btn-textbox mixins
+
+@mixin buttonAt64em {
+  font-size: 1.2rem;
+  padding: 1.5rem;
+}
+
+@mixin buttonAt54em {
+  font-size: 1.2rem;
+  padding: 1.3rem;
+}
+
+@mixin buttonAt45em {
+  font-size: 1.2rem !important;
+  padding: 1.25rem !important;
+}
+
+// image container size mixin
+@mixin widescreenImageContainer {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+//flexbox mixins
+@mixin flex-all-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//general button mixins
+@mixin btn-reset() {
+  background: none;
+  border: none;
+}

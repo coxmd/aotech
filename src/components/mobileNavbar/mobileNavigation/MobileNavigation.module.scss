@@ -1,0 +1,49 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixin";
+
+.mobile-nav {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  &__brand-and-toggles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.75rem;
+
+    a[class*="brand-name"] {
+      &:link,
+      &:visited {
+        color: orangered;
+        text-transform: unset;
+        font-weight: 400;
+        letter-spacing: 0.3rem;
+      }
+    }
+
+    div[class*="hamburger-menu"] {
+      width: 4rem;
+    }
+  }
+
+  &__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: all 0.25s;
+
+    &--open {
+      transform: translateX(0%);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.plain-button__button:link, .plain-button__button:visited {
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s; }
+.plain-button__button:hover, .plain-button__button:active {
+  background-color: #fa5252; }
+
+@media (max-width: 64em) {
+  .plain-button__button:link, .plain-button__button:visited {
+    font-size: 1.2rem;
+    padding: 1.5rem; } }
+@media (max-width: 54em) {
+  .plain-button__button:link, .plain-button__button:visited {
+    font-size: 1.2rem;
+    padding: 1.3rem; } }
+@media (max-width: 45em) {
+  .plain-button__button:link, .plain-button__button:visited {
+    font-size: 1.2rem !important;
+    padding: 1.25rem !important; } }
+
+/*# sourceMappingURL=PlainButton.module.css.map */
