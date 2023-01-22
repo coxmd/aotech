@@ -18,7 +18,11 @@ export default function App() {
       <BrowserRouter>
         <MobileNavigation
           navigationOptionsArray={navigationOptions}
-          brandName={"WebLab"}
+          brandName={
+            <>
+              Web<span className="brand-name--highlighted">Lab</span>
+            </>
+          }
         />
         <Routes>
           <Route path="/" element={<Home />} />

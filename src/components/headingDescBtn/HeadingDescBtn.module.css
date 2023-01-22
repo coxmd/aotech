@@ -1,0 +1,24 @@
+.heading-desc-btn-textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: inherit; }
+  .heading-desc-btn-textbox__short-introduction {
+    font-family: inherit;
+    color: #0099a8;
+    font-size: 1.8rem;
+    margin-bottom: 1rem; }
+  .heading-desc-btn-textbox__heading {
+    font-family: inherit;
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.1; }
+  .heading-desc-btn-textbox__subheading {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem; }
+  .heading-desc-btn-textbox .button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; }
+
+/*# sourceMappingURL=HeadingDescBtn.module.css.map */

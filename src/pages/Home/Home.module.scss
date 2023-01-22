@@ -1,1 +1,9 @@
 @import "../../scss/variables";
+
+.home {
+  .hero {
+    div[class*="textbox"] {
+      width: 73%;
+    }
+  }
+}

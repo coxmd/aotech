@@ -13,12 +13,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.75rem;
+    padding: 1.75rem 2.5rem;
 
     a[class*="brand-name"] {
       &:link,
       &:visited {
-        color: orangered;
+        color: $white;
         text-transform: unset;
         font-weight: 400;
         letter-spacing: 0.3rem;
@@ -27,6 +27,7 @@
 
     div[class*="hamburger-menu"] {
       width: 4rem;
+      background-color: transparent;
     }
   }
 

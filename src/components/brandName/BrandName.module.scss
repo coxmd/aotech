@@ -13,4 +13,8 @@
     text-transform: uppercase;
     letter-spacing: -1px;
   }
+
+  span[class*="brand-name--highlighted"] {
+    color: $primary;
+  }
 }

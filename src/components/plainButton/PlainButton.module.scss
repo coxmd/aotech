@@ -4,56 +4,56 @@
 .plain-button {
   &__button:link,
   &__button:visited {
-    color: $brandPrimary;
-    font-size: 1.4rem;
-    font-weight: 500;
+    color: $white;
+    font-size: 1.5rem;
     padding: 1.5rem;
     display: flex;
     align-items: center;
     letter-spacing: 0.1rem;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all 0.2s;
+    background-color: $primary;
+    font-family: inherit;
   }
 
   &__button:hover,
   &__button:active {
-    background-color: $lightRed;
+    background-color: $secondary;
   }
 }
 
-@media (max-width: 64em) {
-  .plain-button {
-    &__button:link,
-    &__button:visited {
-      @include buttonAt64em();
-    }
-  }
-}
+// @media (max-width: 64em) {
+//   .plain-button {
+//     &__button:link,
+//     &__button:visited {
+//       @include buttonAt64em();
+//     }
+//   }
+// }
 
-@media (max-width: 54em) {
-  .plain-button {
-    &__button:link,
-    &__button:visited {
-      @include buttonAt54em();
-    }
-  }
-}
+// @media (max-width: 54em) {
+//   .plain-button {
+//     &__button:link,
+//     &__button:visited {
+//       @include buttonAt54em();
+//     }
+//   }
+// }
 
-@media (max-width: 45em) {
-  .plain-button {
-    &__button:link,
-    &__button:visited {
-      @include buttonAt45em();
-    }
-  }
-}
+// @media (max-width: 45em) {
+//   .plain-button {
+//     &__button:link,
+//     &__button:visited {
+//       @include buttonAt45em();
+//     }
+//   }
+// }
 
-@media (max-width: 38em) {
-  .plain-button {
-    &__button:link,
-    &__button:visited {
-      // @include buttonAt38em();
-    }
-  }
-}
+// @media (max-width: 38em) {
+//   .plain-button {
+//     &__button:link,
+//     &__button:visited {
+//       // @include buttonAt38em();
+//     }
+//   }
+// }

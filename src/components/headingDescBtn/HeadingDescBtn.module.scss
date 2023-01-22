@@ -1,0 +1,81 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.heading-desc-btn-textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: inherit;
+
+  &__short-introduction {
+    font-family: inherit;
+    color: $secondary;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    font-family: inherit;
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+  }
+
+  &__subheading {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+// @media (max-width: 64em) {
+//   .heading-desc-btn-textbox {
+//     &__heading {
+//       font-size: 4.5rem;
+//       margin-bottom: 1.2rem;
+//     }
+
+//     &__subheading {
+//       font-size: 1.4rem;
+//       margin-bottom: 1.6rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 54em) {
+//   .heading-desc-btn-textbox {
+//     &__heading {
+//       font-size: 3.7rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 45em) {
+//   .heading-desc-btn-textbox {
+//     &__heading {
+//       font-size: 3.5rem;
+//     }
+
+//     &__subheading {
+//       margin-bottom: 1.5rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 25em) {
+//   //400px
+//   .heading-desc-btn-textbox {
+//     &__heading {
+//       font-size: 3rem;
+//     }
+
+//     &__subheading {
+//       margin-bottom: 1.2rem;
+//     }
+//   }
+// }

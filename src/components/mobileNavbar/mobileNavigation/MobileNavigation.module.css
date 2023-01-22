@@ -9,14 +9,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.75rem; }
+    padding: 1.75rem 2.5rem; }
     .mobile-nav__brand-and-toggles a[class*="brand-name"]:link, .mobile-nav__brand-and-toggles a[class*="brand-name"]:visited {
-      color: orangered;
+      color: #fff;
       text-transform: unset;
       font-weight: 400;
       letter-spacing: 0.3rem; }
     .mobile-nav__brand-and-toggles div[class*="hamburger-menu"] {
-      width: 4rem; }
+      width: 4rem;
+      background-color: transparent; }
   .mobile-nav__container {
     position: fixed;
     top: 0;

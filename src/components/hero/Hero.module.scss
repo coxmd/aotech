@@ -1,0 +1,116 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.hero-container {
+  position: relative;
+  max-width: 140rem;
+  aspect-ratio: 16/22;
+
+  .hero-background-image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat !important;
+    background-position: 79% 100% !important;
+    background-size: cover !important;
+  }
+
+  div[class*="textbox"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10%);
+    left: 2.5rem;
+    color: $white;
+
+    p[class*="short-introduction"] {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    h3[class*="heading"] {
+      letter-spacing: 0.2rem;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+
+    p[class*="subheading"] {
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.1rem;
+    }
+
+    a[class*="plain-button__button"] {
+      &:link,
+      &:visited {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// @media (max-width: 54em) {
+//   .hero-container {
+//     div[class*="textbox"] {
+//       left: 2rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 48em) {
+//   .hero-container {
+//     aspect-ratio: 16/10;
+//   }
+// }
+
+// @media (max-width: 45em) {
+//   .hero-container {
+//   }
+// }
+
+// @media (max-width: 38em) {
+//   .hero-container {
+//     div[class*="textbox"] {
+//       transform: translateY(-35%);
+//     }
+//   }
+// }
+
+// @media (max-width: 30em) {
+//   .hero-container {
+//     div[class*="textbox"] {
+//       transform: translateY(-20%);
+
+//       h3[class*="heading"] {
+//         font-size: 4rem !important;
+//       }
+
+//       p[class*="subheading"] {
+//         font-size: 1.6rem !important;
+//       }
+//     }
+//   }
+
+//   .hero-background-image {
+//     background-position: 56% 50% !important;
+//   }
+// }
+
+// @media (max-width: 28em) {
+//   .hero-container {
+//     div[class*="textbox"] {
+//       transform: translateY(-40%);
+
+//       h3[class*="heading"] {
+//         font-size: 4rem !important;
+//       }
+
+//       p[class*="subheading"] {
+//         font-size: 1.6rem !important;
+//       }
+//     }
+//   }
+
+//   .hero-background-image {
+//     background-position: 56% 50% !important;
+//   }
+// }
