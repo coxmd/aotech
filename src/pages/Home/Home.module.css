@@ -3,18 +3,23 @@
 
 .industry-expert {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 6rem; }
   .industry-expert__heading-and-description, .industry-expert__image-descriptions {
     display: flex;
     flex-direction: column; }
   .industry-expert__heading-and-description div[class*="plain-description-box"] {
     flex-basis: 40rem;
-    width: 60%; }
+    width: 60%;
+    background-color: #af0061; }
+    .industry-expert__heading-and-description div[class*="plain-description-box"] p[class*="plain-description-box__description"] {
+      padding-top: 2.5rem;
+      color: #fff; }
   .industry-expert__image-descriptions {
     padding: 0 2.5rem;
     position: relative;
     top: -23rem;
-    margin-bottom: -21rem; }
+    margin-bottom: -23rem; }
     .industry-expert__image-descriptions div[class*="container"] {
       height: 37.5rem; }
 

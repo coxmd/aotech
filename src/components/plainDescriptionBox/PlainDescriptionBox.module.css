@@ -1,12 +1,12 @@
 .plain-description-box {
   width: 100%;
   height: 100%;
-  background-color: #af0061; }
+  background-color: #fff; }
   .plain-description-box__description {
     font-size: 1.7rem;
     line-height: 1.3;
     font-family: inherit;
-    padding: 2.5rem;
-    color: #fff; }
+    padding: 0 2.5rem;
+    color: gray; }
 
 /*# sourceMappingURL=PlainDescriptionBox.module.css.map */

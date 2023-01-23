@@ -26,11 +26,16 @@ import useImportImageDescriptionData from "../../hooks/useImportImageDescription
 import hero from "../../assets/hero.webp";
 
 export default function Home() {
+  //create a ref for the hero image
   const heroRef = useRef();
+  //use custom observer hook to decide if hero image is fully visible on the viewport
   const { entries } = useIntersectionObserver(heroRef, 1);
+  //extract value from the context
   const { setHeroVisible } = useContext(NavbarThemeContext);
+  //extract data from hook
   const { industryExpertSectionData } = useImportImageDescriptionData();
 
+  // based on entries data toggle navbar background color theme
   useEffect(() => {
     if (entries !== null) {
       entries.isIntersecting ? setHeroVisible(true) : setHeroVisible(false);
@@ -88,6 +93,18 @@ export default function Home() {
             );
           })}
         </div>
+      </section>
+
+      <section className={styles["our-services"]}>
+        <SectionTitle
+          title={
+            <>
+              Our Services<span className="highlighted">.</span>
+            </>
+          }
+        />
+
+        <PlainDescriptionBox description="Veniam saepe ipsum rerum expedita, iste enim unde quas delectus hic amet impedit sit deserunt explicabo! Nesciunt, doloribus quibusdam nisi in sequi est eum maxime ut:" />
       </section>
     </div>
   );
