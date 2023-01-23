@@ -23,7 +23,7 @@ export default function App() {
             navigationOptionsArray={navigationOptions}
             brandName={
               <>
-                Web<span className="brand-name--highlighted">Lab</span>
+                Web<span className="highlighted">Lab</span>
               </>
             }
           />

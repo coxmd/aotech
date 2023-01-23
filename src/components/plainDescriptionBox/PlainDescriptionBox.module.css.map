@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,sBAAuB;EACrB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,ECLR,OAAO;EDOf,mCAAe;IACb,SAAS,EAAE,MAAM;IACjB,WAAW,EAAE,GAAG;IAChB,WAAW,EAAE,OAAO;IACpB,OAAO,EAAE,MAAM;IAEf,KAAK,ECVD,IAAI",
+"sources": ["PlainDescriptionBox.module.scss","../../scss/_variables.scss"],
+"names": [],
+"file": "PlainDescriptionBox.module.css"
+}

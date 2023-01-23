@@ -1,0 +1,20 @@
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  padding: 2.5rem 0;
+  margin: 0 2.5rem 2.5rem;
+  color: #222222;
+  letter-spacing: 0.05rem;
+  text-transform: capitalize;
+  position: relative; }
+  .section-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15%;
+    height: 0.3rem;
+    background-color: #af0061;
+    bottom: 0;
+    left: 0; }
+
+/*# sourceMappingURL=SectionTitle.module.css.map */

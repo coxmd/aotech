@@ -23,7 +23,7 @@
       font-weight: 600; }
     .hero-container div[class*="textbox"] p[class*="subheading"] {
       font-weight: 600;
-      line-height: 1.3;
+      line-height: 1.25;
       letter-spacing: 0.1rem; }
     .hero-container div[class*="textbox"] a[class*="plain-button__button"]:link, .hero-container div[class*="textbox"] a[class*="plain-button__button"]:visited {
       font-weight: 600;

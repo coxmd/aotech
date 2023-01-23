@@ -21,15 +21,25 @@
   aspect-ratio: 16/9;
 }
 
-//flexbox mixins
-@mixin flex-all-center() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 //general button mixins
 @mixin btn-reset() {
   background: none;
   border: none;
+}
+
+//flex mixins
+@mixin flexRow() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexColumn() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-all-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

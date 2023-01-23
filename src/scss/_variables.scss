@@ -6,6 +6,10 @@ $white: #fff;
 $black: #000;
 $backdropColor: rgba(17, 17, 17, 0.36);
 $veryLightGray: #ddd;
+$gray: darken($white, 50%);
 
 //font family
 $spartan: "League Spartan", sans-serif;
+
+//animation
+$basic: all 0.2s ease-out;

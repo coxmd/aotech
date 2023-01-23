@@ -1,5 +1,6 @@
 .transparent {
-  background-color: transparent !important; }
+  background-color: transparent !important;
+  box-shadow: none !important; }
   .transparent .mobile-nav__brand-and-toggles a[class*="brand-name"]:link, .transparent .mobile-nav__brand-and-toggles a[class*="brand-name"]:visited {
     color: #fff !important; }
 
@@ -10,7 +11,8 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  box-shadow: 0 2rem 4rem rgba(34, 34, 34, 0.1); }
   .mobile-nav__brand-and-toggles {
     display: flex;
     align-items: center;
