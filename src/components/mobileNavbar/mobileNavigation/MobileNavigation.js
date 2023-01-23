@@ -1,8 +1,16 @@
+//react
+// import { useEffect, useState } from "react";
+
+import { useContext } from "react";
+
 //components
 import MobileNavigationInnerMenu from "../mobileNavigationInnerMenu/MobileNavigationInnerMenu";
 import BackdropBlur from "../../backdropBlur/BackdropBlur";
 import BrandName from "../../brandName/BrandName";
 import HamburgerMenu from "../../hamburgerMenu/HamburgerMenu";
+
+//context
+import { NavbarThemeContext } from "../../../contexts/NavbarThemeContext";
 
 //styles
 import styles from "./MobileNavigation.module.css";
@@ -24,15 +32,24 @@ export default function MobileNavigation({
     goToPrevious,
   } = useMobileNavigation({ closeBackdrop, openBackdrop });
 
+  const { heroVisible } = useContext(NavbarThemeContext);
+
   const closeBackdropAndEverything = () => {
     handleCloseMobileNavigation();
   };
 
   return (
-    <nav className={styles["mobile-nav"]}>
+    <nav
+      className={`${styles["mobile-nav"]} ${
+        heroVisible ? styles["transparent"] : ""
+      }`}
+    >
       <div className={styles["mobile-nav__brand-and-toggles"]}>
         <BrandName title={brandName} />
-        <HamburgerMenu clickHandler={handleOpenMobileNavigation} />
+        <HamburgerMenu
+          clickHandler={handleOpenMobileNavigation}
+          dark={!heroVisible ? true : false}
+        />
       </div>
 
       <BackdropBlur

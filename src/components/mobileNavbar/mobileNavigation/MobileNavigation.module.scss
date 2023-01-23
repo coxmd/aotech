@@ -1,13 +1,26 @@
 @import "../../../scss/variables";
 @import "../../../scss/mixin";
 
+.transparent {
+  background-color: transparent !important;
+  .mobile-nav__brand-and-toggles {
+    a[class*="brand-name"] {
+      &:link,
+      &:visited {
+        color: $white !important;
+      }
+    }
+  }
+}
+
 .mobile-nav {
-  background-color: transparent;
+  background-color: $white;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: all 0.2s;
 
   &__brand-and-toggles {
     display: flex;
@@ -18,7 +31,7 @@
     a[class*="brand-name"] {
       &:link,
       &:visited {
-        color: $white;
+        color: $darkText;
         text-transform: unset;
         font-weight: 400;
         letter-spacing: 0.3rem;
