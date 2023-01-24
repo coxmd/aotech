@@ -27,27 +27,22 @@
   }
 
   &__leftcareticon-container {
+    padding: 5rem 0 4rem;
+
     .leftcareticon {
-      @include btn-reset();
+      @include btn-reset;
+      display: flex;
+      align-items: center;
       font-family: inherit;
-      margin-right: auto;
       gap: 1.4rem;
-      padding: 5rem 0 4rem;
-      @include flex-all-center;
-    }
-
-    span,
-    img {
-      display: block;
-    }
-
-    span {
       font-size: 1.8rem;
       color: $white;
-    }
 
-    img {
-      height: 1.6rem;
+      img {
+        display: block;
+        width: 1.6rem;
+        aspect-ratio: 16/16;
+      }
     }
   }
 

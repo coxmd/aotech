@@ -19,8 +19,8 @@ import { NavbarThemeContext } from "../../contexts/NavbarThemeContext";
 //custom hook
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
-//data import via hook
-import useImportImageDescriptionData from "../../hooks/useImportImageDescriptionData";
+//data
+import { industryExpertSectionData } from "../../data/ImageDescriptionData";
 
 // image source
 import hero from "../../assets/hero.webp";
@@ -33,7 +33,6 @@ export default function Home() {
   //extract value from the context
   const { setHeroVisible } = useContext(NavbarThemeContext);
   //extract data from hook
-  const { industryExpertSectionData } = useImportImageDescriptionData();
 
   // based on entries data toggle navbar background color theme
   useEffect(() => {

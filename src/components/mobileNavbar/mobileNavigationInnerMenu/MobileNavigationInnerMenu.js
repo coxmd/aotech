@@ -52,8 +52,7 @@ export default function MobileNavigationInnerMenu({
             onClick={handleMenuChangeBackward}
             className={styles["leftcareticon"]}
           >
-            <img src={leftcaret} alt={"mobile nav left caret icon"} />
-            <span>Back</span>
+            <img src={leftcaret} alt={"mobile nav left caret icon"} /> Back
           </button>
         </div>
       )}

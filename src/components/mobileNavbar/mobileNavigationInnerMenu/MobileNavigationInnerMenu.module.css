@@ -9,8 +9,7 @@
   background-color: rgba(175, 0, 97, 0.85);
   padding-inline: 3.5rem; }
   .mobile-navigation-innermenu__closelisticon-container .closelisticon {
-    background: none;
-    border: none;
+    all: unset;
     margin-left: auto;
     height: 6.5rem;
     display: flex;
@@ -19,24 +18,20 @@
   .mobile-navigation-innermenu__closelisticon-container img {
     display: block;
     height: 2.3rem; }
-  .mobile-navigation-innermenu__leftcareticon-container .leftcareticon {
-    background: none;
-    border: none;
-    font-family: inherit;
-    margin-right: auto;
-    gap: 1.4rem;
-    padding: 5rem 0 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .mobile-navigation-innermenu__leftcareticon-container span,
-  .mobile-navigation-innermenu__leftcareticon-container img {
-    display: block; }
-  .mobile-navigation-innermenu__leftcareticon-container span {
-    font-size: 1.8rem;
-    color: #fff; }
-  .mobile-navigation-innermenu__leftcareticon-container img {
-    height: 1.6rem; }
+  .mobile-navigation-innermenu__leftcareticon-container {
+    padding: 5rem 0 4rem; }
+    .mobile-navigation-innermenu__leftcareticon-container .leftcareticon {
+      all: unset;
+      display: flex;
+      align-items: center;
+      font-family: inherit;
+      gap: 1.4rem;
+      font-size: 1.8rem;
+      color: #fff; }
+      .mobile-navigation-innermenu__leftcareticon-container .leftcareticon img {
+        display: block;
+        width: 1.6rem;
+        aspect-ratio: 16/16; }
   .mobile-navigation-innermenu__list-of-options {
     list-style-type: none;
     display: flex;

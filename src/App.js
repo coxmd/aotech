@@ -9,12 +9,12 @@ import Home from "./pages/Home/Home";
 import "./basicStyles/App.css";
 
 //custom hooks
-import useImportNavigationMenuData from "./hooks/useImportNavigationMenuData";
 import { NavbarThemeContextProvider } from "./contexts/NavbarThemeContext";
 
-export default function App() {
-  const { navigationOptions } = useImportNavigationMenuData();
+//data
+import { navigationOptions } from "./data/NavigationMenuData";
 
+export default function App() {
   return (
     <NavbarThemeContextProvider>
       <div className="App">

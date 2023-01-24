@@ -23,8 +23,7 @@
 
 //general button mixins
 @mixin btn-reset() {
-  background: none;
-  border: none;
+  all: unset;
 }
 
 //flex mixins
