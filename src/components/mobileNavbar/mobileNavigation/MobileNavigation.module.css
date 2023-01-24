@@ -23,9 +23,6 @@
       text-transform: unset;
       font-weight: 400;
       letter-spacing: 0.3rem; }
-    .mobile-nav__brand-and-toggles div[class*="hamburger-menu"] {
-      width: 4rem;
-      background-color: transparent; }
   .mobile-nav__container {
     position: fixed;
     top: 0;

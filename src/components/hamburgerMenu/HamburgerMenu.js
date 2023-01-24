@@ -17,8 +17,6 @@ export default function HamburgerMenu({
           className={styles["hamburger-menu__button"]}
           style={{
             background: `url(${hamburgerIconDark})`,
-            backgroundPosition: "center",
-            backgroundSize: "contain",
           }}
         >
           &nbsp;
@@ -31,8 +29,6 @@ export default function HamburgerMenu({
           className={styles["hamburger-menu__button"]}
           style={{
             background: `url(${hamburgerIcon})`,
-            backgroundPosition: "center",
-            backgroundSize: "contain",
           }}
         >
           &nbsp;

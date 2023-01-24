@@ -16,7 +16,8 @@
 
   &__heading {
     font-family: inherit;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
     margin-bottom: 1.2rem;
     line-height: 1.1;
   }
@@ -24,6 +25,16 @@
   &__subheading {
     font-size: 1.6rem;
     margin-bottom: 1.3rem;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+  }
+
+  &__list-of-text {
+    list-style-type: none;
+    @include flexColumn();
+    gap: 1rem;
   }
 
   .button-group {

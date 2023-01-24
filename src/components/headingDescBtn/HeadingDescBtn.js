@@ -9,6 +9,8 @@ export default function HeadingDescBtn({
   button = undefined,
   buttonInfoArray = [],
   group = false,
+  list = false,
+  description = false,
 }) {
   return (
     <div
@@ -30,6 +32,29 @@ export default function HeadingDescBtn({
         <p className={styles["heading-desc-btn-textbox__subheading"]}>
           {subheading}
         </p>
+      )}
+
+      {description !== false && (
+        <p className={styles["heading-desc-btn-textbox__description"]}>
+          {description}
+        </p>
+      )}
+
+      {list !== false && (
+        <ul className={styles["heading-desc-btn-textbox__list-of-text"]}>
+          {list.map((single, i) => {
+            return (
+              <li
+                key={i}
+                className={
+                  styles["heading-desc-btn-textbox__list-of-text__item"]
+                }
+              >
+                <span className="highlighted-secondary">-</span> {single}
+              </li>
+            );
+          })}
+        </ul>
       )}
 
       {button && !group && button}

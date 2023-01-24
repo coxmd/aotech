@@ -3,20 +3,23 @@
 
 .hamburger-menu {
   display: inline-block;
-  background-color: $white;
-  width: 3rem;
-  padding: 0.75rem;
+  background-color: transparent;
+  width: 4rem;
+  padding: 0.75rem 0;
   aspect-ratio: 16/16;
   border-radius: 50%;
-  transition: $animate;
+  transition: $basic;
 
   &:hover,
   &:active {
-    background-color: $gray;
+    background-color: $primary;
   }
 
   &__button {
     background: none;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
     border: none;
     display: block;
     width: 100%;

@@ -7,6 +7,8 @@ import PlainButton from "../../components/plainButton/PlainButton";
 import SectionTitle from "../../components/sectionTitle/SectionTitle";
 import PlainDescriptionBox from "../../components/plainDescriptionBox/PlainDescriptionBox";
 import ImageDescBtn from "../../components/imageDescBtn/ImageDescBtn";
+import Showcase from "../../components/showcase/Showcase";
+import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
 
 // styles
 import styles from "./Home.module.css";
@@ -21,6 +23,7 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 //data
 import { industryExpertSectionData } from "../../data/ImageDescriptionData";
+import { ourServicesData } from "../../data/showcaseDescriptionData";
 
 // image source
 import hero from "../../assets/hero.webp";
@@ -29,10 +32,9 @@ export default function Home() {
   //create a ref for the hero image
   const heroRef = useRef();
   //use custom observer hook to decide if hero image is fully visible on the viewport
-  const { entries } = useIntersectionObserver(heroRef, 1);
+  const { entries } = useIntersectionObserver(heroRef, 0.8);
   //extract value from the context
   const { setHeroVisible } = useContext(NavbarThemeContext);
-  //extract data from hook
 
   // based on entries data toggle navbar background color theme
   useEffect(() => {
@@ -104,6 +106,24 @@ export default function Home() {
         />
 
         <PlainDescriptionBox description="Veniam saepe ipsum rerum expedita, iste enim unde quas delectus hic amet impedit sit deserunt explicabo! Nesciunt, doloribus quibusdam nisi in sequi est eum maxime ut:" />
+
+        <div className={styles["our-services__services"]}>
+          {ourServicesData.map((single) => {
+            return (
+              <div
+                className={styles["our-services__service-container"]}
+                key={single.id}
+              >
+                <Showcase imageSource={single.imageSource} />
+                <HeadingDescBtn
+                  heading={single.title}
+                  description={single.description}
+                  list={single.list}
+                />
+              </div>
+            );
+          })}
+        </div>
       </section>
     </div>
   );

@@ -45,3 +45,41 @@
     }
   }
 }
+
+.our-services {
+  &__services {
+    @include flexColumn();
+    gap: 1rem;
+  }
+
+  div[class*="showcase__imgbox"] {
+    box-shadow: 0 0 1.5rem rgba($darkText, 0.2);
+  }
+
+  div[class*="plain-description-box"] {
+    margin-bottom: 2.5rem;
+  }
+
+  div[class*="textbox"] {
+    width: 72%;
+    padding: 0 2.5rem;
+    margin: 2.5rem auto;
+    border-inline: 1px solid $veryLightGray;
+
+    h3[class*="heading"] {
+      font-size: 2.2rem;
+    }
+  }
+
+  p[class*="description"] {
+    line-height: 1.4;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: darken($gray, 50%);
+    letter-spacing: 0.04rem;
+  }
+
+  ul {
+    display: none !important;
+  }
+}

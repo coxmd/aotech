@@ -14,17 +14,12 @@ export const navigationOptions = [
     id: "services",
     heading: { text: "Services", link: undefined },
     options: [
+      { text: "UX & UI Design", id: 0, nextMenu: undefined, link: "ux-design" },
       {
-        text: "UI Design & Development",
-        id: 0,
-        nextMenu: undefined,
-        link: "ui-design",
-      },
-      {
-        text: "UX Design",
+        text: "UI Development",
         id: 1,
         nextMenu: undefined,
-        link: "ux-design",
+        link: "ui-development",
       },
       {
         text: "Fullstack App development",
