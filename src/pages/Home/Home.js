@@ -119,6 +119,13 @@ export default function Home() {
                   heading={single.title}
                   description={single.description}
                   list={single.list}
+                  button={
+                    <PlainButton
+                      toUrl={single.link}
+                      buttonText={single.buttonText}
+                      rightArrow={false}
+                    />
+                  }
                 />
               </div>
             );

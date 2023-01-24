@@ -21,6 +21,8 @@ export const ourServicesData = [
       "Earum facere maxime",
       "Labore temporibus",
     ],
+    buttonText: "Read More",
+    link: "ux-design",
   },
   {
     id: 1,
@@ -36,6 +38,8 @@ export const ourServicesData = [
       "Labore temporibus",
       "Reprehenderit illo",
     ],
+    buttonText: "Read More",
+    link: "ui-development",
   },
   {
     id: 2,
@@ -51,6 +55,8 @@ export const ourServicesData = [
       "Labore temporibus",
       "Quisquam",
     ],
+    buttonText: "Read More",
+    link: "full-app-development",
   },
   {
     id: 3,
@@ -66,6 +72,8 @@ export const ourServicesData = [
       "itaque tenetur",
       "reprehenderit",
     ],
+    buttonText: "Read More",
+    link: "mobile-app-development",
   },
   {
     id: 4,
@@ -80,6 +88,8 @@ export const ourServicesData = [
       "Maxime tolestias",
       "veritatis labore a sedre temporibus",
     ],
+    buttonText: "Read More",
+    link: "quality-assurance",
   },
   {
     id: 5,
@@ -95,5 +105,7 @@ export const ourServicesData = [
       "blanditiis",
       "libero ad unde",
     ],
+    buttonText: "Read More",
+    link: "seo-optimization",
   },
 ];

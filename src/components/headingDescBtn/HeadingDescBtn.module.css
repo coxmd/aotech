@@ -18,7 +18,8 @@
     font-size: 1.6rem;
     margin-bottom: 1.3rem; }
   .heading-desc-btn-textbox__description {
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem; }
   .heading-desc-btn-textbox__list-of-text {
     list-style-type: none;
     display: flex;

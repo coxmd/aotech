@@ -31,7 +31,7 @@ export const navigationOptions = [
         text: "Mobile App development",
         id: 3,
         nextMenu: undefined,
-        link: "mobile-app",
+        link: "mobile-app-development",
       },
       {
         text: "Quality Assurance",
@@ -43,7 +43,7 @@ export const navigationOptions = [
         text: "SEO Optimization",
         id: 5,
         nextMenu: undefined,
-        link: "seo",
+        link: "seo-optimization",
       },
     ],
   },
