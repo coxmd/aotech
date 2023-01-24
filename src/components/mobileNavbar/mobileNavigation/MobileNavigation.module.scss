@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: all 0.2s;
+  transition: $basic;
   box-shadow: 0 2rem 4rem rgba($darkText, 0.1);
 
   &__brand-and-toggles {
@@ -57,7 +57,7 @@
     overflow-y: scroll;
     z-index: 1000;
     transform: translateX(100%);
-    transition: all 0.25s;
+    transition: $basic;
 
     &--open {
       transform: translateX(0%);

@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: all 0.2s;
+  transition: all 0.2s ease-out;
   box-shadow: 0 2rem 4rem rgba(34, 34, 34, 0.1); }
   .mobile-nav__brand-and-toggles {
     display: flex;
@@ -36,7 +36,7 @@
     overflow-y: scroll;
     z-index: 1000;
     transform: translateX(100%);
-    transition: all 0.25s; }
+    transition: all 0.2s ease-out; }
     .mobile-nav__container--open {
       transform: translateX(0%); }
 

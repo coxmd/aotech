@@ -1,5 +1,6 @@
 @import "../scss/variables";
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 *,
 *::before,
@@ -20,7 +21,6 @@ body {
   line-height: 1;
   max-width: 140rem;
   font-weight: 400;
-
   height: 100%;
   -webkit-font-smoothing: antialiased;
   color: $darkText;
