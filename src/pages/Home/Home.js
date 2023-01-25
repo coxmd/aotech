@@ -9,6 +9,7 @@ import PlainDescriptionBox from "../../components/plainDescriptionBox/PlainDescr
 import ImageDescBtn from "../../components/imageDescBtn/ImageDescBtn";
 import Showcase from "../../components/showcase/Showcase";
 import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
+import Testimonial from "../../components/testimonial/Testimonial";
 
 // styles
 import styles from "./Home.module.css";
@@ -23,7 +24,8 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 //data
 import { industryExpertSectionData } from "../../data/ImageDescriptionData";
-import { ourServicesData } from "../../data/showcaseDescriptionData";
+import { ourServicesData } from "../../data/ShowcaseDescriptionData";
+import { testimonialData } from "../../data/TestimonialData";
 
 // image source
 import hero from "../../assets/hero.webp";
@@ -128,6 +130,33 @@ export default function Home() {
                   }
                 />
               </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className={styles["testimonial"]}>
+        <SectionTitle
+          title={
+            <>
+              What Clients Say<span className="highlighted">.</span>
+            </>
+          }
+        />
+
+        <PlainDescriptionBox description="Enim unde quas delectus hic amet impedit sit deserunt explicabo!" />
+
+        <div className={styles["testimonial__all-testimonials"]}>
+          {testimonialData.map((single) => {
+            return (
+              <Testimonial
+                key={single.id}
+                imageSource={single.imageSource}
+                personName={single.personName}
+                oneLiner={single.oneLiner}
+                details={single.details}
+                extraClass={single.extraClass}
+              />
             );
           })}
         </div>

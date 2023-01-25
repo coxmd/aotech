@@ -4,4 +4,15 @@
 .highlighted-secondary {
   color: #0099a8; }
 
+ul {
+  list-style-type: none; }
+
+.reverse {
+  display: flex;
+  flex-direction: row-reverse !important; }
+  .reverse div[class*="text-container"] {
+    align-items: flex-start; }
+    .reverse div[class*="text-container"] p {
+      text-align: left; }
+
 /*# sourceMappingURL=App.css.map */

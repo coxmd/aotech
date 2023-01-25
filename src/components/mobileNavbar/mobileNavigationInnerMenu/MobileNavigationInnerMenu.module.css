@@ -70,7 +70,7 @@
     .mobile-navigation-innermenu__list-of-options__single-option span,
     .mobile-navigation-innermenu__list-of-options__single-option a:link,
     .mobile-navigation-innermenu__list-of-options__single-option a:visited {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 300 !important;
       color: #fff; }
     .mobile-navigation-innermenu__list-of-options__single-option--main-list span,
@@ -78,7 +78,7 @@
     .mobile-navigation-innermenu__list-of-options__single-option--main-list a:visited {
       color: #fff;
       font-size: 2rem;
-      font-weight: 500; }
+      font-weight: 400; }
     .mobile-navigation-innermenu__list-of-options img {
       height: 2rem; }
 

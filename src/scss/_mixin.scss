@@ -26,10 +26,20 @@
   all: unset;
 }
 
+//unordered list mixins
+@mixin list-reset() {
+  list-style-type: none;
+}
+
 //flex mixins
 @mixin flexRow() {
   display: flex;
   flex-direction: row;
+}
+
+@mixin flexRow-r() {
+  display: flex;
+  flex-direction: row-reverse !important;
 }
 
 @mixin flexColumn() {

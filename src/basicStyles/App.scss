@@ -1,4 +1,5 @@
 @import "../scss/variables";
+@import "../scss/mixin";
 
 .highlighted {
   color: $primary;
@@ -6,4 +7,19 @@
 
 .highlighted-secondary {
   color: $secondary;
+}
+
+ul {
+  @include list-reset();
+}
+
+.reverse {
+  @include flexRow-r();
+
+  div[class*="text-container"] {
+    align-items: flex-start;
+    p {
+      text-align: left;
+    }
+  }
 }

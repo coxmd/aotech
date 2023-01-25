@@ -47,9 +47,11 @@
 }
 
 .our-services {
+  margin-bottom: $sectionMargin;
+
   &__services {
     @include flexColumn();
-    gap: 1rem;
+    gap: 2rem;
   }
 
   div[class*="showcase__imgbox"] {
@@ -81,5 +83,12 @@
 
   ul {
     display: none !important;
+  }
+}
+
+.testimonial {
+  div[class*="plain-description-box"] {
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.04rem;
   }
 }
