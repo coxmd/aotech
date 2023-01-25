@@ -16,9 +16,8 @@
     .testimonial__text-container__one-liner {
       padding: 1rem;
       font-size: 2rem;
-      font-weight: 400;
-      color: #0099a8;
-      letter-spacing: 0.01rem; }
+      font-weight: 500;
+      color: #0099a8; }
     .testimonial__text-container__details {
       font-size: 1.5rem;
       color: #fff;
@@ -28,13 +27,13 @@
       padding-bottom: 2rem;
       line-height: 1.25;
       letter-spacing: 0.05rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
       font-weight: 400; }
     .testimonial__text-container__person-name {
       padding: 1rem;
       font-size: 1.6rem;
-      color: #222222;
-      font-weight: 500;
+      color: #000;
+      font-weight: 400;
       letter-spacing: 0.02rem; }
 
 /*# sourceMappingURL=Testimonial.module.css.map */

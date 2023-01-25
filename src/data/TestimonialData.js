@@ -35,7 +35,7 @@ export const testimonialData = [
   {
     id: 3,
     imageSource: akachi,
-    oneLiner: "Delivered on time!",
+    oneLiner: "Excellent staff!",
     details:
       "labore accusamus porro laborum eveniet consequatur explicabo at totam Dignissimos facere recusandae.",
     personName: "Prince Akachi",
