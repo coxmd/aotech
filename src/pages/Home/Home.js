@@ -11,6 +11,7 @@ import Showcase from "../../components/showcase/Showcase";
 import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
 import Testimonial from "../../components/testimonial/Testimonial";
 import Form from "../../components/form/Form";
+import { FormReducerContextProvider } from "../../contexts/FormReducerContext";
 
 // styles
 import styles from "./Home.module.css";
@@ -172,8 +173,9 @@ export default function Home() {
           }
         />
         <PlainDescriptionBox description="Perspiciatis nemo officia commodi saepe laudantium  tempora." />
-
-        <Form additionalData={{ selectBoxData }} imageSource={formImage} />
+        <FormReducerContextProvider>
+          <Form additionalData={{ selectBoxData }} imageSource={formImage} />
+        </FormReducerContextProvider>
       </section>
     </div>
   );
