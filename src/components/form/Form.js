@@ -12,8 +12,12 @@ import styles from "./Form.module.css";
 //context
 import { FormReducerContext } from "../../contexts/FormReducerContext";
 
+//image source
+import check from "../../assets/check.svg";
+
 export default function Form({ imageSource = "", additionalData = undefined }) {
   const {
+    formState,
     formFinalState,
     dispatch,
     selectBoxErrors,
@@ -21,6 +25,7 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
     selectBoxValues,
   } = useContext(FormReducerContext);
 
+  console.log(formFinalState);
   return (
     <div
       className={styles["form-container"]}
@@ -30,17 +35,22 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
     >
       <form
         noValidate
-        className={styles["form-container__form"]}
+        className={`${styles["form-container__form"]} ${
+          formFinalState.processStage === "final"
+            ? styles["final-background"]
+            : ""
+        }`}
         onSubmit={null}
       >
         <div
           className={`${styles["form-container__form__basic-information"]} ${
-            formFinalState.processStage === 0
+            formFinalState.processStage === "basic"
               ? styles["visible"]
               : styles["hidden"]
           }`}
         >
           <InputBox
+            value={formFinalState.name}
             onFocus={() => {
               dispatch({ type: "resetNameError" });
             }}
@@ -52,6 +62,7 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
             errorText={formFinalState.nameError}
           />
           <InputBox
+            value={formFinalState.email}
             onFocus={() => {
               dispatch({ type: "resetEmailError" });
             }}
@@ -64,6 +75,7 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
             errorText={formFinalState.emailError}
           />
           <InputBox
+            value={formFinalState.phone}
             onFocus={() => {
               dispatch({ type: "resetPhoneError" });
             }}
@@ -93,7 +105,7 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
           className={`${
             styles["form-container__form__additional-information"]
           } ${
-            formFinalState.processStage === 1
+            formFinalState.processStage === "additional"
               ? styles["visible"]
               : styles["hidden"]
           }`}
@@ -128,27 +140,39 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
 
         <div
           className={`${styles["form-container__form__success-message"]} ${
-            formFinalState.processStage === 2
+            formFinalState.processStage === "final"
               ? styles["visible"]
               : styles["hidden"]
           }`}
         >
+          <div
+            className={
+              styles["form-container__form__success-message__checkbox"]
+            }
+          >
+            <img src={check} alt={"check mark"} />
+          </div>
+
           <p
             className={styles["form-container__form__success-message__heading"]}
           >
-            {
-              <>
-                <span className="highlighted-secondary">Thank you</span> <br />
-                {formFinalState.name}
-              </>
-            }
+            {`Thank you ${formFinalState.name}
+              `}
           </p>
           <p
             className={styles["form-container__form__success-message__details"]}
           >
-            We have received your request for a free consultation and will reach
-            out to you tomorrow between {formFinalState.time}.
+            Your request for a free consultation regarding{" "}
+            {formFinalState.service} has been received. We will reach out to you
+            tomorrow between {formFinalState.time}.
           </p>
+          <SubmitButton
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch({ type: "reset", payload: { ...formState } });
+            }}
+            buttonText={"Close"}
+          />
         </div>
       </form>
     </div>

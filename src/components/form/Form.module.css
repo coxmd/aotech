@@ -23,24 +23,39 @@
       top: 5.5rem;
       left: 0;
       padding: 0 3rem;
-      transition: all 0.2s; }
+      transition: all 0.4s; }
     .form-container__form__success-message {
-      background-color: rgba(128, 128, 128, 0.3);
-      backdrop-filter: blur(1rem);
+      gap: 0 !important;
       color: #fff;
-      padding: 5rem 3rem 6rem;
-      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%); }
+      padding: 2.5rem;
+      align-items: center; }
+      .form-container__form__success-message__checkbox {
+        width: 5rem;
+        aspect-ratio: 16/16;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #af0061;
+        margin-bottom: 2.5rem; }
+        .form-container__form__success-message__checkbox img {
+          display: block;
+          width: 100%;
+          padding: 1rem; }
       .form-container__form__success-message__heading {
         font-size: 2rem;
         font-weight: 600;
-        text-transform: uppercase;
+        text-transform: capitalize;
         line-height: 1.3;
-        text-align: center; }
+        text-align: center;
+        margin-bottom: 3rem; }
       .form-container__form__success-message__details {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         line-height: 1.3;
         letter-spacing: 0.05rem;
-        font-weight: 500; }
+        font-weight: 500;
+        margin-bottom: 3rem; }
     .form-container__form div[class*="submit-button"] {
       margin-top: 1rem; }
 
@@ -51,5 +66,8 @@
 .hidden {
   transform: translateY(-100%);
   opacity: 0; }
+
+.final-background {
+  backdrop-filter: blur(1rem) !important; }
 
 /*# sourceMappingURL=Form.module.css.map */

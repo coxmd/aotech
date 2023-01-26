@@ -1,5 +1,6 @@
 //react
 import { createContext, useReducer } from "react";
+import { act } from "react-dom/test-utils";
 
 //reducer function
 const formReducer = (state, action) => {
@@ -22,7 +23,7 @@ const formReducer = (state, action) => {
       return { ...state, time: action.payload };
 
     case "checkInfo":
-      if (state.processStage === 0) {
+      if (state.processStage === "basic") {
         return {
           ...state,
           nameError: state.name === "" ? "Please provide full name" : "",
@@ -33,12 +34,14 @@ const formReducer = (state, action) => {
               ? "Please provide email address"
               : "",
           phoneError:
-            state.phone === "" || isNaN(state.phone) || state.phone.length < 10
+            state.phone === "" ||
+            isNaN(state.phone) ||
+            state.phone.length === 10
               ? "Please provide valid phone number"
               : "",
         };
       }
-      if (state.processStage === 1) {
+      if (state.processStage === "additional") {
         return {
           ...state,
           serviceError:
@@ -51,20 +54,23 @@ const formReducer = (state, action) => {
       }
 
     case "changeStage":
-      if (state.processStage === 0) {
+      if (state.processStage === "basic") {
         if (
           state.nameError === "" &&
           state.emailError === "" &&
           state.phoneError === ""
         ) {
-          return { ...state, processStage: 1 };
+          return { ...state, processStage: "additional" };
         }
       }
-      if (state.processStage === 1) {
+      if (state.processStage === "additional") {
         if (state.serviceError === "" && state.timeError === "") {
-          return { ...state, processStage: 2 };
+          return { ...state, processStage: "final" };
         }
       }
+
+    case "reset":
+      return { ...state, ...action.payload };
 
     default:
       return state;
@@ -82,7 +88,7 @@ const formState = {
   serviceError: "",
   time: "Please select",
   timeError: "",
-  processStage: 0,
+  processStage: "basic",
 };
 
 export const FormReducerContext = createContext();
@@ -106,6 +112,7 @@ export function FormReducerContextProvider({ children }) {
   return (
     <FormReducerContext.Provider
       value={{
+        formState,
         formFinalState,
         dispatch,
         selectBoxErrors,
