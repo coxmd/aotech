@@ -10,11 +10,10 @@ import ImageDescBtn from "../../components/imageDescBtn/ImageDescBtn";
 import Showcase from "../../components/showcase/Showcase";
 import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
 import Testimonial from "../../components/testimonial/Testimonial";
+import Form from "../../components/form/Form";
 
 // styles
 import styles from "./Home.module.css";
-
-//image source
 
 //context
 import { NavbarThemeContext } from "../../contexts/NavbarThemeContext";
@@ -26,9 +25,11 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import { industryExpertSectionData } from "../../data/ImageDescriptionData";
 import { ourServicesData } from "../../data/ShowcaseDescriptionData";
 import { testimonialData } from "../../data/TestimonialData";
+import { selectBoxData } from "../../data/FormData";
 
 // image source
 import hero from "../../assets/hero.webp";
+import formImage from "../../assets/form.webp";
 
 export default function Home() {
   //create a ref for the hero image
@@ -160,6 +161,19 @@ export default function Home() {
             );
           })}
         </div>
+      </section>
+
+      <section className={styles["form-section"]}>
+        <SectionTitle
+          title={
+            <>
+              Get Free consultation<span className="highlighted">.</span>
+            </>
+          }
+        />
+        <PlainDescriptionBox description="Perspiciatis nemo officia commodi saepe laudantium  tempora." />
+
+        <Form additionalData={{ selectBoxData }} imageSource={formImage} />
       </section>
     </div>
   );

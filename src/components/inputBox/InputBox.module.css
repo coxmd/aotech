@@ -1,0 +1,49 @@
+.inputbox-container {
+  width: 100%; }
+  .inputbox-container label {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.65rem;
+    color: #fff;
+    gap: 1rem;
+    letter-spacing: 0.05rem; }
+  .inputbox-container span[class*="highlighted-secondary"] {
+    font-size: 2rem; }
+  .inputbox-container__error {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    color: #fff; }
+  .inputbox-container input,
+  .inputbox-container input[type="text"],
+  .inputbox-container input[type="email"],
+  .inputbox-container input[type="tel"], .inputbox-container__input {
+    display: block;
+    border: none;
+    background-image: none;
+    background-color: rgba(128, 128, 128, 0.3);
+    backdrop-filter: blur(1rem);
+    font-family: inherit;
+    font-size: 1.55rem;
+    font-weight: 300;
+    padding: 1rem;
+    color: inherit;
+    letter-spacing: 0.05rem;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    transition: all 0.2s ease-out; }
+    .inputbox-container input::placeholder,
+    .inputbox-container input[type="text"]::placeholder,
+    .inputbox-container input[type="email"]::placeholder,
+    .inputbox-container input[type="tel"]::placeholder, .inputbox-container__input::placeholder {
+      color: #b3b3b3;
+      font-size: 1.5rem; }
+    .inputbox-container input:focus,
+    .inputbox-container input[type="text"]:focus,
+    .inputbox-container input[type="email"]:focus,
+    .inputbox-container input[type="tel"]:focus, .inputbox-container__input:focus {
+      outline: none;
+      background-color: rgba(128, 128, 128, 0.5); }
+
+/*# sourceMappingURL=InputBox.module.css.map */

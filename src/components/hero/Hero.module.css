@@ -7,7 +7,8 @@
     height: 100%;
     background-repeat: no-repeat !important;
     background-position: 79% 100% !important;
-    background-size: cover !important; }
+    background-size: cover !important;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%); }
   .hero-container div[class*="textbox"] {
     position: absolute;
     top: 50%;
@@ -22,9 +23,10 @@
       text-transform: capitalize;
       font-weight: 600; }
     .hero-container div[class*="textbox"] p[class*="subheading"] {
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.25;
-      letter-spacing: 0.1rem; }
+      letter-spacing: 0.1rem;
+      margin-bottom: 2rem; }
     .hero-container div[class*="textbox"] a[class*="plain-button__button"]:link, .hero-container div[class*="textbox"] a[class*="plain-button__button"]:visited {
       font-weight: 600;
       text-transform: uppercase; }

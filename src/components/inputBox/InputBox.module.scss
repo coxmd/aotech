@@ -1,0 +1,58 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.inputbox-container {
+  width: 100%;
+
+  label {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.65rem;
+    color: $white;
+    gap: 1rem;
+    letter-spacing: 0.05rem;
+  }
+
+  span[class*="highlighted-secondary"] {
+    font-size: 2rem;
+  }
+
+  &__error {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    color: $white;
+  }
+
+  input,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  &__input {
+    display: block;
+    border: none;
+    background-image: none;
+    background-color: rgba($gray, 0.3);
+    backdrop-filter: blur(1rem);
+    font-family: inherit;
+    font-size: 1.55rem;
+    font-weight: 300;
+    padding: 1rem;
+    color: inherit;
+    letter-spacing: 0.05rem;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    transition: $basic;
+
+    &::placeholder {
+      color: lighten($gray, 20%);
+      font-size: 1.5rem;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: rgba($gray, 0.5);
+    }
+  }
+}

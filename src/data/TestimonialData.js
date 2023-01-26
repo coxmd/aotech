@@ -19,7 +19,7 @@ export const testimonialData = [
     imageSource: tamara,
     oneLiner: "They're amazing!",
     details:
-      "Voluptatibus maxime dolore consequuntur neque, assumenda omnis reprehenderit eveniet quos sit voluptates debitis.",
+      "Voluptatibus maxime dolore consequuntur neque, assumenda omnis reprehenderit eveniet.",
     personName: "Tamara Bellis",
     extraClass: ["reverse"],
   },
@@ -37,7 +37,7 @@ export const testimonialData = [
     imageSource: akachi,
     oneLiner: "Excellent staff!",
     details:
-      "labore accusamus porro laborum eveniet consequatur explicabo at totam Dignissimos facere recusandae.",
+      "labore accusamus porro laborum eveniet consequatur explicabo at totam Dignissimo.",
     personName: "Prince Akachi",
     extraClass: ["reverse"],
   },

@@ -49,8 +49,19 @@
   .our-services ul {
     display: none !important; }
 
-.testimonial div[class*="plain-description-box"] {
-  margin-bottom: 2.5rem;
-  letter-spacing: 0.04rem; }
+.testimonial {
+  margin-bottom: 5rem; }
+  .testimonial div[class*="plain-description-box"] {
+    margin-bottom: 3rem;
+    letter-spacing: 0.04rem; }
+
+.form-section {
+  margin-bottom: 5rem; }
+  .form-section div[class*="plain-description-box"] {
+    margin-bottom: 1rem;
+    letter-spacing: 0.04rem; }
+  .form-section div[class*="submit-button"] button {
+    font-weight: 600;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=Home.module.css.map */

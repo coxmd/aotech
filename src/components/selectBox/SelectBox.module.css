@@ -1,0 +1,41 @@
+.selectbox-container {
+  width: 100%; }
+  .selectbox-container label {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.65rem;
+    color: #fff;
+    gap: 1rem;
+    letter-spacing: 0.05rem; }
+  .selectbox-container span[class*="highlighted-secondary"] {
+    font-size: 2rem; }
+  .selectbox-container__error {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    color: #fff; }
+  .selectbox-container select {
+    display: block;
+    border: none;
+    background-image: none;
+    background-color: rgba(128, 128, 128, 0.3);
+    backdrop-filter: blur(1rem);
+    font-family: inherit;
+    font-size: 1.55rem;
+    font-weight: 300;
+    padding: 1rem;
+    color: inherit;
+    letter-spacing: 0.05rem;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    transition: all 0.2s ease-out; }
+    .selectbox-container select * {
+      background-color: #222222;
+      border: none !important;
+      outline: none; }
+    .selectbox-container select:focus {
+      outline: none;
+      background-color: rgba(128, 128, 128, 0.5); }
+
+/*# sourceMappingURL=SelectBox.module.css.map */

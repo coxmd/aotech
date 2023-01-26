@@ -12,6 +12,7 @@
     background-repeat: no-repeat !important;
     background-position: 79% 100% !important;
     background-size: cover !important;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
   }
 
   div[class*="textbox"] {
@@ -33,9 +34,10 @@
     }
 
     p[class*="subheading"] {
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.25;
       letter-spacing: 0.1rem;
+      margin-bottom: 2rem;
     }
 
     a[class*="plain-button__button"] {

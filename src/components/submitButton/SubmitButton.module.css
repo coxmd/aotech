@@ -1,0 +1,16 @@
+.submit-button button {
+  all: unset;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  background-color: #af0061;
+  font-family: inherit; }
+.submit-button__button:active {
+  background-color: #7c0045; }
+
+/*# sourceMappingURL=SubmitButton.module.css.map */
