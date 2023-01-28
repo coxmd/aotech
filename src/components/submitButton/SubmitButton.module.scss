@@ -16,6 +16,11 @@
     font-family: inherit;
   }
 
+  button:disabled {
+    opacity: 0.5;
+    background-color: inherit;
+  }
+
   &__button:active {
     background-color: darken($primary, 10%);
   }

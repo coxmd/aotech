@@ -5,6 +5,7 @@ export default function SubmitButton({
   buttonText = "",
   type = undefined,
   onClick = null,
+  disabledStatus = false,
 }) {
   return (
     <div className={styles["submit-button"]}>
@@ -19,7 +20,11 @@ export default function SubmitButton({
       )}
 
       {type === undefined && (
-        <button onClick={onClick} className={styles["submit-button__button"]}>
+        <button
+          disabled={disabledStatus ? true : false}
+          onClick={onClick}
+          className={styles["submit-button__button"]}
+        >
           {buttonText}
         </button>
       )}

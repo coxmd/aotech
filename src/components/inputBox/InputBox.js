@@ -10,12 +10,15 @@ export default function InputBox({
   onChange = undefined,
   onFocus = undefined,
   errorText = undefined,
+  successText = undefined,
+  passRef = null,
 }) {
   return (
     <div className={styles["inputbox-container"]}>
       <label>
         {label && <span>{labelText}</span>}
         <input
+          ref={passRef}
           onFocus={onFocus}
           className={styles["inputbox-container__input"]}
           type={type}
@@ -24,14 +27,12 @@ export default function InputBox({
           value={value}
           required
         />
+
         {errorText && (
-          <p className={styles["inputbox-container__error"]}>
-            {
-              <>
-                <span className={"highlighted-secondary"}>*</span> {errorText}
-              </>
-            }
-          </p>
+          <p className={styles["inputbox-container__error"]}>{errorText}</p>
+        )}
+        {successText && (
+          <p className={styles["inputbox-container__success"]}>{successText}</p>
         )}
       </label>
     </div>

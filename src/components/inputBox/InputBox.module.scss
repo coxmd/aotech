@@ -12,6 +12,7 @@
     color: $white;
     gap: 1rem;
     letter-spacing: 0.05rem;
+    font-weight: 500;
   }
 
   span[class*="highlighted-secondary"] {
@@ -19,9 +20,17 @@
   }
 
   &__error {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+    color: $error;
+    font-weight: 400;
+  }
+
+  &__success {
+    font-size: 1.6rem;
     letter-spacing: 0.05rem;
     color: $white;
+    font-weight: 400;
   }
 
   input,
@@ -35,7 +44,7 @@
     background-color: rgba($gray, 0.5);
     font-family: inherit;
     font-size: 1.55rem;
-    font-weight: 300;
+    font-weight: 500;
     padding: 1rem;
     color: inherit;
     letter-spacing: 0.05rem;
@@ -45,7 +54,7 @@
     transition: $basic;
 
     &::placeholder {
-      color: lighten($gray, 35%);
+      color: lighten($gray, 25%);
       font-size: 1.5rem;
     }
 

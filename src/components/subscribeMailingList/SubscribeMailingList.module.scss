@@ -2,7 +2,7 @@
 @import "../../scss/mixin";
 
 .subscribe-mailing-list-container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: $sectionMargin;
   @include flexColumn();
@@ -13,7 +13,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 45%;
     aspect-ratio: 16/16;
     background-position: 50% 50% !important;
     background-repeat: no-repeat !important;
@@ -26,15 +26,14 @@
   &__textbox {
     width: 100%;
     background-color: $primary;
-    padding-bottom: 2.5rem;
+    padding-bottom: 3rem;
     @include flexColumn();
 
     &__heading {
       font-size: 3rem;
-      width: 60%;
+      width: 70%;
       color: $white;
       padding: 2rem 1.25rem 2rem 0.75rem;
-      text-align: right;
       font-weight: 500;
       text-align: center;
       margin-bottom: 1rem;
@@ -54,8 +53,26 @@
     form {
       padding: 0 2.5rem;
 
-      input {
+      div[class*="inputbox-container"] {
         margin-bottom: 3rem;
+
+        p[class*="inputbox-container__error"] {
+          color: $white;
+        }
+      }
+
+      input {
+        background-color: $white !important;
+        color: $primary !important;
+        opacity: 0.7;
+
+        &:focus {
+          opacity: 1;
+        }
+
+        &::placeholder {
+          color: $primary !important;
+        }
       }
 
       div[class*="submit-button"] {
@@ -64,6 +81,15 @@
 
         button {
           border: 0.1rem solid $white;
+
+          &:active {
+            background-color: $white;
+            color: $primary;
+          }
+
+          &:disabled:active {
+            background-color: transparent;
+          }
         }
       }
     }

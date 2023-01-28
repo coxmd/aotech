@@ -1,23 +1,33 @@
 //react
-import { useState } from "react";
+import { useEffect } from "react";
 
 //components
 import InputBox from "../inputBox/InputBox";
 import SubmitButton from "../submitButton/SubmitButton";
 
+//custom hooks
+import useSubscribeMailingList from "../../hooks/useSubscribeMailingList";
+
 //styles
 import styles from "./SubscribeMailingList.module.css";
 
 export default function SubscribeMailingList({ imageSource = "" }) {
-  const [email, setEmail] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [error, setError] = useState("");
+  const { state, dispatch, initialState } = useSubscribeMailingList();
 
-  const checkForErrors = () => {};
+  useEffect(() => {
+    let timer;
+    if (state.success !== "") {
+      timer = setTimeout(() => {
+        dispatch({ type: "reset", payload: initialState });
 
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-  };
+        clearTimeout(timer);
+      }, 1500);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [state.success]);
 
   return (
     <div className={styles["subscribe-mailing-list-container"]}>
@@ -48,25 +58,31 @@ export default function SubscribeMailingList({ imageSource = "" }) {
           Subscribe for our weekly update and be the first to know about our
           specials and promotions.
         </p>
-        <form noValidate onSubmit={null}>
+
+        <form
+          noValidate
+          onSubmit={(e) => {
+            e.preventDefault();
+            dispatch({ type: "checkForErrors" });
+            dispatch({ type: "changeSuccess" });
+            dispatch({ type: "changeDisable" });
+          }}
+        >
           <InputBox
             label={false}
-            onChange={handleChange}
-            value={email}
+            onChange={(e) => {
+              dispatch({ type: "changeEmail", payload: e.target.value });
+            }}
+            value={state.email}
             placeholder={"Enter your email"}
+            errorText={state.emailError}
+            successText={state.success}
           />
-          {successMessage && (
-            <p
-              className={
-                styles[
-                  "subscribe-mailing-list-container__textbox__success-message"
-                ]
-              }
-            >
-              {successMessage}
-            </p>
-          )}
-          <SubmitButton buttonText={"Subscribe"} />
+
+          <SubmitButton
+            disabledStatus={state.disabled}
+            buttonText={"Subscribe"}
+          />
         </form>
       </div>
     </div>

@@ -7,13 +7,20 @@
     font-size: 1.65rem;
     color: #fff;
     gap: 1rem;
-    letter-spacing: 0.05rem; }
+    letter-spacing: 0.05rem;
+    font-weight: 500; }
   .inputbox-container span[class*="highlighted-secondary"] {
     font-size: 2rem; }
   .inputbox-container__error {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     letter-spacing: 0.05rem;
-    color: #fff; }
+    color: #ff0000;
+    font-weight: 400; }
+  .inputbox-container__success {
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+    color: #fff;
+    font-weight: 400; }
   .inputbox-container input,
   .inputbox-container input[type="text"],
   .inputbox-container input[type="email"],
@@ -24,7 +31,7 @@
     background-color: rgba(128, 128, 128, 0.5);
     font-family: inherit;
     font-size: 1.55rem;
-    font-weight: 300;
+    font-weight: 500;
     padding: 1rem;
     color: inherit;
     letter-spacing: 0.05rem;
@@ -36,7 +43,7 @@
     .inputbox-container input[type="text"]::placeholder,
     .inputbox-container input[type="email"]::placeholder,
     .inputbox-container input[type="tel"]::placeholder, .inputbox-container__input::placeholder {
-      color: #d9d9d9;
+      color: #bfbfbf;
       font-size: 1.5rem; }
     .inputbox-container input:focus,
     .inputbox-container input[type="text"]:focus,

@@ -1,5 +1,5 @@
 .subscribe-mailing-list-container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 5rem;
   display: flex;
@@ -10,7 +10,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 45%;
     aspect-ratio: 16/16;
     background-position: 50% 50% !important;
     background-repeat: no-repeat !important;
@@ -21,15 +21,14 @@
   .subscribe-mailing-list-container__textbox {
     width: 100%;
     background-color: #af0061;
-    padding-bottom: 2.5rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: column; }
     .subscribe-mailing-list-container__textbox__heading {
       font-size: 3rem;
-      width: 60%;
+      width: 70%;
       color: #fff;
       padding: 2rem 1.25rem 2rem 0.75rem;
-      text-align: right;
       font-weight: 500;
       text-align: center;
       margin-bottom: 1rem;
@@ -44,13 +43,28 @@
       margin-bottom: 2rem; }
     .subscribe-mailing-list-container__textbox form {
       padding: 0 2.5rem; }
-      .subscribe-mailing-list-container__textbox form input {
+      .subscribe-mailing-list-container__textbox form div[class*="inputbox-container"] {
         margin-bottom: 3rem; }
+        .subscribe-mailing-list-container__textbox form div[class*="inputbox-container"] p[class*="inputbox-container__error"] {
+          color: #fff; }
+      .subscribe-mailing-list-container__textbox form input {
+        background-color: #fff !important;
+        color: #af0061 !important;
+        opacity: 0.7; }
+        .subscribe-mailing-list-container__textbox form input:focus {
+          opacity: 1; }
+        .subscribe-mailing-list-container__textbox form input::placeholder {
+          color: #af0061 !important; }
       .subscribe-mailing-list-container__textbox form div[class*="submit-button"] {
         display: flex;
         flex-direction: row;
         justify-content: center; }
         .subscribe-mailing-list-container__textbox form div[class*="submit-button"] button {
           border: 0.1rem solid #fff; }
+          .subscribe-mailing-list-container__textbox form div[class*="submit-button"] button:active {
+            background-color: #fff;
+            color: #af0061; }
+          .subscribe-mailing-list-container__textbox form div[class*="submit-button"] button:disabled:active {
+            background-color: transparent; }
 
 /*# sourceMappingURL=SubscribeMailingList.module.css.map */

@@ -1,6 +1,5 @@
 //react
 import { createContext, useReducer } from "react";
-import { act } from "react-dom/test-utils";
 
 //reducer function
 const formReducer = (state, action) => {
@@ -51,9 +50,7 @@ const formReducer = (state, action) => {
           serviceError:
             state.service === "Please select" ? "Please choose a service" : "",
           timeError:
-            state.time === "Please select"
-              ? "Please choose your preferred tme"
-              : "",
+            state.time === "Please select" ? "Please choose a good time" : "",
         };
       }
 

@@ -19,13 +19,7 @@ export default function SelectBox({
           })}
         </select>
         {errorText && (
-          <p className={styles["selectbox-container__error"]}>
-            {
-              <>
-                <span className={"highlighted-secondary"}>*</span> {errorText}
-              </>
-            }
-          </p>
+          <p className={styles["selectbox-container__error"]}>{errorText}</p>
         )}
       </label>
     </div>

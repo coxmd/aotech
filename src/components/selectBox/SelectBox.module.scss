@@ -19,9 +19,10 @@
   }
 
   &__error {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     letter-spacing: 0.05rem;
-    color: $white;
+    color: $error;
+    font-weight: 400;
   }
 
   select {
