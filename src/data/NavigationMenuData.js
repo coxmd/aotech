@@ -14,7 +14,12 @@ export const navigationOptions = [
     id: "services",
     heading: { text: "Services", link: undefined },
     options: [
-      { text: "UX & UI Design", id: 0, nextMenu: undefined, link: "ux-design" },
+      {
+        text: "UX & UI Design",
+        id: 0,
+        nextMenu: undefined,
+        link: "ux-ui-design",
+      },
       {
         text: "UI Development",
         id: 1,
@@ -56,7 +61,7 @@ export const navigationOptions = [
         text: "Why Choose Us",
         id: 1,
         nextMenu: undefined,
-        link: "why",
+        link: "why-choose-us",
       },
       {
         text: "How We Work",

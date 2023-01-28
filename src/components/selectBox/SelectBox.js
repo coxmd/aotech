@@ -7,12 +7,13 @@ export default function SelectBox({
   onChange = null,
   optionsArray = [],
   errorText = undefined,
+  onFocus = null,
 }) {
   return (
     <div className={styles["selectbox-container"]}>
       <label>
         <span>{labelText}</span>
-        <select value={value} onChange={onChange} required>
+        <select value={value} onChange={onChange} onFocus={onFocus} required>
           {optionsArray.map((single) => {
             return <option key={single}>{single}</option>;
           })}

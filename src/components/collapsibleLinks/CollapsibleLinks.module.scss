@@ -1,0 +1,58 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.collapsible {
+  &__text-heading,
+  &__link-heading:link,
+  &__link-heading:visited {
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      height: 1.5rem;
+    }
+  }
+
+  &__collapse-part {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    &__list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid $white;
+      backface-visibility: hidden;
+
+      &__link:link,
+      &__link:visited {
+        color: $white;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+      }
+
+      &__link:hover,
+      &__link:active {
+        color: $white;
+      }
+    }
+  }
+}
+
+.show {
+  transform: scaleY(1);
+  height: 100%;
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.4s;
+}

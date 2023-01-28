@@ -21,8 +21,7 @@
     display: block;
     border: none;
     background-image: none;
-    background-color: rgba(128, 128, 128, 0.3);
-    backdrop-filter: blur(1rem);
+    background-color: rgba(128, 128, 128, 0.5);
     font-family: inherit;
     font-size: 1.55rem;
     font-weight: 300;
@@ -37,13 +36,13 @@
     .inputbox-container input[type="text"]::placeholder,
     .inputbox-container input[type="email"]::placeholder,
     .inputbox-container input[type="tel"]::placeholder, .inputbox-container__input::placeholder {
-      color: #b3b3b3;
+      color: #d9d9d9;
       font-size: 1.5rem; }
     .inputbox-container input:focus,
     .inputbox-container input[type="text"]:focus,
     .inputbox-container input[type="email"]:focus,
     .inputbox-container input[type="tel"]:focus, .inputbox-container__input:focus {
       outline: none;
-      background-color: rgba(128, 128, 128, 0.5); }
+      background-color: gray; }
 
 /*# sourceMappingURL=InputBox.module.css.map */

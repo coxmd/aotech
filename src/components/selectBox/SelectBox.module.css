@@ -18,8 +18,7 @@
     display: block;
     border: none;
     background-image: none;
-    background-color: rgba(128, 128, 128, 0.3);
-    backdrop-filter: blur(1rem);
+    background-color: rgba(128, 128, 128, 0.5);
     font-family: inherit;
     font-size: 1.55rem;
     font-weight: 300;
@@ -36,6 +35,6 @@
       outline: none; }
     .selectbox-container select:focus {
       outline: none;
-      background-color: rgba(128, 128, 128, 0.5); }
+      background-color: gray; }
 
 /*# sourceMappingURL=SelectBox.module.css.map */

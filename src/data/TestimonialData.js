@@ -10,7 +10,7 @@ export const testimonialData = [
     imageSource: richard,
     oneLiner: "Very professional.",
     details:
-      "Quia ipsa recusandae sed delectus explicabo consequatur laudantium! Quibusdam, rerum atque? Iure aut explicabo.",
+      "Quia ipsa recusandae sed delectus explicabo consequatur laudantium! Quibusdam.",
     personName: "Richard Parker",
     extraClass: [],
   },
@@ -18,8 +18,7 @@ export const testimonialData = [
     id: 1,
     imageSource: tamara,
     oneLiner: "They're amazing!",
-    details:
-      "Voluptatibus maxime dolore consequuntur neque, assumenda omnis reprehenderit eveniet.",
+    details: "Voluptatibus maxime dolore consequuntur neque, assumenda.",
     personName: "Tamara Bellis",
     extraClass: ["reverse"],
   },
@@ -37,7 +36,7 @@ export const testimonialData = [
     imageSource: akachi,
     oneLiner: "Excellent staff!",
     details:
-      "labore accusamus porro laborum eveniet consequatur explicabo at totam Dignissimo.",
+      "Labore accusamus porro laborum eveniet consequatur explicabo at totam Dignissimo.",
     personName: "Prince Akachi",
     extraClass: ["reverse"],
   },

@@ -3,6 +3,7 @@ import styles from "./InputBox.module.css";
 
 export default function InputBox({
   labelText = "",
+  label = true,
   type = "text",
   placeholder = "no placeholder provided",
   value = undefined,
@@ -13,7 +14,7 @@ export default function InputBox({
   return (
     <div className={styles["inputbox-container"]}>
       <label>
-        <span>{labelText}</span>
+        {label && <span>{labelText}</span>}
         <input
           onFocus={onFocus}
           className={styles["inputbox-container__input"]}

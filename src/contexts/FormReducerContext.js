@@ -19,8 +19,12 @@ const formReducer = (state, action) => {
       return { ...state, phoneError: "" };
     case "changeService":
       return { ...state, service: action.payload };
+    case "resetServiceError":
+      return { ...state, serviceError: "" };
     case "changeTime":
       return { ...state, time: action.payload };
+    case "resetTimeError":
+      return { ...state, timeError: "" };
 
     case "checkInfo":
       if (state.processStage === "basic") {
@@ -36,7 +40,7 @@ const formReducer = (state, action) => {
           phoneError:
             state.phone === "" ||
             isNaN(state.phone) ||
-            state.phone.length === 10
+            state.phone.length !== 10
               ? "Please provide valid phone number"
               : "",
         };
@@ -96,6 +100,14 @@ export const FormReducerContext = createContext();
 export function FormReducerContextProvider({ children }) {
   const [formFinalState, dispatch] = useReducer(formReducer, formState);
 
+  const selectBoxResetFunctions = [
+    function (e) {
+      dispatch({ type: "resetServiceError" });
+    },
+    function (e) {
+      dispatch({ type: "resetTimeError" });
+    },
+  ];
   const selectBoxValues = [formFinalState.service, formFinalState.time];
   const selectBoxFunctions = [
     function (e) {
@@ -109,15 +121,33 @@ export function FormReducerContextProvider({ children }) {
     formFinalState.serviceError,
     formFinalState.timeError,
   ];
+
+  const submit = (e) => {
+    e.preventDefault();
+    dispatch({
+      type: "checkInfo",
+    });
+    dispatch({
+      type: "changeStage",
+    });
+  };
+
+  const reset = (e) => {
+    e.preventDefault();
+    dispatch({ type: "reset", payload: { ...formState } });
+  };
+
   return (
     <FormReducerContext.Provider
       value={{
-        formState,
         formFinalState,
         dispatch,
         selectBoxErrors,
         selectBoxFunctions,
         selectBoxValues,
+        selectBoxResetFunctions,
+        submit,
+        reset,
       }}
     >
       {children}

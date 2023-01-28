@@ -1,0 +1,23 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.image-button {
+  display: inline-block;
+  background-color: $white;
+  width: 2.5rem;
+  padding: 0.5rem;
+  aspect-ratio: 16/16;
+  border-radius: 50%;
+  transition: $basic;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.image-button__link:link,
+.image-button__link:visited {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

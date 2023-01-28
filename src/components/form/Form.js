@@ -2,7 +2,7 @@
 import { useContext } from "react";
 
 //components
-import InputBox from "../../components/inputBox/InputBox";
+import InputBox from "../inputBox/InputBox";
 import SelectBox from "../selectBox/SelectBox";
 import SubmitButton from "../submitButton/SubmitButton";
 
@@ -17,15 +17,16 @@ import check from "../../assets/check.svg";
 
 export default function Form({ imageSource = "", additionalData = undefined }) {
   const {
-    formState,
     formFinalState,
     dispatch,
     selectBoxErrors,
     selectBoxFunctions,
     selectBoxValues,
+    selectBoxResetFunctions,
+    submit,
+    reset,
   } = useContext(FormReducerContext);
 
-  console.log(formFinalState);
   return (
     <div
       className={styles["form-container"]}
@@ -87,18 +88,7 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
             placeholder={"i.e. 9001234567"}
             errorText={formFinalState.phoneError}
           />
-          <SubmitButton
-            onClick={(e) => {
-              e.preventDefault();
-              dispatch({
-                type: "checkInfo",
-              });
-              dispatch({
-                type: "changeStage",
-              });
-            }}
-            buttonText={"Get Started"}
-          />
+          <SubmitButton onClick={submit} buttonText={"Get Started"} />
         </div>
 
         <div
@@ -114,6 +104,7 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
             additionalData.selectBoxData.map((single, i) => {
               return (
                 <SelectBox
+                  onFocus={selectBoxResetFunctions[i]}
                   onChange={selectBoxFunctions[i]}
                   value={selectBoxValues[i]}
                   key={single.id}
@@ -124,18 +115,7 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
               );
             })}
 
-          <SubmitButton
-            onClick={(e) => {
-              e.preventDefault();
-              dispatch({
-                type: "checkInfo",
-              });
-              dispatch({
-                type: "changeStage",
-              });
-            }}
-            buttonText={"Submit"}
-          />
+          <SubmitButton onClick={submit} buttonText={"Submit"} />
         </div>
 
         <div
@@ -166,13 +146,7 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
             {formFinalState.service} has been received. We will reach out to you
             tomorrow between {formFinalState.time}.
           </p>
-          <SubmitButton
-            onClick={(e) => {
-              e.preventDefault();
-              dispatch({ type: "reset", payload: { ...formState } });
-            }}
-            buttonText={"Close"}
-          />
+          <SubmitButton onClick={reset} buttonText={"Close"} />
         </div>
       </form>
     </div>

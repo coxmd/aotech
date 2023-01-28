@@ -1,0 +1,56 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.mobile-footer {
+  background-image: linear-gradient(
+    to bottom right,
+    lighten($primary, 5%),
+    $primary
+  );
+  padding: 4rem 2rem 3rem;
+
+  &__top {
+    margin-bottom: 5rem;
+
+    &__links {
+      @include flexColumn();
+      gap: 3rem;
+    }
+  }
+
+  &__bottom {
+    &__image-buttons {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    &__buttons {
+      div[class*="link-group"] {
+        margin-bottom: 4rem;
+        ul[class*="link-group__list"] {
+          gap: 2rem !important;
+
+          a:link,
+          a:visited {
+            color: $white;
+            letter-spacing: 0.05rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+          }
+
+          a:hover,
+          a:active {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &__copyright-info--details {
+      color: $white;
+      font-size: 1.4rem;
+      letter-spacing: 0.05rem;
+    }
+  }
+}

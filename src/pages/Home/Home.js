@@ -11,13 +11,14 @@ import Showcase from "../../components/showcase/Showcase";
 import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
 import Testimonial from "../../components/testimonial/Testimonial";
 import Form from "../../components/form/Form";
-import { FormReducerContextProvider } from "../../contexts/FormReducerContext";
+import SubscribeMailingList from "../../components/subscribeMailingList/SubscribeMailingList";
 
 // styles
 import styles from "./Home.module.css";
 
 //context
 import { NavbarThemeContext } from "../../contexts/NavbarThemeContext";
+import { FormReducerContextProvider } from "../../contexts/FormReducerContext";
 
 //custom hook
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
@@ -31,6 +32,7 @@ import { selectBoxData } from "../../data/FormData";
 // image source
 import hero from "../../assets/hero.webp";
 import formImage from "../../assets/form.webp";
+import engineer from "../../assets/engineer.webp";
 
 export default function Home() {
   //create a ref for the hero image
@@ -176,6 +178,10 @@ export default function Home() {
         <FormReducerContextProvider>
           <Form additionalData={{ selectBoxData }} imageSource={formImage} />
         </FormReducerContextProvider>
+      </section>
+
+      <section>
+        <SubscribeMailingList imageSource={engineer} />
       </section>
     </div>
   );
