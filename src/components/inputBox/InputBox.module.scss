@@ -8,9 +8,8 @@
     display: inline-flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     color: $white;
-    gap: 1rem;
     letter-spacing: 0.05rem;
     font-weight: 500;
   }
@@ -20,17 +19,21 @@
   }
 
   &__error {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 0.05rem;
     color: $error;
     font-weight: 400;
   }
 
   &__success {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 0.05rem;
     color: $white;
     font-weight: 400;
+  }
+
+  &__label {
+    margin-bottom: 1rem;
   }
 
   input,
@@ -41,26 +44,28 @@
     display: block;
     border: none;
     background-image: none;
-    background-color: rgba($gray, 0.5);
+    background-color: $white;
     font-family: inherit;
-    font-size: 1.55rem;
+    font-size: 1.4rem;
     font-weight: 500;
     padding: 1rem;
-    color: inherit;
-    letter-spacing: 0.05rem;
+    color: $darkText;
+    letter-spacing: 0.02rem;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    margin-bottom: 1rem;
+    opacity: 0.7;
     transition: $basic;
 
     &::placeholder {
-      color: lighten($gray, 25%);
-      font-size: 1.5rem;
+      color: $gray;
+      font-size: 1.3rem;
     }
 
     &:focus {
       outline: none;
-      background-color: rgba($gray, 1);
+      opacity: 1;
     }
   }
 }

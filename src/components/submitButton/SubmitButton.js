@@ -13,7 +13,7 @@ export default function SubmitButton({
         <button
           onClick={onClick}
           className={styles["submit-button__button"]}
-          type="submit"
+          type={type}
         >
           {buttonText}
         </button>

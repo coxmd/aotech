@@ -20,12 +20,12 @@ const formReducer = (state, action) => {
       if (state.emailError === "") {
         return {
           ...state,
-          success: "Subscription successfully added",
+          success: true,
           email: "",
         };
       }
     case "changeDisable":
-      if (state.success !== "") {
+      if (state.success) {
         return { ...state, disabled: true };
       }
 
@@ -39,7 +39,7 @@ const formReducer = (state, action) => {
 const initialState = {
   email: "",
   emailError: "",
-  success: "",
+  success: false,
   disabled: false,
 };
 

@@ -2,11 +2,7 @@
 @import "../../scss/mixin";
 
 .mobile-footer {
-  background-image: linear-gradient(
-    to bottom right,
-    lighten($primary, 5%),
-    $primary
-  );
+  background-color: $primary;
   padding: 4rem 2rem 3rem;
 
   &__top {
@@ -34,8 +30,8 @@
           a:link,
           a:visited {
             color: $white;
-            letter-spacing: 0.05rem;
-            font-size: 1.5rem;
+            letter-spacing: 0.02rem;
+            font-size: 1.4rem;
             font-weight: 500;
           }
 
@@ -49,7 +45,7 @@
 
     &__copyright-info--details {
       color: $white;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       letter-spacing: 0.05rem;
     }
   }

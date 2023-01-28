@@ -34,8 +34,6 @@
 
   &__image-descriptions {
     padding: 0 2.5rem;
-    // transform: translateY(-20rem);
-
     position: relative;
     top: -23rem;
     margin-bottom: -23rem;
@@ -70,14 +68,14 @@
   }
 
   h3[class*="heading"] {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   p[class*="description"] {
     line-height: 1.4;
-    font-weight: 300;
-    font-size: 1.6rem;
-    color: darken($gray, 50%);
+    font-weight: 400;
+    font-size: 1.45rem;
+    color: darken($gray, 10%);
     letter-spacing: 0.04rem;
   }
 
@@ -91,7 +89,7 @@
 
   div[class*="plain-description-box"] {
     margin-bottom: 3rem;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.04rem !important;
   }
 }
 
@@ -100,13 +98,6 @@
 
   div[class*="plain-description-box"] {
     margin-bottom: 1rem;
-    letter-spacing: 0.04rem;
-  }
-
-  div[class*="submit-button"] {
-    button {
-      font-weight: 600;
-      text-transform: uppercase;
-    }
+    letter-spacing: 0.04rem !important;
   }
 }

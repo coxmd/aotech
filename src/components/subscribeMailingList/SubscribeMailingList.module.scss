@@ -19,7 +19,7 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
     border-radius: 50%;
-    border: 0.7rem solid white;
+    border: 0.75rem solid white;
     transform: translate(-20%, -20%);
   }
 
@@ -30,7 +30,7 @@
     @include flexColumn();
 
     &__heading {
-      font-size: 3rem;
+      font-size: 2.5rem;
       width: 70%;
       color: $white;
       padding: 2rem 1.25rem 2rem 0.75rem;
@@ -41,8 +41,8 @@
     }
 
     &__details {
-      font-size: 1.7rem;
-      line-height: 1.3;
+      font-size: 1.45rem;
+      line-height: 1.4;
       letter-spacing: 0.02rem;
       color: $white;
       padding: 0 2.5rem;

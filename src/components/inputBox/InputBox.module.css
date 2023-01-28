@@ -4,23 +4,24 @@
     display: inline-flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     color: #fff;
-    gap: 1rem;
     letter-spacing: 0.05rem;
     font-weight: 500; }
   .inputbox-container span[class*="highlighted-secondary"] {
     font-size: 2rem; }
   .inputbox-container__error {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 0.05rem;
-    color: #ff0000;
+    color: #ff2e2e;
     font-weight: 400; }
   .inputbox-container__success {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 0.05rem;
     color: #fff;
     font-weight: 400; }
+  .inputbox-container__label {
+    margin-bottom: 1rem; }
   .inputbox-container input,
   .inputbox-container input[type="text"],
   .inputbox-container input[type="email"],
@@ -28,28 +29,30 @@
     display: block;
     border: none;
     background-image: none;
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: #fff;
     font-family: inherit;
-    font-size: 1.55rem;
+    font-size: 1.4rem;
     font-weight: 500;
     padding: 1rem;
-    color: inherit;
-    letter-spacing: 0.05rem;
+    color: #222222;
+    letter-spacing: 0.02rem;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    margin-bottom: 1rem;
+    opacity: 0.7;
     transition: all 0.2s ease-out; }
     .inputbox-container input::placeholder,
     .inputbox-container input[type="text"]::placeholder,
     .inputbox-container input[type="email"]::placeholder,
     .inputbox-container input[type="tel"]::placeholder, .inputbox-container__input::placeholder {
-      color: #bfbfbf;
-      font-size: 1.5rem; }
+      color: gray;
+      font-size: 1.3rem; }
     .inputbox-container input:focus,
     .inputbox-container input[type="text"]:focus,
     .inputbox-container input[type="email"]:focus,
     .inputbox-container input[type="tel"]:focus, .inputbox-container__input:focus {
       outline: none;
-      background-color: gray; }
+      opacity: 1; }
 
 /*# sourceMappingURL=InputBox.module.css.map */

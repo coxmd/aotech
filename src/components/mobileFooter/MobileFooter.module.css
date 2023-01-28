@@ -1,5 +1,5 @@
 .mobile-footer {
-  background-image: linear-gradient(to bottom right, #c9006f, #af0061);
+  background-color: #af0061;
   padding: 4rem 2rem 3rem; }
   .mobile-footer__top {
     margin-bottom: 5rem; }
@@ -18,15 +18,15 @@
       .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:link,
       .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:visited {
         color: #fff;
-        letter-spacing: 0.05rem;
-        font-size: 1.5rem;
+        letter-spacing: 0.02rem;
+        font-size: 1.4rem;
         font-weight: 500; }
       .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:hover,
       .mobile-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:active {
         color: #fff; }
   .mobile-footer__bottom__copyright-info--details {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     letter-spacing: 0.05rem; }
 
 /*# sourceMappingURL=MobileFooter.module.css.map */

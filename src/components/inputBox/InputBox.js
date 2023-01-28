@@ -16,7 +16,11 @@ export default function InputBox({
   return (
     <div className={styles["inputbox-container"]}>
       <label>
-        {label && <span>{labelText}</span>}
+        {label && (
+          <span className={styles["inputbox-container__label"]}>
+            {labelText}
+          </span>
+        )}
         <input
           ref={passRef}
           onFocus={onFocus}
@@ -29,7 +33,7 @@ export default function InputBox({
         />
 
         {errorText && (
-          <p className={styles["inputbox-container__error"]}>{errorText}</p>
+          <p className={styles["inputbox-container__error"]}>* {errorText}</p>
         )}
         {successText && (
           <p className={styles["inputbox-container__success"]}>{successText}</p>

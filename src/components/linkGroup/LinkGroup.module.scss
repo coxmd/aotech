@@ -8,8 +8,9 @@
 
   &__heading {
     color: $white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
+    letter-spacing: 0.02rem;
 
     &-link {
       &:link,
@@ -26,7 +27,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.2rem;
     list-style-type: none;
 
     &-item {
@@ -35,9 +36,8 @@
         &:visited {
           color: $white;
           text-decoration: none;
-          font-size: 1.5rem;
-          font-weight: 400;
-          letter-spacing: 0.05rem;
+          font-size: 1.4rem;
+          letter-spacing: 0.02rem;
         }
       }
     }

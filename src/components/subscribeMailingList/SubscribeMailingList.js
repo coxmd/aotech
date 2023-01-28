@@ -76,7 +76,7 @@ export default function SubscribeMailingList({ imageSource = "" }) {
             value={state.email}
             placeholder={"Enter your email"}
             errorText={state.emailError}
-            successText={state.success}
+            successText={state.success && "Subscription added!"}
           />
 
           <SubmitButton

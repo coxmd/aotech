@@ -24,11 +24,11 @@
       font-weight: 600; }
     .hero-container div[class*="textbox"] p[class*="subheading"] {
       font-weight: 500;
-      line-height: 1.25;
+      line-height: 1.4;
       letter-spacing: 0.1rem;
       margin-bottom: 2rem; }
     .hero-container div[class*="textbox"] a[class*="plain-button__button"]:link, .hero-container div[class*="textbox"] a[class*="plain-button__button"]:visited {
-      font-weight: 600;
-      text-transform: uppercase; }
+      font-weight: 500;
+      text-transform: capitalize; }
 
 /*# sourceMappingURL=Hero.module.css.map */

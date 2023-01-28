@@ -16,6 +16,7 @@
     height: 100%;
     padding: 5.5rem 3rem;
     background-color: rgba($darkText, 0.85);
+    backdrop-filter: blur(0.4rem);
     clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
     position: relative;
     transition: $basic;
@@ -36,7 +37,7 @@
     &__success-message {
       gap: 0 !important;
       color: $white;
-      padding: 2.5rem;
+      padding: 2rem;
       align-items: center;
 
       &__checkbox {
@@ -59,17 +60,16 @@
         font-size: 2rem;
         font-weight: 600;
         text-transform: capitalize;
-        line-height: 1.3;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
       }
 
       &__details {
-        font-size: 1.7rem;
-        line-height: 1.3;
-        letter-spacing: 0.05rem;
-        font-weight: 500;
-        margin-bottom: 3rem;
+        font-size: 1.45rem;
+        line-height: 1.4;
+        letter-spacing: 0.02rem;
+        font-weight: 400;
+        margin-bottom: 2.5rem;
       }
     }
 
