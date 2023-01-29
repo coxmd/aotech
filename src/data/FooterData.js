@@ -88,3 +88,9 @@ export const collapsibleFooterData = [
     ],
   },
 ];
+
+export const addressData = {
+  addressDetails: ["1600 Amphitheatre", "Parkway Mountain View", "CA 94043"],
+  phone: "+16502530000",
+  email: "welcome@weblab.com",
+};

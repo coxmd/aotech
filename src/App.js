@@ -12,12 +12,16 @@ import "./basicStyles/App.css";
 //custom hooks
 import { NavbarThemeContextProvider } from "./contexts/NavbarThemeContext";
 
+//image source
+import buildingsSmall from "./assets/buildings-small.webp";
+
 //data
 import { navigationOptions } from "./data/NavigationMenuData";
 import {
   logoButtonData,
   footerBottomOptions,
   collapsibleFooterData,
+  addressData,
 } from "./data/FooterData";
 
 export default function App() {
@@ -37,12 +41,20 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
+
           <MobileFooter
             appName={"WebLab"}
             developer={"Nashiuz Zaman"}
             bottomOptionsArray={footerBottomOptions}
             logoButtonsArray={logoButtonData}
             normalOptionsArray={collapsibleFooterData}
+            addressData={addressData}
+            imageSource={buildingsSmall}
+            companyName={
+              <>
+                Web<span className="highlighted">Lab</span>
+              </>
+            }
           />
         </BrowserRouter>
       </div>

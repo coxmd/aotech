@@ -3,10 +3,21 @@
 
 .mobile-footer {
   background-color: $primary;
-  padding: 4rem 2rem 3rem;
+  padding: 0rem 0rem 3rem;
+
+  &__address-part {
+    margin-bottom: 3rem;
+    @include bg-cover-center();
+    padding: 2rem;
+  }
+
+  &__address-part > div {
+    width: 72.5%;
+  }
 
   &__top {
     margin-bottom: 5rem;
+    padding: 0 2rem;
 
     &__links {
       @include flexColumn();
@@ -15,6 +26,7 @@
   }
 
   &__bottom {
+    padding: 0 2rem;
     &__image-buttons {
       display: flex;
       gap: 1.5rem;

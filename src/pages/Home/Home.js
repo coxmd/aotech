@@ -180,7 +180,7 @@ export default function Home() {
         </FormReducerContextProvider>
       </section>
 
-      <section>
+      <section className={styles["subscribe-mailing-list"]}>
         <SubscribeMailingList imageSource={engineer} />
       </section>
     </div>

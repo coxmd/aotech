@@ -1,0 +1,43 @@
+.address-main {
+  background: rgba(34, 34, 34, 0.8);
+  backdrop-filter: blur(2px);
+  text-align: center;
+  aspect-ratio: 16/13;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem 0; }
+  .address-main__company-name {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.3rem; }
+  .address-main__address {
+    font-style: normal;
+    color: #fff; }
+    .address-main__address__location-details {
+      color: #fff;
+      font-size: 1.4rem;
+      letter-spacing: 0.02rem;
+      line-height: 1.4;
+      margin-bottom: 2rem; }
+    .address-main__address__contact-details__heading {
+      font-weight: 600;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02rem; }
+    .address-main__address__contact-details__phone-email {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.4; }
+      .address-main__address__contact-details__phone-email a:link,
+      .address-main__address__contact-details__phone-email a:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.4rem;
+        letter-spacing: 0.02rem; }
+
+/*# sourceMappingURL=Address.module.css.map */
