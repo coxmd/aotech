@@ -31,7 +31,7 @@
     transition: all 0.2s ease-out; }
     .image-description-button__container__button-container__button:link, .image-description-button__container__button-container__button:visited {
       color: #fff;
-      font-size: 2rem;
+      font-size: 1.7rem;
       text-decoration: none; }
 
 /*# sourceMappingURL=ImageDescBtn.module.css.map */

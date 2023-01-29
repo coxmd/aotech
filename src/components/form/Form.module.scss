@@ -94,3 +94,19 @@
   backdrop-filter: blur(1rem) !important;
   transition: all 0.4s;
 }
+
+@media (max-width: 24em) {
+  .form-container {
+    &__form {
+      height: 110%;
+    }
+  }
+}
+
+// @media (max-width: 20em) {
+//   .form-container {
+//     &__form {
+//       height: 130%;
+//     }
+//   }
+// }

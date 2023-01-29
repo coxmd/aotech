@@ -9,7 +9,7 @@ import MobileFooter from "./components/mobileFooter/MobileFooter";
 //styles
 import "./basicStyles/App.css";
 
-//custom hooks
+//context
 import { NavbarThemeContextProvider } from "./contexts/NavbarThemeContext";
 
 //image source

@@ -59,3 +59,11 @@
     }
   }
 }
+
+@media (min-width: 30em) {
+  .mobile-nav {
+    &__container {
+      width: 30rem !important;
+    }
+  }
+}

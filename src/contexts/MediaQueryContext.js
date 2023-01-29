@@ -37,7 +37,7 @@ const mediaQueryReducer = (state, action) => {
   }
 };
 
-export function MediaQueryProvider({ children }) {
+export function MediaQueryContextProvider({ children }) {
   const [mediaQueryState, dispatch] = useReducer(mediaQueryReducer, {
     mobileMatches: mobileQuery.matches,
     smallTabletMatches: smallTabletQuery.matches,

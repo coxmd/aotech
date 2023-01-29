@@ -30,4 +30,14 @@ body {
     flex-direction: column;
     /* margin-top: auto FOR footer */ }
 
+@media (max-width: 23em) {
+  html {
+    font-size: 61.5%; } }
+@media (max-width: 22em) {
+  html {
+    font-size: 59%; } }
+@media (max-width: 20em) {
+  html {
+    font-size: 55%; } }
+
 /*# sourceMappingURL=index.css.map */

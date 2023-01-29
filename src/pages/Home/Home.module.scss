@@ -1,14 +1,6 @@
 @import "../../scss/variables";
 @import "../../scss/mixin";
 
-.home {
-  .hero {
-    div[class*="textbox"] {
-      width: 73%;
-    }
-  }
-}
-
 .industry-expert {
   display: flex;
   flex-direction: column;
@@ -105,3 +97,25 @@
 .subscribe-mailing-list {
   margin-bottom: 6rem;
 }
+
+// @media (max-width: 23em) {
+//   .industry-expert {
+//     &__image-descriptions {
+//       top: -21rem;
+//       margin-bottom: -21rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 22em) {
+//   .industry-expert {
+//     &__image-descriptions {
+//       top: -17rem;
+//       margin-bottom: -17rem;
+
+//       div[class*="container"] {
+//         height: 35rem;
+//       }
+//     }
+//   }
+// }

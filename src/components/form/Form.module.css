@@ -73,4 +73,8 @@
   backdrop-filter: blur(1rem) !important;
   transition: all 0.4s; }
 
+@media (max-width: 24em) {
+  .form-container__form {
+    height: 110%; } }
+
 /*# sourceMappingURL=Form.module.css.map */

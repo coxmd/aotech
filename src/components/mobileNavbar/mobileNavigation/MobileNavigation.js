@@ -45,7 +45,7 @@ export default function MobileNavigation({
       }`}
     >
       <div className={styles["mobile-nav__brand-and-toggles"]}>
-        <BrandName title={brandName} />
+        <BrandName title={brandName} toUrl={"/"} />
         <HamburgerMenu
           clickHandler={handleOpenMobileNavigation}
           dark={!heroVisible ? true : false}

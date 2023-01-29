@@ -1,6 +1,3 @@
-.home .hero div[class*="textbox"] {
-  width: 73%; }
-
 .industry-expert {
   display: flex;
   flex-direction: column;

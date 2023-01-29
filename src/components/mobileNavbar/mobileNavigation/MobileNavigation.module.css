@@ -37,4 +37,8 @@
     .mobile-nav__container--open {
       transform: translateX(0%); }
 
+@media (min-width: 30em) {
+  .mobile-nav__container {
+    width: 30rem !important; } }
+
 /*# sourceMappingURL=MobileNavigation.module.css.map */

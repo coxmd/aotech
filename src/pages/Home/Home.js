@@ -61,7 +61,8 @@ export default function Home() {
           }
           button={
             <PlainButton
-              toUrl={"#"}
+              toUrl={"#signup-form"}
+              external={true}
               buttonText={"Get started"}
               rightArrow={false}
             />
@@ -166,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles["form-section"]}>
+      <section id={"signup-form"} className={styles["form-section"]}>
         <SectionTitle
           title={
             <>
