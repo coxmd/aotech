@@ -63,8 +63,9 @@ export default function Home() {
         }
       });
     }
-  }, [servicesEntries]);
+  }, [servicesEntries, observer]);
 
+  console.log(0);
   // based on entries data toggle navbar background color theme
   useEffect(() => {
     if (heroEntry !== null) {
