@@ -18,11 +18,27 @@ ul {
     .reverse div[class*="text-container"] p {
       text-align: left; }
 
-.show div[class*="showcase"] div[class*="showcase__imgbox"] {
-  transform: translateX(0%);
+.show-service div[class*="showcase"] div[class*="showcase__imgbox"] {
+  transform: translate(0%, 0%);
   opacity: 1; }
-.show div[class*="textbox"] {
+.show-service div[class*="textbox"] {
   opacity: 1;
   transform: translate(0%, 0%); }
+
+.show-testimonial-elements {
+  transform: translate(0%, 0%);
+  opacity: 1; }
+
+.show-testimonial-section {
+  transform: translate(0%, 0%);
+  opacity: 1; }
+
+@media (min-width: 64em) {
+  .reverse {
+    flex-direction: column !important; }
+    .reverse div[class*="text-container"] {
+      align-items: stretch; }
+      .reverse div[class*="text-container"] p {
+        text-align: unset; } }
 
 /*# sourceMappingURL=App.css.map */

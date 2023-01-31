@@ -2,8 +2,8 @@
 @import "../../scss/mixin";
 
 .only-design-div {
-  padding: 4rem 0;
-  // padding-bottom: 4rem;
+  padding: 5rem 0;
+
   @include flexRow();
   justify-content: center;
   align-items: center;

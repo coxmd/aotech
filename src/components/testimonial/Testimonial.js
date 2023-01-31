@@ -1,5 +1,11 @@
+//react
+import { useEffect, useRef } from "react";
+
 //styles
 import styles from "./Testimonial.module.css";
+
+//custom hooks
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 export default function Testimonial({
   imageSource = "",
@@ -7,9 +13,25 @@ export default function Testimonial({
   oneLiner = "",
   details = "",
   extraClass = [],
+  extraInlineStyle = {},
 }) {
+  const testimonialRef = useRef();
+  const { entry, observer } = useIntersectionObserver(testimonialRef, 0.1);
+
+  useEffect(() => {
+    if (entry) {
+      console.log(entry);
+      if (entry.isIntersecting === true) {
+        entry.target.classList.add("show-testimonial-elements");
+        observer.unobserve(entry.target);
+      }
+    }
+  }, [entry, observer]);
+
   return (
     <div
+      ref={testimonialRef}
+      style={extraInlineStyle}
       className={`${styles["testimonial"]} ${
         extraClass.length > 0 ? extraClass.join(" ") : "default class"
       }`}

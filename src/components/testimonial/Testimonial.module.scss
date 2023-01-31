@@ -46,3 +46,61 @@
     }
   }
 }
+
+@media (min-width: 64em) {
+  .testimonial {
+    @include flexColumn();
+    align-items: center;
+    margin: 0;
+    background-color: $primary;
+    transform: translateY(5rem);
+    opacity: 0;
+
+    &__img {
+      width: 17.5rem;
+      height: 17.5rem;
+      border-radius: 50%;
+      flex-basis: unset;
+      aspect-ratio: unset;
+      background-size: cover !important;
+      border: 1rem solid $white;
+      background-position: 50% 0% !important;
+      transform: translateY(-3rem);
+      margin-bottom: -3rem;
+    }
+
+    &__text-container {
+      padding: 2.5rem;
+      flex-grow: 1;
+      @include flexColumn();
+      align-items: stretch;
+      color: $white;
+
+      &__one-liner {
+        padding: 0;
+        font-size: 2.15rem;
+        line-height: 1.2;
+        color: inherit;
+        margin: 0;
+        margin-bottom: 2rem;
+        text-align: center !important;
+      }
+
+      &__details {
+        font-size: 1.5rem;
+        color: inherit;
+        padding: 0;
+        margin-bottom: 4rem;
+      }
+
+      &__person-name {
+        padding: 0;
+        margin-top: auto;
+        font-size: 1.5rem;
+        color: inherit;
+        font-weight: 500;
+        align-self: flex-end !important;
+      }
+    }
+  }
+}

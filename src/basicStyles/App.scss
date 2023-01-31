@@ -28,10 +28,10 @@ ul {
   }
 }
 
-.show {
+.show-service {
   div[class*="showcase"] {
     div[class*="showcase__imgbox"] {
-      transform: translateX(0%);
+      transform: translate(0%, 0%);
       opacity: 1;
     }
   }
@@ -39,5 +39,29 @@ ul {
   div[class*="textbox"] {
     opacity: 1;
     transform: translate(0%, 0%);
+  }
+}
+
+.show-testimonial-elements {
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+
+.show-testimonial-section {
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+
+@media (min-width: 64em) {
+  .reverse {
+    flex-direction: column !important;
+
+    div[class*="text-container"] {
+      align-items: stretch;
+
+      p {
+        text-align: unset;
+      }
+    }
   }
 }

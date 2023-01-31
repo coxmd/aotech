@@ -41,29 +41,24 @@ export default function Home() {
   //create a ref for the hero image
   const heroRef = useRef();
   const servicesRefs = useRef([]);
-
-  const { allEntries: servicesEntries, observer } =
-    useMultipleIntersectionObserver(servicesRefs, 0.3);
+  const testimonialSectionRef = useRef();
 
   //use custom observer hook to decide if hero image is fully visible on the viewport
   const { entry: heroEntry } = useIntersectionObserver(heroRef, 0.8);
 
+  //use custom observer hook to decide if the services are becoming visible on the viewport
+  const { allEntries: servicesEntries, observer: servicesObserver } =
+    useMultipleIntersectionObserver(servicesRefs, 0.4);
+
+  //use custom observer hook to decide if testimonial section is becoming visible on the viewport
+  const {
+    entry: testimonialSectionEntry,
+    observer: testimonialSectionObserver,
+  } = useIntersectionObserver(testimonialSectionRef, 0);
+
   //extract value from the context
   const { setHeroVisible } = useContext(NavbarThemeContext);
   const { mediaQueryState } = useContext(MediaQueryContext);
-
-  //animations based on if the services are intersecting on the screen
-
-  useEffect(() => {
-    if (servicesEntries) {
-      servicesEntries.forEach((entry) => {
-        if (entry.isIntersecting === true) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
-        }
-      });
-    }
-  }, [servicesEntries, observer]);
 
   console.log(0);
   // based on entries data toggle navbar background color theme
@@ -72,6 +67,29 @@ export default function Home() {
       heroEntry.isIntersecting ? setHeroVisible(true) : setHeroVisible(false);
     }
   }, [heroEntry, setHeroVisible]);
+
+  //animations based on if the services are intersecting on the screen
+  useEffect(() => {
+    if (servicesEntries) {
+      servicesEntries.forEach((entry) => {
+        if (entry.isIntersecting === true) {
+          entry.target.classList.add("show-service");
+          servicesObserver.unobserve(entry.target);
+        }
+      });
+    }
+  }, [servicesEntries, servicesObserver]);
+
+  useEffect(() => {
+    if (testimonialSectionEntry) {
+      if (testimonialSectionEntry.isIntersecting === true) {
+        testimonialSectionEntry.target.classList.add(
+          "show-testimonial-section"
+        );
+        testimonialSectionObserver.unobserve(testimonialSectionEntry.target);
+      }
+    }
+  }, [testimonialSectionEntry, testimonialSectionObserver]);
 
   return (
     <div className={styles["home"]}>
@@ -175,7 +193,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles["testimonial"]}>
+      <section ref={testimonialSectionRef} className={styles["testimonial"]}>
         <SectionTitle
           title={
             <>
@@ -183,11 +201,13 @@ export default function Home() {
             </>
           }
         />
-
-        <PlainDescriptionBox description="Enim unde quas delectus hic amet impedit sit deserunt explicabo!" />
+        <div className={styles["desktop-center"]}>
+          <PlainDescriptionBox description="Enim unde quas delectus hic amet impedit sit deserunt explicabo!" />
+        </div>
 
         <div className={styles["testimonial__all-testimonials"]}>
-          {testimonialData.map((single) => {
+          {testimonialData.map((single, i) => {
+            // pass transition delay to each element dynamically based on the array index, so that they don't start the transition all at once, rather one by one
             return (
               <Testimonial
                 key={single.id}
@@ -196,6 +216,7 @@ export default function Home() {
                 oneLiner={single.oneLiner}
                 details={single.details}
                 extraClass={single.extraClass}
+                extraInlineStyle={{ transition: `all 0.4s ${i * 0.2}s` }}
               />
             );
           })}

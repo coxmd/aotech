@@ -1,6 +1,7 @@
 .plain-description-box {
   width: 100%;
-  background-color: #fff; }
+  background-color: #fff;
+  margin-bottom: 3rem; }
   .plain-description-box__description {
     font-size: 1.45rem;
     line-height: 1.4;
@@ -10,9 +11,11 @@
     color: gray; }
 
 @media (min-width: 64em) {
-  .plain-description-box__description {
-    font-size: 1.6rem !important;
-    line-height: 1.45 !important;
-    font-weight: 300 !important; } }
+  .plain-description-box {
+    margin-bottom: 4rem !important; }
+    .plain-description-box__description {
+      font-size: 1.6rem !important;
+      line-height: 1.45 !important;
+      font-weight: 300 !important; } }
 
 /*# sourceMappingURL=PlainDescriptionBox.module.css.map */
