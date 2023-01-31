@@ -23,6 +23,7 @@ export const ourServicesData = [
     ],
     buttonText: "Read More",
     link: "ux-design",
+    reverse: false,
   },
   {
     id: 1,
@@ -40,6 +41,7 @@ export const ourServicesData = [
     ],
     buttonText: "Read More",
     link: "ui-development",
+    reverse: true,
   },
   {
     id: 2,
@@ -49,7 +51,6 @@ export const ourServicesData = [
       "Fugit maiores est deleniti quaerat quisquam aliquid, optio unde? Amet tenetur officia tempora maxime ipsum molestias quae provident modi doloribus natus in quis temporibus quas eaque.",
     list: [
       "Fugit maiores",
-      "Reprehenderit illo",
       "Consectetur adipisicing",
       "Maxime ipsum molestias",
       "Labore temporibus",
@@ -57,6 +58,7 @@ export const ourServicesData = [
     ],
     buttonText: "Read More",
     link: "full-app-development",
+    reverse: false,
   },
   {
     id: 3,
@@ -66,7 +68,7 @@ export const ourServicesData = [
       "Exercitationem optio, odio fugit beatae pariatur deserunt necessitatibus repellat architecto harum facilis! Sed natus numquam autem repellat et, distinctio neque ut voluptas nam.",
     list: [
       "Necessitatibus repellat architecto",
-      "Reprehenderit",
+
       "Sed natus numquam",
       "Neque ut voluptas nam vel",
       "itaque tenetur",
@@ -74,6 +76,7 @@ export const ourServicesData = [
     ],
     buttonText: "Read More",
     link: "mobile-app-development",
+    reverse: true,
   },
   {
     id: 4,
@@ -90,6 +93,7 @@ export const ourServicesData = [
     ],
     buttonText: "Read More",
     link: "quality-assurance",
+    reverse: false,
   },
   {
     id: 5,
@@ -107,5 +111,6 @@ export const ourServicesData = [
     ],
     buttonText: "Read More",
     link: "seo-optimization",
+    reverse: true,
   },
 ];

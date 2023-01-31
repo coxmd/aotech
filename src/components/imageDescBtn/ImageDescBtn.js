@@ -12,9 +12,14 @@ export default function ImageDescBtn({
   rightArrow = true,
   external = false,
   buttonPresent = false,
+  extraClass = [],
 }) {
   return (
-    <div className={styles["image-description-button__container"]}>
+    <div
+      className={`${styles["image-description-button__container"]} ${
+        extraClass.length > 0 ? extraClass.join(" ") : "default class"
+      }`}
+    >
       <div
         className={
           styles["image-description-button__container__background-img"]

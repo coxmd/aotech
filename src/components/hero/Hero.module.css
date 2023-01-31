@@ -41,6 +41,8 @@
 @media (min-width: 48em) {
   .hero-container {
     height: 50rem; }
+    .hero-container .hero-background-image {
+      clip-path: none; }
     .hero-container div[class*="textbox"] {
       transform: translateY(-50%); } }
 @media (min-width: 51em) {
@@ -60,8 +62,7 @@
   .hero-container {
     height: 60rem; }
     .hero-container .hero-background-image {
-      background-position: 50% 50% !important;
-      clip-path: none; }
+      background-position: 50% 50% !important; }
     .hero-container div[class*="textbox"] {
       width: 100%;
       left: 15%; }
@@ -70,6 +71,11 @@
         width: 45rem; }
       .hero-container div[class*="textbox"] p[class*="subheading"] {
         font-size: 2rem;
-        width: 40rem; } }
+        width: 40rem;
+        margin-bottom: 3rem !important; }
+      .hero-container div[class*="textbox"] a[class*="plain-button__button"]:link, .hero-container div[class*="textbox"] a[class*="plain-button__button"]:visited {
+        font-size: 1.7rem;
+        font-weight: 500;
+        text-transform: capitalize; } }
 
 /*# sourceMappingURL=Hero.module.css.map */

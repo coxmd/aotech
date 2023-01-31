@@ -1,5 +1,5 @@
 //react
-import { useRef, useEffect, useContext } from "react";
+import { React, useRef, useEffect, useContext } from "react";
 
 // components
 import Hero from "../../components/hero/Hero";
@@ -19,9 +19,11 @@ import styles from "./Home.module.css";
 //context
 import { NavbarThemeContext } from "../../contexts/NavbarThemeContext";
 import { FormReducerContextProvider } from "../../contexts/FormReducerContext";
+import { MediaQueryContext } from "../../contexts/MediaQueryContext";
 
 //custom hook
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useMultipleIntersectionObserver from "../../hooks/useMultipleIntersectionObserver";
 
 //data
 import { industryExpertSectionData } from "../../data/ImageDescriptionData";
@@ -33,21 +35,42 @@ import { selectBoxData } from "../../data/FormData";
 import hero from "../../assets/hero.webp";
 import formImage from "../../assets/form.webp";
 import engineer from "../../assets/engineer.webp";
+import OnlyDesignDiv from "../../components/onlyDesignDiv/OnlyDesignDiv";
 
 export default function Home() {
   //create a ref for the hero image
   const heroRef = useRef();
+  const servicesRefs = useRef([]);
+
+  const { allEntries: servicesEntries, observer } =
+    useMultipleIntersectionObserver(servicesRefs, 0.3);
+
   //use custom observer hook to decide if hero image is fully visible on the viewport
-  const { entries } = useIntersectionObserver(heroRef, 0.8);
+  const { entry: heroEntry } = useIntersectionObserver(heroRef, 0.8);
+
   //extract value from the context
   const { setHeroVisible } = useContext(NavbarThemeContext);
+  const { mediaQueryState } = useContext(MediaQueryContext);
+
+  //animations based on if the services are intersecting on the screen
+
+  useEffect(() => {
+    if (servicesEntries) {
+      servicesEntries.forEach((entry) => {
+        if (entry.isIntersecting === true) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+  }, [servicesEntries]);
 
   // based on entries data toggle navbar background color theme
   useEffect(() => {
-    if (entries !== null) {
-      entries.isIntersecting ? setHeroVisible(true) : setHeroVisible(false);
+    if (heroEntry !== null) {
+      heroEntry.isIntersecting ? setHeroVisible(true) : setHeroVisible(false);
     }
-  }, [entries, setHeroVisible]);
+  }, [heroEntry, setHeroVisible]);
 
   return (
     <div className={styles["home"]}>
@@ -81,7 +104,7 @@ export default function Home() {
 
           <PlainDescriptionBox
             description={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores itaque qui consequuntur aut unde, fugiat deleniti"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores itaque qui consequuntur aut unde, fugiat deleniti."
             }
           />
         </div>
@@ -97,6 +120,7 @@ export default function Home() {
                 rightArrow={single.rightArrow}
                 buttonText={single.buttonText}
                 description={single.description}
+                extraClass={single.extraClass}
               />
             );
           })}
@@ -112,28 +136,38 @@ export default function Home() {
           }
         />
 
-        <PlainDescriptionBox description="Veniam saepe ipsum rerum expedita, iste enim unde quas delectus hic amet impedit sit deserunt explicabo! Nesciunt, doloribus quibusdam nisi in sequi est eum maxime ut:" />
+        <div className={styles["desktop-center"]}>
+          <PlainDescriptionBox description="Veniam saepe ipsum rerum expedita, iste enim unde quas delectus hic amet impedit sit deserunt explicabo:" />
+        </div>
 
         <div className={styles["our-services__services"]}>
-          {ourServicesData.map((single) => {
+          {ourServicesData.map((single, i) => {
             return (
-              <div
-                className={styles["our-services__service-container"]}
-                key={single.id}
-              >
-                <Showcase imageSource={single.imageSource} />
-                <HeadingDescBtn
-                  heading={single.title}
-                  description={single.description}
-                  list={single.list}
-                  button={
-                    <PlainButton
-                      toUrl={single.link}
-                      buttonText={single.buttonText}
-                      rightArrow={false}
-                    />
-                  }
-                />
+              <div key={single.id}>
+                <div
+                  ref={(el) => (servicesRefs.current[i] = el)}
+                  className={`${styles["our-services__service-container"]} ${
+                    single.reverse
+                      ? styles["our-services__service-container-reverse"]
+                      : "default class"
+                  }`}
+                >
+                  <Showcase imageSource={single.imageSource} />
+                  <HeadingDescBtn
+                    heading={single.title}
+                    description={single.description}
+                    list={single.list}
+                    button={
+                      <PlainButton
+                        toUrl={single.link}
+                        buttonText={single.buttonText}
+                        rightArrow={false}
+                      />
+                    }
+                  />
+                </div>
+                {mediaQueryState.computerScreenMatches &&
+                  i !== ourServicesData.length - 1 && <OnlyDesignDiv />}
               </div>
             );
           })}

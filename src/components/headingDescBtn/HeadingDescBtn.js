@@ -50,7 +50,7 @@ export default function HeadingDescBtn({
                   styles["heading-desc-btn-textbox__list-of-text__item"]
                 }
               >
-                <span className="highlighted-secondary">-</span> {single}
+                <span className="highlighted-secondary bold">-</span> {single}
               </li>
             );
           })}

@@ -3,7 +3,6 @@
 
 .showcase {
   display: block;
-  width: 100% !important;
   aspect-ratio: 16/8.5;
 
   .showcase__imgbox {
@@ -12,11 +11,3 @@
     height: 100%;
   }
 }
-
-// @media (max-width: 480px) {
-//   .showcase {
-//     [class*="section__title"] {
-//       text-align: center;
-//     }
-//   }
-// }

@@ -9,6 +9,10 @@
   color: $secondary;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 ul {
   @include list-reset();
 }
@@ -21,5 +25,19 @@ ul {
     p {
       text-align: left;
     }
+  }
+}
+
+.show {
+  div[class*="showcase"] {
+    div[class*="showcase__imgbox"] {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  div[class*="textbox"] {
+    opacity: 1;
+    transform: translate(0%, 0%);
   }
 }

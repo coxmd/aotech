@@ -2,13 +2,13 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function useIntersectionObserver(ref, threshold = 0) {
-  const [entriesState, setEntriesState] = useState(null);
+  const [entryState, setEntryState] = useState(null);
   const observerRef = useRef();
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       ([currentEntry]) => {
-        setEntriesState(currentEntry);
+        setEntryState(currentEntry);
       },
       {
         threshold: threshold,
@@ -26,5 +26,5 @@ export default function useIntersectionObserver(ref, threshold = 0) {
     };
   }, [ref]);
 
-  return { entries: entriesState };
+  return { entry: entryState, observer: observerRef.current };
 }

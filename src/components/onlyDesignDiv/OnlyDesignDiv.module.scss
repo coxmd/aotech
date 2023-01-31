@@ -1,0 +1,15 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.only-design-div {
+  padding: 6rem 0;
+  @include flexRow();
+  justify-content: center;
+  align-items: center;
+
+  &__core {
+    width: 15rem;
+    height: 0.3rem;
+    background-color: $primary;
+  }
+}

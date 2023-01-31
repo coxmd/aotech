@@ -66,6 +66,10 @@
   .hero-container {
     height: 50rem;
 
+    .hero-background-image {
+      clip-path: none;
+    }
+
     div[class*="textbox"] {
       transform: translateY(-50%);
     }
@@ -102,7 +106,6 @@
 
     .hero-background-image {
       background-position: 50% 50% !important;
-      clip-path: none;
     }
 
     div[class*="textbox"] {
@@ -117,6 +120,16 @@
       p[class*="subheading"] {
         font-size: 2rem;
         width: 40rem;
+        margin-bottom: 3rem !important;
+      }
+
+      a[class*="plain-button__button"] {
+        &:link,
+        &:visited {
+          font-size: 1.7rem;
+          font-weight: 500;
+          text-transform: capitalize;
+        }
       }
     }
   }

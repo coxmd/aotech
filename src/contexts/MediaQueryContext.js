@@ -8,10 +8,10 @@ export const MediaQueryContext = createContext();
 const mobile = "(max-width: 480px)";
 const mobileQuery = window.matchMedia(mobile);
 
-const smallTablet = "(min-width: 481px) and (max-width: 768px)";
+const smallTablet = "(min-width: 481px) and (max-width: 767px)";
 const smallTabletQuery = window.matchMedia(smallTablet);
 
-const largeTablet = "(min-width: 769px) and (max-width: 1024px)";
+const largeTablet = "(min-width: 768px) and (max-width: 1024px)";
 const largeTabletQuery = window.matchMedia(largeTablet);
 
 const computerScreen = "(min-width: 1025px)";

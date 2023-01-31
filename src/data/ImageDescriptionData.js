@@ -12,6 +12,7 @@ export const industryExpertSectionData = [
     rightArrow: false,
     buttonText: "Maintain Industry standards",
     toUrl: "industry-standards",
+    extraClass: ["darkbutton"],
   },
   {
     id: 1,
@@ -22,5 +23,6 @@ export const industryExpertSectionData = [
     rightArrow: false,
     buttonText: "Industry Expert Enginners",
     toUrl: "industry-experts",
+    extraClass: [],
   },
 ];

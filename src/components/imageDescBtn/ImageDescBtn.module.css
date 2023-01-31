@@ -23,15 +23,17 @@
     opacity: 0;
     transition: all 0.2s ease-out; }
   .image-description-button__container__button-container {
-    flex-basis: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-    transition: all 0.2s ease-out; }
+    flex-basis: 20%; }
     .image-description-button__container__button-container__button:link, .image-description-button__container__button-container__button:visited {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
       color: #fff;
       font-size: 1.7rem;
-      text-decoration: none; }
+      text-decoration: none;
+      background-color: gray;
+      transition: all 0.2s ease-out; }
 
 /*# sourceMappingURL=ImageDescBtn.module.css.map */

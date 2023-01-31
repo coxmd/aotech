@@ -23,8 +23,7 @@
   .heading-desc-btn-textbox__list-of-text {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
-    gap: 1rem; }
+    flex-direction: column; }
   .heading-desc-btn-textbox .button-group {
     display: flex;
     flex-direction: row;
