@@ -4,13 +4,10 @@
 .form-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/22;
+  aspect-ratio: 16/21;
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
   padding: 2.5rem;
   overflow: hidden !important;
-  backdrop-filter: blur(
-    0px
-  ); // because the blur filter of form element extends beyond the clipped path
 
   &__imgbox {
     width: 100%;
@@ -21,36 +18,56 @@
     background-repeat: no-repeat !important;
     background-position: 50% 100% !important;
     background-size: cover !important;
+    padding: 2rem;
+    backdrop-filter: blur(
+      0px
+    ); // because the blur filter of form element extends beyond the clipped path
   }
 
   &__form {
-    display: block;
     width: 100%;
     height: 100%;
     background-color: rgba($darkText, 0.85);
-    backdrop-filter: blur(0.4rem);
+    backdrop-filter: blur(0.2rem);
     clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%) !important;
-    position: relative;
-    transition: $basic;
     overflow: hidden !important;
+    position: relative;
+    // transition: $basic;
+
+    label {
+      span {
+        font-size: 1.5rem;
+      }
+
+      input {
+        font-size: 1.4rem !important;
+
+        &::placeholder {
+          font-size: 1.4rem !important;
+        }
+      }
+
+      select {
+        font-size: 1.4rem !important;
+      }
+    }
 
     &__basic-information,
     &__additional-information,
     &__success-message {
       @include flexColumn();
       width: 100%;
+      height: 100%;
       position: absolute;
-      gap: 2.5rem;
+      gap: 2rem;
       top: 0;
       left: 0;
       padding: 5.5rem 3rem;
-      transition: all 0.4s;
     }
 
     &__success-message {
       gap: 0 !important;
       color: $white;
-      padding: 3rem;
       align-items: center;
 
       &__checkbox {
@@ -85,22 +102,19 @@
         margin-bottom: 2.5rem;
       }
     }
-
-    div[class*="submit-button"] {
-      margin-top: 1rem;
-    }
   }
 }
 
 .visible {
   opacity: 1;
   visibility: visible;
-  transition: all 0.4s 0.4s;
+  transition: all 0.2s 0.2s;
 }
 
 .hidden {
   opacity: 0;
   visibility: collapse;
+  transition: all 0.2s;
 }
 
 .final-background {
@@ -110,32 +124,24 @@
 
 @media (max-width: 24em) {
   .form-container {
-    aspect-ratio: 16/24;
-
-    &__form {
-      &__basic-information,
-      &__additional-information,
-      &__success-message {
-        padding: 5.5rem 2.2rem;
-      }
-    }
+    aspect-ratio: 16/22;
   }
 }
 
 @media (min-width: 27em) {
   .form-container {
-    aspect-ratio: 16/21 !important;
+    aspect-ratio: 16/19 !important;
   }
 }
 @media (min-width: 30em) {
   .form-container {
-    aspect-ratio: 16/18 !important;
+    aspect-ratio: 16/17 !important;
 
     &__form {
       &__basic-information,
       &__additional-information,
       &__success-message {
-        padding: 5.5rem 3rem;
+        padding: 5.5rem 4rem;
       }
     }
   }
@@ -143,11 +149,13 @@
 
 @media (min-width: 37em) {
   .form-container {
-    aspect-ratio: 16/15 !important;
+    aspect-ratio: 16/14 !important;
 
     &__form {
       label {
-        font-size: 1.7rem;
+        span {
+          font-size: 1.7rem;
+        }
 
         input::placeholder {
           font-size: 1.5rem !important;
@@ -158,13 +166,154 @@
           font-size: 1.5rem !important;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 45em) {
+  .form-container {
+    aspect-ratio: 16/12 !important;
+  }
+}
+
+@media (min-width: 48em) {
+  .form-container {
+    aspect-ratio: 16/11 !important;
+    @include flexRow();
+    align-items: center;
+    gap: 2.5rem;
+    position: static;
+    width: 100%;
+    clip-path: none;
+    padding: 0;
+    overflow: hidden !important;
+    backdrop-filter: unset;
+
+    .section-title-and-description {
+      flex-basis: 50%;
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+
+    &__imgbox {
+      clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+      flex-basis: 50%;
+      position: static;
+      top: unset;
+      left: unset;
+      transform: translateX(10%);
+      opacity: 0;
+    }
+
+    &__form {
+      &__basic-information,
+      &__additional-information,
+      &__success-message {
+        padding: 5.5rem 3rem;
+      }
+
+      label {
+        span {
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+
+        input {
+          font-size: 1.4rem !important;
+
+          &::placeholder {
+            font-size: 1.4rem !important;
+          }
+        }
+
+        select {
+          font-size: 1.4rem !important;
+        }
+
+        p[class*="error"] {
+          font-size: 1.4rem !important;
+        }
+      }
+
+      &__success-message {
+        &__checkbox {
+          margin-bottom: 3rem;
+        }
+
+        &__details {
+          font-size: 1.45rem;
+          line-height: 1.5;
+          font-weight: 400 !important;
+          letter-spacing: 0.02rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  .form-container {
+    aspect-ratio: 16/10 !important;
+  }
+}
+
+@media (min-width: 62em) {
+  .form-container {
+    aspect-ratio: 16/8.2 !important;
+    gap: 5rem;
+
+    &__imgbox {
+      background-position: 0% 80% !important;
+    }
+  }
+}
+
+@media (min-width: 64em) {
+  .form-container {
+    aspect-ratio: 16/8 !important;
+    justify-content: space-evenly;
+    gap: 2rem;
+
+    .section-title-and-description {
+      flex-basis: 50% !important;
+    }
+    &__form {
+      clip-path: unset !important;
 
       &__basic-information,
       &__additional-information,
       &__success-message {
-        padding: 5.5rem 4rem;
+        padding: 3rem;
       }
     }
+
+    &__imgbox {
+      padding: 2.5rem;
+      flex-basis: 50%;
+      height: 100%;
+      clip-path: unset !important;
+      background-position: 0% 50% !important;
+    }
+  }
+}
+@media (min-width: 65em) {
+  .form-container {
+    aspect-ratio: 16/7.5 !important;
+
+    .section-title-and-description {
+      flex-basis: 50% !important;
+    }
+
+    &__imgbox {
+      padding: 2.5rem;
+      flex-basis: 50%;
+    }
+  }
+}
+@media (min-width: 77em) {
+  .form-container {
+    aspect-ratio: 16/6.7 !important;
+    gap: 2.5rem;
   }
 }
 

@@ -1,12 +1,13 @@
 .selectbox-container {
   width: 100%; }
+  .selectbox-container__label {
+    margin-bottom: 1.2rem; }
   .selectbox-container label {
     display: inline-flex;
     flex-direction: column;
     width: 100%;
     font-size: 1.65rem;
     color: #fff;
-    gap: 1rem;
     letter-spacing: 0.05rem; }
   .selectbox-container span[class*="highlighted-secondary"] {
     font-size: 2rem; }
@@ -29,7 +30,8 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    transition: all 0.2s ease-out; }
+    transition: all 0.2s ease-out;
+    margin-bottom: 1rem; }
     .selectbox-container select * {
       background-color: #222222;
       border: none !important;

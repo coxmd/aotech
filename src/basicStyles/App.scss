@@ -52,6 +52,15 @@ ul {
   opacity: 1;
 }
 
+.show-form-section {
+  div[class*="section-title-and-description"],
+  div[class*="imgbox"] {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: all 0.8s ease-out;
+  }
+}
+
 @media (min-width: 37em) {
   .reverse {
     flex-direction: column !important;

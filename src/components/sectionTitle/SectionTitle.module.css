@@ -31,6 +31,6 @@
         transform: translateX(-55%); } }
 @media (min-width: 64em) {
   .section-title-box__section-title {
-    font-size: 4rem; } }
+    font-size: 4rem !important; } }
 
 /*# sourceMappingURL=SectionTitle.module.css.map */

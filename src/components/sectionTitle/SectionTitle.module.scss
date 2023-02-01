@@ -46,7 +46,7 @@
 @media (min-width: 64em) {
   .section-title-box {
     &__section-title {
-      font-size: 4rem;
+      font-size: 4rem !important;
     }
   }
 }

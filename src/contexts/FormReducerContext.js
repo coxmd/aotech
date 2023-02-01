@@ -98,10 +98,10 @@ export function FormReducerContextProvider({ children }) {
   const [formFinalState, dispatch] = useReducer(formReducer, formState);
 
   const selectBoxResetFunctions = [
-    function (e) {
+    function () {
       dispatch({ type: "resetServiceError" });
     },
-    function (e) {
+    function () {
       dispatch({ type: "resetTimeError" });
     },
   ];

@@ -42,25 +42,29 @@ export default function Home() {
   const heroRef = useRef();
   const servicesRefs = useRef([]);
   const testimonialSectionRef = useRef();
+  const formSectionRef = useRef();
 
-  //use custom observer hook to decide if hero image is fully visible on the viewport
+  //use custom observer hook to check if hero image is fully visible on the viewport
   const { entry: heroEntry } = useIntersectionObserver(heroRef, 0.8);
 
-  //use custom observer hook to decide if the services are becoming visible on the viewport
+  //use custom observer hook to check if the services are becoming visible on the viewport
   const { allEntries: servicesEntries, observer: servicesObserver } =
     useMultipleIntersectionObserver(servicesRefs, 0.4);
 
-  //use custom observer hook to decide if testimonial section is becoming visible on the viewport
+  //use custom observer hook to check if testimonial section is becoming visible on the viewport
   const {
     entry: testimonialSectionEntry,
     observer: testimonialSectionObserver,
   } = useIntersectionObserver(testimonialSectionRef, 0);
 
+  //use custom observer hook to check if form section is becoming visible on the viewport
+  const { entry: formSectionEntry, observer: formSectionObserver } =
+    useIntersectionObserver(formSectionRef, 0.3);
+
   //extract value from the context
   const { setHeroVisible } = useContext(NavbarThemeContext);
   const { mediaQueryState } = useContext(MediaQueryContext);
 
-  console.log(0);
   // based on entries data toggle navbar background color theme
   useEffect(() => {
     if (heroEntry !== null) {
@@ -80,6 +84,7 @@ export default function Home() {
     }
   }, [servicesEntries, servicesObserver]);
 
+  //animations based on if the testimonials are intersecting on the screen
   useEffect(() => {
     if (testimonialSectionEntry) {
       if (testimonialSectionEntry.isIntersecting === true) {
@@ -90,6 +95,16 @@ export default function Home() {
       }
     }
   }, [testimonialSectionEntry, testimonialSectionObserver]);
+
+  //animations based on if the testimonials are intersecting on the screen
+  useEffect(() => {
+    if (formSectionEntry) {
+      if (formSectionEntry.isIntersecting === true) {
+        formSectionEntry.target.classList.add("show-form-section");
+        formSectionObserver.unobserve(formSectionEntry.target);
+      }
+    }
+  }, [formSectionEntry, formSectionObserver]);
 
   return (
     <div className={styles["home"]}>
@@ -232,17 +247,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section id={"signup-form"} className={styles["form-section"]}>
-        <SectionTitle
-          title={
-            <>
-              Get Free consultation<span className="highlighted">.</span>
-            </>
-          }
-        />
-        <PlainDescriptionBox description="Perspiciatis nemo officia commodi saepe laudantium  tempora." />
+      {(mediaQueryState.largeTabletMatches ||
+        mediaQueryState.computerScreenMatches) && <OnlyDesignDiv />}
+
+      <section
+        ref={formSectionRef}
+        id={"signup-form"}
+        className={styles["form-section"]}
+      >
         <FormReducerContextProvider>
-          <Form additionalData={{ selectBoxData }} imageSource={formImage} />
+          <Form
+            additionalData={{ selectBoxData }}
+            imageSource={formImage}
+            sectionTitle={
+              <SectionTitle
+                title={
+                  <>
+                    Get Free consultation<span className="highlighted">.</span>
+                  </>
+                }
+              />
+            }
+            description={
+              <div className={styles["desktop-center"]}>
+                <PlainDescriptionBox description="Perspiciatis nemo officia commodi saepe laudantium  tempora." />
+              </div>
+            }
+          />
         </FormReducerContextProvider>
       </section>
 
