@@ -100,6 +100,52 @@
   margin-bottom: 6rem;
 }
 
+@media (min-width: 37em) {
+  .desktop-center {
+    // make the plain description box centered and also center align the text inside it.
+    width: 55rem !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .industry-expert {
+    &__heading-and-description {
+      div[class*="section-title-box"] {
+        align-self: flex-start;
+
+        h2[class*="section-title"] {
+          margin: 0 0 2.5rem 2.5rem;
+          text-align: left !important;
+          &::before {
+            left: 0;
+            transform: translateX(0%);
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    width: 100%;
+    padding: 0 1rem;
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: all 0.4s ease-out;
+
+    div[class*="plain-description-box"] {
+      margin-bottom: 5rem;
+    }
+
+    &__all-testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      row-gap: 5rem;
+    }
+  }
+}
+
 @media (min-width: 48em) {
   .industry-expert {
     display: flex;
@@ -116,7 +162,7 @@
     &__heading-and-description {
       div[class*="section-title-box"] {
         flex-basis: 50%;
-        align-items: flex-start;
+        align-self: flex-start;
         justify-content: left;
 
         h2[class*="section-title"] {
@@ -129,9 +175,9 @@
         }
       }
 
-      div[class*="plain-description-box"] {
+      & > div[class*="plain-description-box"] {
         flex-basis: 50%;
-        @include flexRow();
+        align-self: stretch;
 
         p[class*="plain-description-box__description"] {
           padding: 3.5rem;
@@ -161,15 +207,99 @@
       height: 30rem;
     }
   }
-}
 
-@media (min-width: 64em) {
-  .desktop-center {
-    width: 55rem !important;
-    margin: 0 auto;
-    text-align: center;
+  .our-services {
+    overflow-x: hidden;
+
+    &__service-container {
+      margin: 0;
+      padding: 0 3rem;
+      @include flexRow();
+      align-items: center;
+      gap: 3rem;
+
+      div[class*="showcase"] {
+        flex-basis: 50%;
+
+        div[class*="showcase__imgbox"] {
+          box-shadow: 0 0 2rem rgba($darkText, 0.2);
+          transform: translateX(-10%);
+          opacity: 0;
+          transition: all 0.8s ease-out;
+        }
+      }
+
+      div[class*="textbox"] {
+        padding: 0;
+        margin: 0;
+        flex-basis: 50%;
+        width: unset;
+        border-inline: none;
+        transform: translate(10%, 0%);
+        opacity: 0;
+        transition: all 0.8s ease-out;
+      }
+
+      h3[class*="heading"] {
+        font-size: 2.5rem;
+        font-weight: 500 !important;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+        color: $darkText;
+      }
+
+      p[class*="description"] {
+        line-height: 1.4;
+        font-weight: 300;
+        font-size: 1.45rem;
+        margin-bottom: 1.5rem;
+        color: $darkText;
+      }
+
+      ul {
+        display: flex !important ;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+
+        li {
+          font-size: 1.45rem;
+          font-weight: 400;
+          color: $darkText;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    &__service-container-reverse {
+      flex-direction: row-reverse;
+
+      div[class*="showcase"] {
+        div[class*="showcase__imgbox"] {
+          transform: translateX(10%);
+        }
+      }
+
+      div[class*="textbox"] {
+        opacity: 0;
+        transform: translate(-10%, 0%);
+        left: initial;
+      }
+    }
   }
 
+  .testimonial {
+    max-width: 80rem; // because there needs to be 2 rem of padding on both side, can't do it with margin because margin auto is centering the element
+    padding: 0 5rem;
+    margin: 0 auto $sectionMargin;
+
+    &__all-testimonials {
+      gap: 5rem;
+    }
+  }
+}
+
+@media (min-width: 62em) {
   .our-services {
     &__service-container {
       position: relative;
@@ -253,19 +383,16 @@
       }
     }
   }
+}
 
+@media (min-width: 64em) {
   .testimonial {
-    max-width: 120rem;
-    margin: 0 auto;
-    margin-bottom: $sectionMargin;
-    opacity: 0;
-    transform: translateY(5rem);
-    transition: all 0.4s ease-out;
-
+    max-width: 124rem;
+    // margin: 0 auto;
+    padding: 0 2rem;
     &__all-testimonials {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-      gap: 3rem;
+      gap: 2rem;
+      row-gap: 4rem;
     }
   }
 }

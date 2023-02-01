@@ -30,10 +30,11 @@ export default function Form({ imageSource = "", additionalData = undefined }) {
   return (
     <div
       className={styles["form-container"]}
-      style={{
-        background: `url(${imageSource})`,
-      }}
+      
     >
+      <div className={styles["form-container__imgbox"]} style={{
+        background: `url(${imageSource})`,
+      }}></div>
       <form
         noValidate
         className={`${styles["form-container__form"]} ${

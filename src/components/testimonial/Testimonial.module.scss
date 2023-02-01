@@ -47,8 +47,9 @@
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 37em) {
   .testimonial {
+    width: 28rem;
     @include flexColumn();
     align-items: center;
     margin: 0;
@@ -63,7 +64,7 @@
       flex-basis: unset;
       aspect-ratio: unset;
       background-size: cover !important;
-      border: 1rem solid $white;
+      border: 0.6rem solid $white;
       background-position: 50% 0% !important;
       transform: translateY(-3rem);
       margin-bottom: -3rem;

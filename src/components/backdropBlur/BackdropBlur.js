@@ -15,11 +15,7 @@ export default function BackdropBlur({
   return (
     <div
       onClick={handleCloseClick}
-      className={`${
-        mediaQueryState.computerScreenMatches
-          ? styles["backdrop-blur-short"]
-          : styles["backdrop-blur-long"]
-      }
+      className={`${styles["backdrop-blur-long"]}
      ${open ? styles["show"] : "hide"}
         `}
     ></div>

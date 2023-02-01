@@ -27,12 +27,14 @@
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 37em) {
   .section-title-box {
     @include flexRow();
     justify-content: center;
 
     &__section-title {
+      font-size: 3rem;
+
       &::before {
         left: 50%;
         transform: translateX(-55%);

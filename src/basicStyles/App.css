@@ -33,7 +33,7 @@ ul {
   transform: translate(0%, 0%);
   opacity: 1; }
 
-@media (min-width: 64em) {
+@media (min-width: 37em) {
   .reverse {
     flex-direction: column !important; }
     .reverse div[class*="text-container"] {

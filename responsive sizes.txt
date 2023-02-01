@@ -1,0 +1,32 @@
+320 px
+
+346 px
+
+360 px
+
+375 px
+
+390 px
+
+432 px
+
+504 px
+
+600px = 37em
+
+768px = 48em
+
+800px = 50em
+
+854px
+
+1000px
+
+1024px
+
+
+
+mobile max width 480px
+small tab 481px to 768px
+large tab 769px to 1024px
+computer 1025px +

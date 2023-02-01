@@ -185,7 +185,8 @@ export default function Home() {
                     }
                   />
                 </div>
-                {mediaQueryState.computerScreenMatches &&
+                {(mediaQueryState.largeTabletMatches ||
+                  mediaQueryState.computerScreenMatches) &&
                   i !== ourServicesData.length - 1 && <OnlyDesignDiv />}
               </div>
             );
@@ -216,7 +217,15 @@ export default function Home() {
                 oneLiner={single.oneLiner}
                 details={single.details}
                 extraClass={single.extraClass}
-                extraInlineStyle={{ transition: `all 0.4s ${i * 0.2}s` }}
+                extraInlineStyle={
+                  mediaQueryState.computerScreenMatches
+                    ? {
+                        transition: `all 0.4s ${0.2 + i * 0.3}s ease-out`,
+                      }
+                    : {
+                        transition: `all 0.4s ease-out`,
+                      }
+                }
               />
             );
           })}
