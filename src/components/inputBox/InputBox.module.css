@@ -1,8 +1,13 @@
 .inputbox-container {
   width: 100%; }
   .inputbox-container label {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     font-size: 1.5rem;
     color: #fff;
@@ -14,12 +19,14 @@
     font-size: 1.4rem;
     letter-spacing: 0.05rem;
     color: #ff2e2e;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-top: 1rem; }
   .inputbox-container__success {
     font-size: 1.4rem;
     letter-spacing: 0.05rem;
     color: #fff;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-top: 1rem; }
   .inputbox-container__label {
     margin-bottom: 1.2rem; }
   .inputbox-container input,
@@ -37,11 +44,28 @@
     color: #222222;
     letter-spacing: 0.02rem;
     -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
     opacity: 0.7;
-    transition: all 0.2s ease-out;
-    margin-bottom: 1rem; }
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    .inputbox-container input::-webkit-input-placeholder,
+    .inputbox-container input[type="text"]::-webkit-input-placeholder,
+    .inputbox-container input[type="email"]::-webkit-input-placeholder,
+    .inputbox-container input[type="tel"]::-webkit-input-placeholder, .inputbox-container__input::-webkit-input-placeholder {
+      color: gray;
+      font-size: 1.3rem; }
+    .inputbox-container input:-ms-input-placeholder,
+    .inputbox-container input[type="text"]:-ms-input-placeholder,
+    .inputbox-container input[type="email"]:-ms-input-placeholder,
+    .inputbox-container input[type="tel"]:-ms-input-placeholder, .inputbox-container__input:-ms-input-placeholder {
+      color: gray;
+      font-size: 1.3rem; }
+    .inputbox-container input::-ms-input-placeholder,
+    .inputbox-container input[type="text"]::-ms-input-placeholder,
+    .inputbox-container input[type="email"]::-ms-input-placeholder,
+    .inputbox-container input[type="tel"]::-ms-input-placeholder, .inputbox-container__input::-ms-input-placeholder {
+      color: gray;
+      font-size: 1.3rem; }
     .inputbox-container input::placeholder,
     .inputbox-container input[type="text"]::placeholder,
     .inputbox-container input[type="email"]::placeholder,

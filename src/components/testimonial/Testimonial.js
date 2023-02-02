@@ -20,7 +20,6 @@ export default function Testimonial({
 
   useEffect(() => {
     if (entry) {
-      console.log(entry);
       if (entry.isIntersecting === true) {
         entry.target.classList.add("show-testimonial-elements");
         observer.unobserve(entry.target);

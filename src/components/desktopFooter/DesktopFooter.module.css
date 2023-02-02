@@ -1,0 +1,138 @@
+.desktop-footer {
+  padding: 3rem;
+  margin-top: auto;
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important; }
+  .desktop-footer__container {
+    background-color: rgba(34, 34, 34, 0.85);
+    padding: 2.5rem; }
+    .desktop-footer__container > div[class*="address-main"] {
+      background-color: transparent !important;
+      -webkit-backdrop-filter: none !important;
+              backdrop-filter: none !important;
+      text-align: left;
+      aspect-ratio: unset;
+      margin-bottom: 4rem;
+      padding: 0; }
+  .desktop-footer__top {
+    margin-bottom: 6rem; }
+    .desktop-footer__top__links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      row-gap: 4rem;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .desktop-footer__top__links > div {
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%; }
+      .desktop-footer__top__links > div[class*="link-group"] {
+        gap: 1.6rem; }
+        .desktop-footer__top__links > div[class*="link-group"] h3[class*="link-group__heading"] {
+          font-size: 1.7rem;
+          font-weight: 500;
+          letter-spacing: 0.02rem !important; }
+        .desktop-footer__top__links > div[class*="link-group"] ul a:link,
+        .desktop-footer__top__links > div[class*="link-group"] ul a:visited {
+          font-weight: 300; }
+        .desktop-footer__top__links > div[class*="link-group"] ul a:hover,
+        .desktop-footer__top__links > div[class*="link-group"] ul a:active {
+          color: #0099a8; }
+  .desktop-footer__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 4rem; }
+    .desktop-footer__bottom > div {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
+    .desktop-footer__bottom__image-buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 1.5rem; }
+    .desktop-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] {
+      gap: 2rem !important; }
+      .desktop-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:link,
+      .desktop-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:visited {
+        color: #fff;
+        letter-spacing: 0.02rem;
+        font-size: 1.4rem;
+        font-weight: 500; }
+      .desktop-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:hover,
+      .desktop-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] a:active {
+        color: #0099a8 !important; }
+    .desktop-footer__bottom__copyright-info--details {
+      color: #fff;
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem; }
+
+@media (min-width: 53em) {
+  .desktop-footer__container {
+    padding: 4rem; } }
+@media (min-width: 62em) {
+  .desktop-footer__top__links {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .desktop-footer__top__links > div {
+      -ms-flex-preferred-size: unset;
+          flex-basis: unset; }
+  .desktop-footer__bottom {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-column-gap: 15rem;
+            column-gap: 15rem; }
+    .desktop-footer__bottom > div {
+      -ms-flex-preferred-size: unset;
+          flex-basis: unset; }
+    .desktop-footer__bottom__buttons div[class*="link-group"] ul[class*="link-group__list"] {
+      -webkit-box-orient: horizontal !important;
+      -webkit-box-direction: normal !important;
+          -ms-flex-direction: row !important;
+              flex-direction: row !important; } }
+@media (min-width: 77em) {
+  .desktop-footer__top__links {
+    gap: 9rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .desktop-footer__top__links > div[class*="link-group"] {
+      gap: 2rem; }
+      .desktop-footer__top__links > div[class*="link-group"] h3[class*="link-group__heading"] {
+        font-size: 2.1rem; }
+      .desktop-footer__top__links > div[class*="link-group"] ul {
+        gap: 1.5rem; }
+        .desktop-footer__top__links > div[class*="link-group"] ul a:link,
+        .desktop-footer__top__links > div[class*="link-group"] ul a:visited {
+          font-size: 1.5rem; }
+  .desktop-footer__bottom {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 0; }
+    .desktop-footer__bottom > div {
+      -ms-flex-preferred-size: unset;
+          flex-basis: unset; }
+    .desktop-footer__bottom__image-buttons {
+      gap: 2.25rem; } }
+
+/*# sourceMappingURL=DesktopFooter.module.css.map */

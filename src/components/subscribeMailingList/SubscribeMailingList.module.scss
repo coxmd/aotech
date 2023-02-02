@@ -7,54 +7,36 @@
   margin-bottom: $sectionMargin;
   @include flexColumn();
   align-items: center;
-  position: relative;
-
-  &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 45%;
-    aspect-ratio: 16/16;
-    background-position: 50% 50% !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    border-radius: 50%;
-    border: 0.75rem solid white;
-    transform: translate(-20%, -20%);
-  }
 
   &__textbox {
     width: 100%;
     background-color: $primary;
-    padding-bottom: 3rem;
+    padding: 2.5rem;
     @include flexColumn();
+    letter-spacing: 0.02rem;
+    color: $white;
 
     &__heading {
       font-size: 2.5rem;
-      width: 70%;
-      color: $white;
-      padding: 2rem 1.25rem 2rem 0.75rem;
+      width: 100%;
+      letter-spacing: inherit;
       font-weight: 500;
       text-align: center;
-      margin-bottom: 1rem;
-      margin-left: auto;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
     }
 
     &__details {
       font-size: 1.45rem;
       line-height: 1.4;
-      letter-spacing: 0.02rem;
-      color: $white;
-      padding: 0 2.5rem;
+      letter-spacing: inherit;
       font-weight: 400;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     form {
-      padding: 0 2.5rem;
-
       div[class*="inputbox-container"] {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
         p[class*="inputbox-container__error"] {
           color: $white;
@@ -89,6 +71,103 @@
 
           &:disabled:active {
             background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 30em) {
+  .subscribe-mailing-list-container {
+    width: unset;
+    max-width: 42.5rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .subscribe-mailing-list-container {
+    max-width: 50rem;
+
+    &__textbox {
+      padding: 3rem;
+
+      &__heading {
+        font-size: 2.6rem;
+        margin-bottom: 2.5rem;
+      }
+
+      &__details {
+        font-size: 1.45rem;
+        margin-bottom: 1rem;
+      }
+
+      form {
+        div[class*="inputbox-container"] {
+          margin-bottom: 2.5rem;
+        }
+
+        input {
+          font-size: 1.45rem;
+
+          &::placeholder {
+            font-size: 1.45rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 62em) {
+  .subscribe-mailing-list-container {
+    max-width: 60rem;
+
+    &__textbox {
+      padding: 4rem 5rem;
+
+      &__heading {
+        margin-bottom: 2rem;
+      }
+
+      &__details {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      form {
+        div[class*="inputbox-container"] {
+          margin-bottom: 3rem;
+        }
+
+        input {
+          font-size: 1.45rem;
+
+          &::placeholder {
+            font-size: 1.45rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 64em) {
+  .subscribe-mailing-list-container {
+    &__textbox {
+      &__heading {
+        font-size: 4rem;
+      }
+
+      &__details {
+        font-size: 1.5rem !important;
+      }
+
+      form {
+        input {
+          font-size: 1.5rem !important;
+
+          &::placeholder {
+            font-size: 1.5rem !important;
           }
         }
       }

@@ -1,6 +1,7 @@
 .mobile-footer {
   background-color: #af0061;
-  padding: 0rem 0rem 3rem; }
+  padding: 0rem 0rem 3rem;
+  margin-top: auto; }
   .mobile-footer__address-part {
     margin-bottom: 3rem;
     background-position: 50% 50% !important;
@@ -13,12 +14,19 @@
     margin-bottom: 5rem;
     padding: 0 2rem; }
     .mobile-footer__top__links {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       gap: 3rem; }
   .mobile-footer__bottom {
     padding: 0 2rem; }
     .mobile-footer__bottom__image-buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       gap: 1.5rem;
       margin-bottom: 4rem; }

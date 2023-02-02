@@ -8,12 +8,14 @@
     background-repeat: no-repeat !important;
     background-position: 79% 100% !important;
     background-size: cover !important;
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%); }
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%); }
   .hero-container div[class*="textbox"] {
     width: 73%;
     position: absolute;
     top: 50%;
-    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
     left: 2.5rem;
     color: #fff; }
     .hero-container div[class*="textbox"] p[class*="short-introduction"] {
@@ -42,9 +44,11 @@
   .hero-container {
     height: 50rem; }
     .hero-container .hero-background-image {
-      clip-path: none; }
+      -webkit-clip-path: none;
+              clip-path: none; }
     .hero-container div[class*="textbox"] {
-      transform: translateY(-50%); } }
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); } }
 @media (min-width: 51em) {
   .hero-container {
     height: 60rem;

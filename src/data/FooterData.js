@@ -1,32 +1,92 @@
-import twitterLogo from "../assets/twitter.png";
-import facebookLogo from "../assets/facebook.png";
-import instagramLogo from "../assets/instagram.png";
-import youtubeLogo from "../assets/youtube.png";
+import twitterLogoPrimary from "../assets/twitter-primary.png";
+import facebookLogoPrimary from "../assets/facebook-primary.png";
+import instagramLogoPrimary from "../assets/instagram-primary.png";
+import youtubeLogoPrimary from "../assets/youtube-primary.png";
+import linkedinLogoPrimary from "../assets/linkedin-primary.png";
+import tiktokLogoPrimary from "../assets/tiktok-primary.png";
 
-export const logoButtonData = [
+import twitterLogoDarktext from "../assets/twitter-darktext.png";
+import facebookLogoDarktext from "../assets/facebook-darktext.png";
+import instagramLogoDarktext from "../assets/instagram-darktext.png";
+import youtubeLogoDarktext from "../assets/youtube-darktext.png";
+import linkedinLogoDarktext from "../assets/linkedin-darktext.png";
+import tiktokLogoDarktext from "../assets/tiktok-darktext.png";
+
+export const logoButtonDataPrimary = [
   {
     id: 0,
-    source: twitterLogo,
+    source: twitterLogoPrimary,
     link: "https://twitter.com",
     title: "Link for twitter",
   },
   {
     id: 1,
-    source: facebookLogo,
+    source: facebookLogoPrimary,
     link: "https://www.facebook.com",
     title: "Link for facebook",
   },
   {
     id: 2,
-    source: youtubeLogo,
+    source: youtubeLogoPrimary,
     link: "https://www.youtube.com",
     title: "Link for youtube",
   },
   {
     id: 3,
-    source: instagramLogo,
+    source: instagramLogoPrimary,
     link: "https://www.instagram.com/",
     title: "Link for instagram",
+  },
+  {
+    id: 4,
+    source: linkedinLogoPrimary,
+    link: "https://www.linkedin.com/",
+    title: "Link for linkedin",
+  },
+  {
+    id: 5,
+    source: tiktokLogoPrimary,
+    link: "https://www.tiktok.com/",
+    title: "Link for tiktok",
+  },
+];
+
+export const logoButtonDataDarktext = [
+  {
+    id: 0,
+    source: twitterLogoDarktext,
+    link: "https://twitter.com",
+    title: "Link for twitter",
+  },
+  {
+    id: 1,
+    source: facebookLogoDarktext,
+    link: "https://www.facebook.com",
+    title: "Link for facebook",
+  },
+  {
+    id: 2,
+    source: youtubeLogoDarktext,
+    link: "https://www.youtube.com",
+    title: "Link for youtube",
+  },
+  {
+    id: 3,
+    source: instagramLogoDarktext,
+    link: "https://www.instagram.com/",
+    title: "Link for instagram",
+  },
+  {
+    id: 4,
+    source: linkedinLogoDarktext,
+    link: "https://www.linkedin.com/",
+    title: "Link for linkedin",
+  },
+  {
+    id: 5,
+    source: tiktokLogoDarktext,
+    link: "https://www.tiktok.com/",
+    title: "Link for tiktok",
   },
 ];
 

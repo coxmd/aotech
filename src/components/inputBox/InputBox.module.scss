@@ -23,6 +23,7 @@
     letter-spacing: 0.05rem;
     color: $error;
     font-weight: 400;
+    margin-top: 1rem;
   }
 
   &__success {
@@ -30,6 +31,7 @@
     letter-spacing: 0.05rem;
     color: $white;
     font-weight: 400;
+    margin-top: 1rem;
   }
 
   &__label {
@@ -56,7 +58,6 @@
     box-shadow: none;
     opacity: 0.7;
     transition: $basic;
-    margin-bottom: 1rem;
 
     &::placeholder {
       color: $gray;

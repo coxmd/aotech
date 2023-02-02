@@ -33,12 +33,14 @@ ul {
     div[class*="showcase__imgbox"] {
       transform: translate(0%, 0%);
       opacity: 1;
+      transition: all 0.8s ease-out;
     }
   }
 
   div[class*="textbox"] {
     opacity: 1;
     transform: translate(0%, 0%);
+    transition: all 0.8s ease-out;
   }
 }
 

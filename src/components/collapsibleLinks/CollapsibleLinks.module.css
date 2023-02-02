@@ -5,9 +5,15 @@
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .collapsible__text-heading img, .collapsible__link-heading:link img, .collapsible__link-heading:visited img {
     height: 1.5rem; }
 .collapsible__collapse-part {
@@ -16,12 +22,18 @@
   overflow: hidden; }
   .collapsible__collapse-part__list {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #fff;
-    backface-visibility: hidden; }
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
     .collapsible__collapse-part__list__link:link, .collapsible__collapse-part__list__link:visited {
       color: #fff;
       text-decoration: none;
@@ -31,9 +43,13 @@
       color: #fff; }
 
 .show {
-  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
   height: 100%;
   opacity: 1;
-  transition: transform 0.5s, opacity 0.4s; }
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.5s;
+  transition: opacity 0.4s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.4s;
+  transition: transform 0.5s, opacity 0.4s, -webkit-transform 0.5s; }
 
 /*# sourceMappingURL=CollapsibleLinks.module.css.map */

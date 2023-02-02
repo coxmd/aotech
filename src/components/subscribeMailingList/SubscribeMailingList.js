@@ -11,7 +11,7 @@ import useSubscribeMailingList from "../../hooks/useSubscribeMailingList";
 //styles
 import styles from "./SubscribeMailingList.module.css";
 
-export default function SubscribeMailingList({ imageSource = "" }) {
+export default function SubscribeMailingList() {
   const { state, dispatch, initialState } = useSubscribeMailingList();
 
   useEffect(() => {
@@ -27,27 +27,17 @@ export default function SubscribeMailingList({ imageSource = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [state.success]);
+  }, [state.success, dispatch, initialState]);
 
   return (
     <div className={styles["subscribe-mailing-list-container"]}>
-      <div
-        className={styles["subscribe-mailing-list-container__img"]}
-        style={{ background: `url(${imageSource})` }}
-      >
-        &nbsp;
-      </div>
-
       <div className={styles["subscribe-mailing-list-container__textbox"]}>
         <h3
           className={
             styles["subscribe-mailing-list-container__textbox__heading"]
           }
         >
-          Subscribe <br />
-          To Our
-          <br />
-          Mailing List
+          Subscribe To Our Mailing List!
         </h3>
 
         <p

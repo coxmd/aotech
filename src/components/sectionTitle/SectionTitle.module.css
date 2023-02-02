@@ -21,14 +21,22 @@
 
 @media (min-width: 37em) {
   .section-title-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .section-title-box__section-title {
       font-size: 3rem; }
       .section-title-box__section-title::before {
         left: 50%;
-        transform: translateX(-55%); } }
+        -webkit-transform: translateX(-55%);
+                transform: translateX(-55%); } }
 @media (min-width: 64em) {
   .section-title-box__section-title {
     font-size: 4rem !important; } }
