@@ -10,7 +10,12 @@ export default function HamburgerMenu({
   dark = true,
 }) {
   return (
-    <div onClick={clickHandler} className={styles["hamburger-menu"]}>
+    <div
+      onClick={clickHandler}
+      className={`${styles["hamburger-menu"]} ${
+        dark ? styles["hamburger-menu-dark"] : ""
+      }`}
+    >
       {dark && (
         <button
           aria-label="Mobile Navigation Button to toggle navigation menu on and off"

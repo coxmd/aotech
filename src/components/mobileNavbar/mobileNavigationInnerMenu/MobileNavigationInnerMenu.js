@@ -16,6 +16,7 @@ export default function MobileNavigationInnerMenu({
   handleMenuChangeForward,
   handleMenuChangeBackward,
   previousMenuArray,
+  buttonInfoArray = undefined,
 }) {
   return (
     <div
@@ -125,6 +126,21 @@ export default function MobileNavigationInnerMenu({
           );
         })}
       </ul>
+
+      {/* Buttons for the main menu slide */}
+      {singleMenuOptions.id === "main" && buttonInfoArray && (
+        <div
+          className={styles["mobile-navigation-innermenu__main-slide__buttons"]}
+        >
+          {buttonInfoArray.map((single) => {
+            return (
+              <button onClick={null} key={single.id}>
+                {single.text}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

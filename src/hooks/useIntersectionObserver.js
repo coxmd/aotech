@@ -14,17 +14,13 @@ export default function useIntersectionObserver(ref, threshold = 0) {
         threshold: threshold,
       }
     );
-  }, [threshold]);
 
-  useEffect(() => {
     const element = ref.current;
-
     observerRef.current.observe(element);
-
     return () => {
-      observerRef.current.unobserve(element);
+      observerRef.current.disconnect();
     };
-  }, [ref]);
+  }, [ref, threshold]);
 
   return { entry: entryState, observer: observerRef.current };
 }

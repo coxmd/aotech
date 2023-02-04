@@ -9,9 +9,11 @@
   background-color: rgba(175, 0, 97, 0.9);
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
-  padding-inline: 3.5rem;
+  padding: 1rem 3em 3rem;
   -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out; }
+  transition: all 0.2s ease-out;
+  overscroll-behavior: contain;
+  overflow-y: auto; }
   .mobile-navigation-innermenu__closelisticon-container .closelisticon {
     all: unset;
     margin-left: auto;
@@ -93,6 +95,7 @@
     .mobile-navigation-innermenu__list-of-options__single-option span,
     .mobile-navigation-innermenu__list-of-options__single-option a:link,
     .mobile-navigation-innermenu__list-of-options__single-option a:visited {
+      line-height: 1.5;
       font-size: 1.5rem;
       font-weight: 400 !important;
       color: #fff; }

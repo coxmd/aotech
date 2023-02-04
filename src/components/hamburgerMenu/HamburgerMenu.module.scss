@@ -26,3 +26,17 @@
     height: 100%;
   }
 }
+
+.hamburger-menu-dark {
+  &:hover,
+  &:active {
+    background-color: $veryLightGray !important;
+  }
+}
+
+@media (min-width: 77em) {
+  .hamburger-menu {
+    width: 5rem;
+    padding: 1rem 0;
+  }
+}

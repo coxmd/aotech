@@ -22,7 +22,7 @@ export const ourServicesData = [
       "Labore temporibus",
     ],
     buttonText: "Read More",
-    link: "ux-design",
+    link: "ux-ui-design",
     reverse: false,
   },
   {

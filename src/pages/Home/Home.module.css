@@ -80,6 +80,10 @@
 .subscribe-mailing-list {
   margin-bottom: 6rem; }
 
+@media (min-width: 30em) {
+  .industry-expert__image-descriptions {
+    top: -25rem;
+    margin-bottom: -25rem; } }
 @media (min-width: 37em) {
   .desktop-center {
     width: 55rem !important;
@@ -96,6 +100,9 @@
         left: 0;
         -webkit-transform: translateX(0%);
                 transform: translateX(0%); }
+  .industry-expert__image-descriptions {
+    top: -27rem;
+    margin-bottom: -27rem; }
 
   .testimonial {
     width: 100%;
@@ -347,7 +354,7 @@
 
   .form-section {
     width: 100%;
-    margin: 3rem auto 10rem auto; } }
+    margin: 1rem auto 7rem auto; } }
 @media (min-width: 65em) {
   .testimonial__all-testimonials {
     -webkit-box-pack: justify;

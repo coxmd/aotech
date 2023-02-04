@@ -14,9 +14,7 @@ export default function useMultipleIntersectionObserver(refs, threshold = 0) {
         threshold: threshold,
       }
     );
-  }, [threshold]);
 
-  useEffect(() => {
     const elements = refs.current;
 
     elements.forEach((el) => {
@@ -24,11 +22,9 @@ export default function useMultipleIntersectionObserver(refs, threshold = 0) {
     });
 
     return () => {
-      elements.forEach((el) => {
-        observerRef.current.unobserve(el);
-      });
+      observerRef.current.disconnect();
     };
-  }, [refs]);
+  }, [refs, threshold]);
 
   return { allEntries: entriesState, observer: observerRef.current };
 }

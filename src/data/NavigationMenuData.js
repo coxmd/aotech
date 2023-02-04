@@ -72,3 +72,18 @@ export const navigationOptions = [
     ],
   },
 ];
+
+export const notFinishedPaths = [
+  "blog",
+  "careers",
+  "contact",
+  "ux-ui-design",
+  "ui-development",
+  "full-app-development",
+  "mobile-app-development",
+  "quality-assurance",
+  "seo-optimization",
+  "about-us",
+  "why-choose-us",
+  "how-we-work",
+];

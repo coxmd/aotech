@@ -70,6 +70,10 @@ export default function Home() {
     if (heroEntry !== null) {
       heroEntry.isIntersecting ? setHeroVisible(true) : setHeroVisible(false);
     }
+
+    return () => {
+      setHeroVisible(null);
+    };
   }, [heroEntry, setHeroVisible]);
 
   //animations based on if the services are intersecting on the screen
@@ -118,8 +122,9 @@ export default function Home() {
           }
           button={
             <PlainButton
-              toUrl={"#signup-form"}
-              external={true}
+              // external={true}
+              hashlink={true}
+              toUrl={"signup-form"}
               buttonText={"Get started"}
               rightArrow={false}
             />

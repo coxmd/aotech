@@ -18,7 +18,7 @@
     background-position: 50% 100% !important;
     background-size: cover !important;
     padding: 2rem;
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
     backdrop-filter: blur(
       0px
     ); // because the blur filter of form element extends beyond the clipped path
@@ -29,7 +29,7 @@
     height: 100%;
     background-color: rgba($darkText, 0.85);
     backdrop-filter: blur(0.2rem);
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%) !important;
+    clip-path: inherit !important;
     overflow: hidden !important;
     position: relative;
     // transition: $basic;
@@ -124,7 +124,7 @@
 
 @media (max-width: 24em) {
   .form-container {
-    aspect-ratio: 16/22;
+    aspect-ratio: 16/22.7;
   }
 }
 
@@ -305,7 +305,7 @@
     justify-content: space-between;
 
     &__imgbox {
-      clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 7.5%, 100% 0, 100% 92.5%, 0% 100%) !important;
       flex-basis: 45%;
     }
 

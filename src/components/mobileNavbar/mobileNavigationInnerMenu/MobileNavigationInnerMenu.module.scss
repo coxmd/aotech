@@ -10,8 +10,10 @@
   transform: translateX(100%);
   background-color: rgba($primary, 0.9);
   backdrop-filter: blur(1rem);
-  padding-inline: 3.5rem;
+  padding: 1rem 3em 3rem;
   transition: $basic;
+  overscroll-behavior: contain;
+  overflow-y: auto;
 
   &__closelisticon-container {
     .closelisticon {
@@ -92,6 +94,7 @@
       span,
       a:link,
       a:visited {
+        line-height: 1.5;
         font-size: 1.5rem;
         font-weight: 400 !important;
         color: $white;

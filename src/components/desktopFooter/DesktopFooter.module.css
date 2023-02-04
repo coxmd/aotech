@@ -6,6 +6,8 @@
   background-repeat: no-repeat !important; }
   .desktop-footer__container {
     background-color: rgba(34, 34, 34, 0.85);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     padding: 2.5rem; }
     .desktop-footer__container > div[class*="address-main"] {
       background-color: transparent !important;

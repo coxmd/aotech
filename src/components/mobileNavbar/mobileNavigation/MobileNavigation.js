@@ -22,6 +22,7 @@ import useBackdrop from "../../../hooks/useBackdrop";
 export default function MobileNavigation({
   navigationOptionsArray = [],
   brandName = "",
+  buttonsInfoArray = undefined,
 }) {
   const { backdropOpen, closeBackdrop, openBackdrop } = useBackdrop();
   const {
@@ -41,7 +42,7 @@ export default function MobileNavigation({
   return (
     <nav
       className={`${styles["mobile-nav"]} ${
-        heroVisible ? styles["transparent"] : ""
+        heroVisible ? "" : styles["solid-white-navbar"]
       }`}
     >
       <div className={styles["mobile-nav__brand-and-toggles"]}>
@@ -71,6 +72,7 @@ export default function MobileNavigation({
               previousMenuArray={state.previousMenu}
               handleMenuChangeForward={goToNext}
               handleMenuChangeBackward={goToPrevious}
+              buttonsInfoArray={buttonsInfoArray && buttonsInfoArray}
             />
           );
         })}

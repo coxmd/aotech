@@ -1,29 +1,28 @@
 @import "../../../scss/variables";
 @import "../../../scss/mixin";
 
-.transparent {
-  background-color: transparent !important;
-  box-shadow: none !important;
+.solid-white-navbar {
+  background-color: $white !important;
+  box-shadow: 0 2rem 4rem rgba($darkText, 0.1) !important;
 
   .mobile-nav__brand-and-toggles {
     a[class*="brand-name"] {
       &:link,
       &:visited {
-        color: $white !important;
+        color: $darkText;
       }
     }
   }
 }
 
 .mobile-nav {
-  background-color: $white;
+  background-color: transparent;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   transition: $basic;
-  box-shadow: 0 2rem 4rem rgba($darkText, 0.1);
 
   &__brand-and-toggles {
     display: flex;
@@ -34,7 +33,7 @@
     a[class*="brand-name"] {
       &:link,
       &:visited {
-        color: $darkText;
+        color: $white;
         text-transform: unset;
         font-weight: 400;
         letter-spacing: 0.3rem;
@@ -46,10 +45,11 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 80%;
+    width: 82%;
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     z-index: 1000;
     transform: translateX(100%);
     transition: $basic;

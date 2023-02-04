@@ -13,8 +13,8 @@
     background-position: 50% 100% !important;
     background-size: cover !important;
     padding: 2rem;
-    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
     -webkit-backdrop-filter: blur(0px);
             backdrop-filter: blur(0px); }
   .form-container__form {
@@ -23,8 +23,8 @@
     background-color: rgba(34, 34, 34, 0.85);
     -webkit-backdrop-filter: blur(0.2rem);
             backdrop-filter: blur(0.2rem);
-    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%) !important;
-            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%) !important;
+    -webkit-clip-path: inherit !important;
+            clip-path: inherit !important;
     overflow: hidden !important;
     position: relative; }
     .form-container__form label span {
@@ -115,7 +115,7 @@
 
 @media (max-width: 24em) {
   .form-container {
-    aspect-ratio: 16/22; } }
+    aspect-ratio: 16/22.7; } }
 @media (min-width: 27em) {
   .form-container {
     aspect-ratio: 16/19 !important; } }
@@ -241,8 +241,8 @@
         -ms-flex-pack: justify;
             justify-content: space-between; }
     .form-container__imgbox {
-      -webkit-clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0% 100%);
-              clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0% 100%);
+      -webkit-clip-path: polygon(0 7.5%, 100% 0, 100% 92.5%, 0% 100%) !important;
+              clip-path: polygon(0 7.5%, 100% 0, 100% 92.5%, 0% 100%) !important;
       -ms-flex-preferred-size: 45%;
           flex-basis: 45%; }
     .form-container__form {

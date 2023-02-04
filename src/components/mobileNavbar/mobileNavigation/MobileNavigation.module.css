@@ -1,21 +1,19 @@
-.transparent {
-  background-color: transparent !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important; }
-  .transparent .mobile-nav__brand-and-toggles a[class*="brand-name"]:link, .transparent .mobile-nav__brand-and-toggles a[class*="brand-name"]:visited {
-    color: #fff !important; }
+.solid-white-navbar {
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 2rem 4rem rgba(34, 34, 34, 0.1) !important;
+          box-shadow: 0 2rem 4rem rgba(34, 34, 34, 0.1) !important; }
+  .solid-white-navbar .mobile-nav__brand-and-toggles a[class*="brand-name"]:link, .solid-white-navbar .mobile-nav__brand-and-toggles a[class*="brand-name"]:visited {
+    color: #222222; }
 
 .mobile-nav {
-  background-color: #fff;
+  background-color: transparent;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-box-shadow: 0 2rem 4rem rgba(34, 34, 34, 0.1);
-          box-shadow: 0 2rem 4rem rgba(34, 34, 34, 0.1); }
+  transition: all 0.2s ease-out; }
   .mobile-nav__brand-and-toggles {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -28,7 +26,7 @@
             justify-content: space-between;
     padding: 1.75rem 2.5rem; }
     .mobile-nav__brand-and-toggles a[class*="brand-name"]:link, .mobile-nav__brand-and-toggles a[class*="brand-name"]:visited {
-      color: #222222;
+      color: #fff;
       text-transform: unset;
       font-weight: 400;
       letter-spacing: 0.3rem; }
@@ -36,10 +34,11 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 80%;
+    width: 82%;
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     z-index: 1000;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);

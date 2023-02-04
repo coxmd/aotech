@@ -19,7 +19,7 @@
   .selectbox-container__error {
     font-size: 1.6rem;
     letter-spacing: 0.05rem;
-    color: #ff2e2e;
+    color: red;
     font-weight: 400; }
   .selectbox-container select {
     display: block;

@@ -35,6 +35,10 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     /* margin-top: auto FOR footer */ }
+  #root ::-moz-selection {
+    background-color: transparent; }
+  #root ::selection {
+    background-color: transparent; }
 
 @media (max-width: 23em) {
   html {

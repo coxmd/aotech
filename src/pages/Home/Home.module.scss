@@ -102,6 +102,15 @@
   margin-bottom: 6rem;
 }
 
+@media (min-width: 30em) {
+  .industry-expert {
+    &__image-descriptions {
+      top: -25rem; // positioning the element above its top element
+      margin-bottom: -25rem; //negative margin to keep the whitespace in balance
+    }
+  }
+}
+
 @media (min-width: 37em) {
   .desktop-center {
     // make the plain description box centered and also center align the text inside it.
@@ -124,6 +133,11 @@
           }
         }
       }
+    }
+
+    &__image-descriptions {
+      top: -27rem; // positioning the element above its top element
+      margin-bottom: -27rem; //negative margin to keep the whitespace in balance
     }
   }
 
@@ -415,7 +429,7 @@
 
   .form-section {
     width: 100%;
-    margin: 3rem auto 10rem auto;
+    margin: 1rem auto 7rem auto;
   }
 }
 

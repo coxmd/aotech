@@ -8,6 +8,7 @@
 
   &__container {
     background-color: rgba($darkText, 0.85);
+    backdrop-filter: blur(2px);
     padding: 2.5rem;
 
     & > div[class*="address-main"] {
