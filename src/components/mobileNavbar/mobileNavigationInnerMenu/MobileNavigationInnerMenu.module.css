@@ -16,6 +16,7 @@
   overflow-y: auto; }
   .mobile-navigation-innermenu__closelisticon-container .closelisticon {
     all: unset;
+    font-family: inherit;
     margin-left: auto;
     height: 6.5rem;
     display: -webkit-box;
@@ -34,6 +35,7 @@
     padding: 5rem 0 4rem; }
     .mobile-navigation-innermenu__leftcareticon-container .leftcareticon {
       all: unset;
+      font-family: inherit;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;

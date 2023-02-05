@@ -6,17 +6,17 @@ import App from "./App";
 // context
 import { MediaQueryContextProvider } from "./contexts/MediaQueryContext";
 import { NavbarThemeContextProvider } from "./contexts/NavbarThemeContext";
-import { LoginSignupContextProvider } from "./contexts/LoginSignUpContext";
+import { LoginSignupContextProvider } from "./contexts/LoginSignupContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <MediaQueryContextProvider>
-      <LoginSignupContextProvider>
-        <NavbarThemeContextProvider>
+      <NavbarThemeContextProvider>
+        <LoginSignupContextProvider>
           <App />
-        </NavbarThemeContextProvider>
-      </LoginSignupContextProvider>
+        </LoginSignupContextProvider>
+      </NavbarThemeContextProvider>
     </MediaQueryContextProvider>
   </React.StrictMode>
 );

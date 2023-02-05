@@ -22,8 +22,9 @@
 }
 
 //general button mixins
-@mixin btn-reset() {
+@mixin button-reset() {
   all: unset;
+  font-family: inherit;
 }
 
 //unordered list mixins

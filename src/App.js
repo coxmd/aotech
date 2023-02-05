@@ -28,6 +28,7 @@ import {
 
 //styles
 import "./basicStyles/App.css";
+import LoginSignup from "./components/loginSignup/LoginSignup";
 
 export default function App() {
   const { mediaQueryState } = useContext(MediaQueryContext);
@@ -43,6 +44,8 @@ export default function App() {
             </>
           }
         />
+
+        <LoginSignup />
 
         <Routes>
           <Route path="/" element={<Home />} />

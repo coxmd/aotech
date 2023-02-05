@@ -9,9 +9,14 @@ $veryLightGray: #ddd;
 $gray: darken($white, 50%);
 $success: #008000;
 $error: red;
+$formBackground: rgba($darkText, 0.85);
+
+// backdrop blur
+$standardBlur: blur(0.2rem);
 
 //margins and paddings
 $sectionMargin: 5rem;
+$standardPadding: 2.5rem;
 
 //font family
 $poppins: "Poppins", sans-serif;

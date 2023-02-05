@@ -1,20 +1,30 @@
+//react
+import React from "react";
+
 //styles
 import styles from "./InputBox.module.css";
 
-export default function InputBox({
-  labelText = "",
-  label = true,
-  type = "text",
-  placeholder = "no placeholder provided",
-  value = undefined,
-  onChange = undefined,
-  onFocus = undefined,
-  errorText = undefined,
-  successText = undefined,
-  passRef = null,
-}) {
+function InputBox(
+  {
+    labelText = "",
+    label = true,
+    type = "text",
+    placeholder = "no placeholder provided",
+    value = undefined,
+    onChange = null,
+    onFocus = null,
+    errorText = undefined,
+    successText = undefined,
+    extraClass = undefined,
+  },
+  ref
+) {
   return (
-    <div className={styles["inputbox-container"]}>
+    <div
+      className={`${styles["inputbox-container"]} ${
+        extraClass && extraClass.join(" ")
+      }`}
+    >
       <label>
         {label && (
           <span className={styles["inputbox-container__label"]}>
@@ -22,7 +32,7 @@ export default function InputBox({
           </span>
         )}
         <input
-          ref={passRef}
+          ref={ref}
           onFocus={onFocus}
           className={styles["inputbox-container__input"]}
           type={type}
@@ -42,3 +52,5 @@ export default function InputBox({
     </div>
   );
 }
+
+export default React.forwardRef(InputBox);

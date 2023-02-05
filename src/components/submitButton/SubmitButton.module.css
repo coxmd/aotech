@@ -1,5 +1,6 @@
 .submit-button button {
   all: unset;
+  font-family: inherit;
   color: #fff;
   font-size: 1.45rem;
   padding: 1.5rem;
@@ -13,8 +14,7 @@
   text-decoration: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: #af0061;
-  font-family: inherit; }
+  background-color: #af0061; }
 .submit-button button:disabled {
   opacity: 0.5;
   background-color: inherit; }

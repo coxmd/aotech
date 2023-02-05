@@ -1,0 +1,51 @@
+.login-signup-main {
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1001;
+  background-color: rgba(34, 34, 34, 0.85);
+  -webkit-backdrop-filter: blur(0.4rem);
+          backdrop-filter: blur(0.4rem);
+  padding: 3rem; }
+  .login-signup-main__form-heading {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 3rem; }
+  .login-signup-main__form__inputs-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem; }
+    .login-signup-main__form__inputs-container label {
+      font-size: 1.4rem; }
+      .login-signup-main__form__inputs-container label span {
+        font-weight: 500;
+        margin-bottom: 1rem; }
+  .login-signup-main__form__switch-button-container {
+    margin-bottom: 3rem; }
+    .login-signup-main__form__switch-button-container > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 1.25rem; }
+    .login-signup-main__form__switch-button-container button {
+      all: unset;
+      font-family: inherit;
+      color: #fff;
+      font-size: 1.3rem;
+      letter-spacing: 0.02rem; }
+
+/*# sourceMappingURL=LoginSignup.module.css.map */

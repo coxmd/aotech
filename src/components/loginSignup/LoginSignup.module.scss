@@ -1,0 +1,54 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.login-signup-main {
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background-color: $formBackground;
+  backdrop-filter: blur(0.4rem);
+  padding: 3rem;
+
+  &__form-heading {
+    color: $white;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+
+  &__form {
+    &__inputs-container {
+      @include flexColumn();
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+
+      label {
+        font-size: 1.4rem;
+
+        span {
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &__switch-button-container {
+      margin-bottom: 3rem;
+
+      & > div {
+        @include flexColumn();
+        gap: 1.25rem;
+      }
+
+      button {
+        @include button-reset();
+        color: $white;
+        font-size: 1.3rem;
+        letter-spacing: 0.02rem;
+      }
+    }
+  }
+}

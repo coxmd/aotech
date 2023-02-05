@@ -17,7 +17,7 @@
 
   &__closelisticon-container {
     .closelisticon {
-      @include btn-reset();
+      @include button-reset();
       margin-left: auto;
       height: 6.5rem;
       @include flex-all-center();
@@ -33,7 +33,7 @@
     padding: 5rem 0 4rem;
 
     .leftcareticon {
-      @include btn-reset;
+      @include button-reset;
       display: flex;
       align-items: center;
       font-family: inherit;
