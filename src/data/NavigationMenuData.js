@@ -87,3 +87,10 @@ export const notFinishedPaths = [
   "why-choose-us",
   "how-we-work",
 ];
+
+export const additionalButtons = [
+  {
+    id: 0,
+    buttonText: "Employee Login",
+  },
+];

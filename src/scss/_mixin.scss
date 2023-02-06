@@ -24,6 +24,7 @@
 //general button mixins
 @mixin button-reset() {
   all: unset;
+  display: inline-block;
   font-family: inherit;
 }
 

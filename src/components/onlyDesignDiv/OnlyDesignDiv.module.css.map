@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAGA,gBAAiB;EACf,OAAO,EAAE,MAAM;ECuCf,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EDrCnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EAEnB,sBAAQ;IACN,KAAK,EAAE,KAAK;IACZ,MAAM,EAAE,MAAM;IACd,gBAAgB,EEZV,OAAO",
+"mappings": "AAGA,gBAAiB;EACf,OAAO,EAAE,MAAM;ECwCf,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EDtCnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EAEnB,sBAAQ;IACN,KAAK,EAAE,KAAK;IACZ,MAAM,EAAE,MAAM;IACd,gBAAgB,EEZV,OAAO",
 "sources": ["OnlyDesignDiv.module.scss","../../scss/_mixin.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "OnlyDesignDiv.module.css"

@@ -12,5 +12,5 @@ export default function useBackdrop() {
     setBackdropOpen(false);
   };
 
-  return { backdropOpen, closeBackdrop, openBackdrop };
+  return { backdropOpen, closeBackdrop, openBackdrop, setBackdropOpen };
 }

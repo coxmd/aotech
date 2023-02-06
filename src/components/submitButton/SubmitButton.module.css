@@ -1,5 +1,6 @@
 .submit-button button {
   all: unset;
+  display: inline-block;
   font-family: inherit;
   color: #fff;
   font-size: 1.45rem;

@@ -1,10 +1,15 @@
 //react
 import { Link } from "react-router-dom";
 
+//components
+import CloseIcon from "../../closeIcon/CloseIcon";
+
 //image source
-import closelisticon from "../../../assets/closelisticon.svg";
 import rightcaret from "../../../assets/caret-right.svg";
 import leftcaret from "../../../assets/caret-left.svg";
+
+//hooks
+import useLoginSignupContext from "../../../hooks/useLoginSignupContext";
 
 //styles
 import styles from "./MobileNavigationInnerMenu.module.css";
@@ -18,6 +23,8 @@ export default function MobileNavigationInnerMenu({
   previousMenuArray,
   buttonInfoArray = undefined,
 }) {
+  const { openForm, setBackdropOpen } = useLoginSignupContext();
+
   return (
     <div
       className={`${styles["mobile-navigation-innermenu"]} ${
@@ -34,12 +41,7 @@ export default function MobileNavigationInnerMenu({
             styles["mobile-navigation-innermenu__closelisticon-container"]
           }
         >
-          <button
-            onClick={handleCloseClick}
-            className={styles["closelisticon"]}
-          >
-            <img src={closelisticon} alt={"mobile nav close icon"} />
-          </button>
+          <CloseIcon handleClick={handleCloseClick} />
         </div>
       )}
 
@@ -134,8 +136,15 @@ export default function MobileNavigationInnerMenu({
         >
           {buttonInfoArray.map((single) => {
             return (
-              <button onClick={null} key={single.id}>
-                {single.text}
+              <button
+                onClick={() => {
+                  handleCloseClick();
+                  setBackdropOpen(true);
+                  openForm();
+                }}
+                key={single.id}
+              >
+                {single.buttonText}
               </button>
             );
           })}

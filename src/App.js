@@ -17,7 +17,11 @@ import buildingsSmall from "./assets/buildings-small.webp";
 import buildingsLarge from "./assets/buildings.jpg";
 
 //data
-import { navigationOptions, notFinishedPaths } from "./data/NavigationMenuData";
+import {
+  navigationOptions,
+  notFinishedPaths,
+  additionalButtons,
+} from "./data/NavigationMenuData";
 import {
   logoButtonDataPrimary,
   logoButtonDataDarktext,
@@ -38,6 +42,7 @@ export default function App() {
       <BrowserRouter>
         <MobileNavigation
           navigationOptionsArray={navigationOptions}
+          buttonInfoArray={additionalButtons}
           brandName={
             <>
               Web<span className="highlighted">Lab</span>
@@ -45,7 +50,7 @@ export default function App() {
           }
         />
 
-        <LoginSignup />
+        <LoginSignup onlyLogin={false} />
 
         <Routes>
           <Route path="/" element={<Home />} />

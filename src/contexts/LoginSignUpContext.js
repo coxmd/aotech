@@ -1,14 +1,37 @@
 //react
-import { createContext, useState } from "react";
+import { createContext } from "react";
+
+//custom hook
+import useLoginSignupReducer from "../hooks/useLoginSignupReducer";
+import useBackdrop from "../hooks/useBackdrop";
 
 //creating the context
 export const LoginSignupContext = createContext();
 
 //creating the context provider component
 export function LoginSignupContextProvider({ children }) {
-  const [formType, setFormType] = useState("login");
+  const {
+    loginSignupFinalState,
+    openForm,
+    closeForm,
+    collectData,
+    changeFormType,
+  } = useLoginSignupReducer();
+
+  const { backdropOpen, setBackdropOpen } = useBackdrop();
+
   return (
-    <LoginSignupContext.Provider value={{ formType, setFormType }}>
+    <LoginSignupContext.Provider
+      value={{
+        loginSignupFinalState,
+        backdropOpen,
+        setBackdropOpen,
+        openForm,
+        closeForm,
+        collectData,
+        changeFormType,
+      }}
+    >
       {children}
     </LoginSignupContext.Provider>
   );

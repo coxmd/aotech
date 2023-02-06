@@ -6,23 +6,40 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-150%, -50%);
   z-index: 1001;
-  background-color: $formBackground;
+  background-color: $darkText;
   backdrop-filter: blur(0.4rem);
-  padding: 3rem;
+  padding: 0 3rem 3rem;
+  visibility: collapse;
+  opacity: 0;
+
+  transition: $basic;
+
+  &__open {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &__close-icon-container {
+    @include flexRow();
+    justify-content: flex-end;
+    margin: 2.5rem 0 2.5rem;
+  }
 
   &__form-heading {
     color: $white;
     font-size: 2.4rem;
     font-weight: 400;
     margin-bottom: 3rem;
+    letter-spacing: 0.02rem;
   }
 
   &__form {
     &__inputs-container {
       @include flexColumn();
-      gap: 1.5rem;
+      gap: 2rem;
       margin-bottom: 2rem;
 
       label {
@@ -37,16 +54,14 @@
 
     &__switch-button-container {
       margin-bottom: 3rem;
-
-      & > div {
-        @include flexColumn();
-        gap: 1.25rem;
-      }
+      @include flexColumn();
+      gap: 1.2rem;
 
       button {
         @include button-reset();
-        color: $white;
-        font-size: 1.3rem;
+        color: $secondary;
+        font-size: 1.4rem;
+        font-weight: 500;
         letter-spacing: 0.02rem;
       }
     }

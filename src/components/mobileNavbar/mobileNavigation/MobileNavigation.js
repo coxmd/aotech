@@ -22,7 +22,7 @@ import useBackdrop from "../../../hooks/useBackdrop";
 export default function MobileNavigation({
   navigationOptionsArray = [],
   brandName = "",
-  buttonsInfoArray = undefined,
+  buttonInfoArray = undefined,
 }) {
   const { backdropOpen, closeBackdrop, openBackdrop } = useBackdrop();
   const {
@@ -53,10 +53,7 @@ export default function MobileNavigation({
         />
       </div>
 
-      <BackdropBlur
-        open={backdropOpen}
-        handleCloseClick={closeBackdropAndEverything}
-      />
+      <BackdropBlur open={backdropOpen} onClick={closeBackdropAndEverything} />
       <div
         className={`${styles["mobile-nav__container"]} ${
           state.containerOpen ? styles["mobile-nav__container--open"] : ""
@@ -72,7 +69,7 @@ export default function MobileNavigation({
               previousMenuArray={state.previousMenu}
               handleMenuChangeForward={goToNext}
               handleMenuChangeBackward={goToPrevious}
-              buttonsInfoArray={buttonsInfoArray && buttonsInfoArray}
+              buttonInfoArray={buttonInfoArray && buttonInfoArray}
             />
           );
         })}

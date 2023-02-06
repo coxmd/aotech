@@ -16,17 +16,9 @@
   overflow-y: auto;
 
   &__closelisticon-container {
-    .closelisticon {
-      @include button-reset();
-      margin-left: auto;
-      height: 6.5rem;
-      @include flex-all-center();
-    }
-
-    img {
-      display: block;
-      height: 2.3rem;
-    }
+    @include flexRow();
+    justify-content: flex-end;
+    padding: 1.5rem 0;
   }
 
   &__leftcareticon-container {
@@ -112,6 +104,18 @@
     }
     img {
       height: 2rem;
+    }
+  }
+
+  &__main-slide {
+    &__buttons {
+      button {
+        @include button-reset();
+        color: $white;
+        border: 1px solid $white;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+      }
     }
   }
 }
