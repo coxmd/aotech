@@ -72,9 +72,17 @@ export default function MobileNavigationInnerMenu({
               styles["mobile-navigation-innermenu__list-of-options__heading"]
             }
           >
-            <Link to={`/${singleMenuOptions.heading.link}`}>
-              {singleMenuOptions.heading.text}
-            </Link>
+            {/* if it is not a link, a span tag is output */}
+            {singleMenuOptions.heading.link === undefined && (
+              <span>{singleMenuOptions.heading.text}</span>
+            )}
+
+            {/* if it is a link, a LINK or a tag is output */}
+            {singleMenuOptions.heading.link !== undefined && (
+              <Link to={`/${singleMenuOptions.heading.link}`}>
+                {singleMenuOptions.heading.text}
+              </Link>
+            )}
           </li>
         )}
 

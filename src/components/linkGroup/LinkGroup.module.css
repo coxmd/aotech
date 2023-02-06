@@ -13,11 +13,14 @@
     font-weight: 600;
     letter-spacing: 0.02rem; }
     .link-group__heading-link:link, .link-group__heading-link:visited {
-      color: inherit;
+      display: inline-block;
       text-decoration: none;
+      color: inherit;
       font-weight: 600;
       text-transform: uppercase;
       font-size: inherit; }
+      .link-group__heading-link:link:focus, .link-group__heading-link:visited:focus {
+        outline-color: green !important; }
   .link-group__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -29,9 +32,13 @@
     gap: 1.2rem;
     list-style-type: none; }
     .link-group__list-item-link:link, .link-group__list-item-link:visited {
-      color: #fff;
+      display: inline-block;
       text-decoration: none;
+      color: inherit;
+      color: #fff;
       font-size: 1.4rem;
       letter-spacing: 0.02rem; }
+      .link-group__list-item-link:link:focus, .link-group__list-item-link:visited:focus {
+        outline-color: green !important; }
 
 /*# sourceMappingURL=LinkGroup.module.css.map */

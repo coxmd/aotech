@@ -19,19 +19,50 @@ const reducer = (state, action) => {
       return { ...state, employeeId: action.payload };
     case "changeUsername":
       return { ...state, username: action.payload };
-    case "checkRecoverFormInfo":
+    case "checkRecoverAccountFormInfo":
       return {
         ...state,
         emailError:
           state.email === "" ||
           !state.email.includes("@") ||
           !state.email.includes(".com")
-            ? "Please provide email address"
+            ? "Required"
             : "",
       };
 
     case "checkLoginFormInfo":
-      return { ...state };
+      return {
+        ...state,
+        employeeIdError: state.employeeId === "" ? "Required" : "",
+        passwordError:
+          (state.password === "" ? "Required" : "") ||
+          (state.password.length < 6
+            ? "Passwords are at least 6 characters long"
+            : ""),
+      };
+
+    case "checkSignupFormInfo":
+      return {
+        ...state,
+        emailError:
+          state.email === "" ||
+          !state.email.includes("@") ||
+          !state.email.includes(".com")
+            ? "Required"
+            : "",
+        usernameError: state.username === "" ? "Required" : "",
+        passwordError:
+          (state.password === "" ? "Required" : "") ||
+          (state.password.length < 6
+            ? "Password should be at least 6 characters long"
+            : ""),
+        confirmedPasswordError:
+          (state.confirmedPassword === "" ? "Required" : "") ||
+          (state.confirmedPassword !== "" &&
+          state.confirmedPassword !== state.password
+            ? "Passwords do not match"
+            : ""),
+      };
 
     case "resetData":
       return {
@@ -80,7 +111,6 @@ export default function useLoginSignupReducer() {
   );
 
   // function to open the form
-
   const openForm = () => {
     dispatch({ type: "openForm" });
   };
@@ -109,6 +139,11 @@ export default function useLoginSignupReducer() {
     });
   };
 
+  //function to check form data
+  const checkData = (typeOfCheck) => {
+    dispatch({ type: typeOfCheck });
+  };
+
   return {
     loginSignupFinalState,
     dispatch,
@@ -116,5 +151,6 @@ export default function useLoginSignupReducer() {
     closeForm,
     collectData,
     changeFormType,
+    checkData,
   };
 }

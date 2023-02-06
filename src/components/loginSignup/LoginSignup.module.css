@@ -6,9 +6,7 @@
   -webkit-transform: translate(-150%, -50%);
           transform: translate(-150%, -50%);
   z-index: 1001;
-  background-color: #222222;
-  -webkit-backdrop-filter: blur(0.4rem);
-          backdrop-filter: blur(0.4rem);
+  background-color: rgba(34, 34, 34, 0.95);
   padding: 0 3rem 3rem;
   visibility: collapse;
   opacity: 0;
@@ -49,6 +47,10 @@
     margin-bottom: 2rem; }
     .login-signup-main__form__inputs-container label {
       font-size: 1.4rem; }
+      .login-signup-main__form__inputs-container label p[class*="inputbox-container__error"] {
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.4; }
       .login-signup-main__form__inputs-container label span {
         font-weight: 500;
         margin-bottom: 1rem; }
@@ -61,14 +63,25 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 1.2rem; }
     .login-signup-main__form__switch-button-container button {
-      all: unset;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      background-color: transparent;
+      background: none;
+      border: none;
+      line-height: 1;
       display: inline-block;
       font-family: inherit;
       color: #0099a8;
       font-size: 1.4rem;
       font-weight: 500;
       letter-spacing: 0.02rem; }
+      .login-signup-main__form__switch-button-container button:focus {
+        outline-color: green !important; }
 
 /*# sourceMappingURL=LoginSignup.module.css.map */

@@ -29,7 +29,13 @@
   .mobile-navigation-innermenu__leftcareticon-container {
     padding: 5rem 0 4rem; }
     .mobile-navigation-innermenu__leftcareticon-container .leftcareticon {
-      all: unset;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      background-color: transparent;
+      background: none;
+      border: none;
+      line-height: 1;
       display: inline-block;
       font-family: inherit;
       display: -webkit-box;
@@ -42,7 +48,10 @@
       gap: 1.4rem;
       font-size: 1.5rem;
       font-weight: 300 !important;
-      color: #fff; }
+      color: #fff;
+      cursor: pointer; }
+      .mobile-navigation-innermenu__leftcareticon-container .leftcareticon:focus {
+        outline-color: green !important; }
       .mobile-navigation-innermenu__leftcareticon-container .leftcareticon img {
         display: block;
         width: 1.6rem;
@@ -58,12 +67,6 @@
             flex-direction: column;
     gap: 2.5rem;
     margin-bottom: 3.5rem; }
-    .mobile-navigation-innermenu__list-of-options__heading a:link,
-    .mobile-navigation-innermenu__list-of-options__heading a:visited, .mobile-navigation-innermenu__list-of-options__single-option a:link,
-    .mobile-navigation-innermenu__list-of-options__single-option a:visited, .mobile-navigation-innermenu__list-of-options__single-option--main-list a:link,
-    .mobile-navigation-innermenu__list-of-options__single-option--main-list a:visited {
-      text-decoration: none;
-      text-transform: capitalize; }
     .mobile-navigation-innermenu__list-of-options__heading span,
     .mobile-navigation-innermenu__list-of-options__heading a:link,
     .mobile-navigation-innermenu__list-of-options__heading a:visited, .mobile-navigation-innermenu__list-of-options__single-option span,
@@ -71,9 +74,12 @@
     .mobile-navigation-innermenu__list-of-options__single-option a:visited, .mobile-navigation-innermenu__list-of-options__single-option--main-list span,
     .mobile-navigation-innermenu__list-of-options__single-option--main-list a:link,
     .mobile-navigation-innermenu__list-of-options__single-option--main-list a:visited {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
@@ -82,37 +88,83 @@
               justify-content: space-between;
       letter-spacing: 0.18rem;
       text-transform: capitalize; }
+      .mobile-navigation-innermenu__list-of-options__heading span:focus,
+      .mobile-navigation-innermenu__list-of-options__heading a:link:focus,
+      .mobile-navigation-innermenu__list-of-options__heading a:visited:focus, .mobile-navigation-innermenu__list-of-options__single-option span:focus,
+      .mobile-navigation-innermenu__list-of-options__single-option a:link:focus,
+      .mobile-navigation-innermenu__list-of-options__single-option a:visited:focus, .mobile-navigation-innermenu__list-of-options__single-option--main-list span:focus,
+      .mobile-navigation-innermenu__list-of-options__single-option--main-list a:link:focus,
+      .mobile-navigation-innermenu__list-of-options__single-option--main-list a:visited:focus {
+        outline-color: green !important; }
     .mobile-navigation-innermenu__list-of-options__heading span,
     .mobile-navigation-innermenu__list-of-options__heading a:link,
     .mobile-navigation-innermenu__list-of-options__heading a:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
       font-size: 2.4rem;
       font-weight: 500;
       text-transform: capitalize;
       display: inline-block;
       color: #fff; }
+      .mobile-navigation-innermenu__list-of-options__heading span:focus,
+      .mobile-navigation-innermenu__list-of-options__heading a:link:focus,
+      .mobile-navigation-innermenu__list-of-options__heading a:visited:focus {
+        outline-color: green !important; }
     .mobile-navigation-innermenu__list-of-options__single-option span,
     .mobile-navigation-innermenu__list-of-options__single-option a:link,
     .mobile-navigation-innermenu__list-of-options__single-option a:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
       line-height: 1.5;
       font-size: 1.5rem;
       font-weight: 400 !important;
-      color: #fff; }
+      color: #fff;
+      cursor: pointer; }
+      .mobile-navigation-innermenu__list-of-options__single-option span:focus,
+      .mobile-navigation-innermenu__list-of-options__single-option a:link:focus,
+      .mobile-navigation-innermenu__list-of-options__single-option a:visited:focus {
+        outline-color: green !important; }
     .mobile-navigation-innermenu__list-of-options__single-option--main-list span,
     .mobile-navigation-innermenu__list-of-options__single-option--main-list a:link,
     .mobile-navigation-innermenu__list-of-options__single-option--main-list a:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
       color: #fff;
       font-size: 2rem;
-      font-weight: 400; }
+      font-weight: 400;
+      cursor: pointer; }
+      .mobile-navigation-innermenu__list-of-options__single-option--main-list span:focus,
+      .mobile-navigation-innermenu__list-of-options__single-option--main-list a:link:focus,
+      .mobile-navigation-innermenu__list-of-options__single-option--main-list a:visited:focus {
+        outline-color: green !important; }
     .mobile-navigation-innermenu__list-of-options img {
       height: 2rem; }
   .mobile-navigation-innermenu__main-slide__buttons button {
-    all: unset;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    background: none;
+    border: none;
+    line-height: 1;
     display: inline-block;
     font-family: inherit;
     color: #fff;
+    background-color: #af0061;
     border: 1px solid #fff;
     padding: 1.5rem;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    .mobile-navigation-innermenu__main-slide__buttons button:focus {
+      outline-color: green !important; }
+    .mobile-navigation-innermenu__main-slide__buttons button:hover, .mobile-navigation-innermenu__main-slide__buttons button:active {
+      color: #af0061;
+      background-color: #fff; }
 
 .show {
   -webkit-transform: translateX(0%) !important;
@@ -121,5 +173,9 @@
 .previously-shown {
   -webkit-transform: translateX(-100%) !important;
           transform: translateX(-100%) !important; }
+
+@media (min-width: 77em) {
+  .mobile-navigation-innermenu {
+    padding: 1rem 3.5rem 3rem; } }
 
 /*# sourceMappingURL=MobileNavigationInnerMenu.module.css.map */

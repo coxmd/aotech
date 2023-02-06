@@ -40,6 +40,20 @@ body {
   #root ::selection {
     background-color: transparent; }
 
+a:link,
+a:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit; }
+  a:link:focus,
+  a:visited:focus {
+    outline-color: green !important; }
+
+button {
+  cursor: pointer; }
+  button:disabled {
+    cursor: default; }
+
 @media (max-width: 23em) {
   html {
     font-size: 61.5%; } }

@@ -69,10 +69,12 @@
           -ms-flex-pack: center;
               justify-content: center; }
       .subscribe-mailing-list-container__textbox form div[class*="submit-button"] button {
-        border: 0.1rem solid #fff; }
-        .subscribe-mailing-list-container__textbox form div[class*="submit-button"] button:active {
-          background-color: #fff;
-          color: #af0061; }
+        border: 0.1rem solid #fff;
+        color: #fff;
+        background-color: #af0061; }
+        .subscribe-mailing-list-container__textbox form div[class*="submit-button"] button:hover, .subscribe-mailing-list-container__textbox form div[class*="submit-button"] button:active {
+          color: #af0061;
+          background-color: #fff; }
         .subscribe-mailing-list-container__textbox form div[class*="submit-button"] button:disabled:active {
           background-color: transparent; }
 

@@ -64,10 +64,7 @@
         button {
           border: 0.1rem solid $white;
 
-          &:active {
-            background-color: $white;
-            color: $primary;
-          }
+          @include invertColorsButtons($white, $primary);
 
           &:disabled:active {
             background-color: transparent;

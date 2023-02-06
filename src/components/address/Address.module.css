@@ -52,5 +52,8 @@
         color: inherit;
         font-size: 1.4rem;
         letter-spacing: 0.02rem; }
+        .address-main__address__contact-details__phone-email a:link:focus,
+        .address-main__address__contact-details__phone-email a:visited:focus {
+          outline-color: green !important; }
 
 /*# sourceMappingURL=Address.module.css.map */

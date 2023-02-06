@@ -8,8 +8,7 @@
   left: 50%;
   transform: translate(-150%, -50%);
   z-index: 1001;
-  background-color: $darkText;
-  backdrop-filter: blur(0.4rem);
+  background-color: rgba($darkText, 0.95);
   padding: 0 3rem 3rem;
   visibility: collapse;
   opacity: 0;
@@ -45,6 +44,12 @@
       label {
         font-size: 1.4rem;
 
+        p[class*="inputbox-container__error"] {
+          font-size: 1.3rem;
+          font-weight: 400;
+          line-height: 1.4;
+        }
+
         span {
           font-weight: 500;
           margin-bottom: 1rem;
@@ -55,6 +60,7 @@
     &__switch-button-container {
       margin-bottom: 3rem;
       @include flexColumn();
+      align-items: flex-start;
       gap: 1.2rem;
 
       button {

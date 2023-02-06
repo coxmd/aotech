@@ -32,6 +32,11 @@ function InputBox(
           </span>
         )}
         <input
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+            }
+          }}
           ref={ref}
           onFocus={onFocus}
           className={styles["inputbox-container__input"]}

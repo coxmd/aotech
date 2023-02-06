@@ -1,4 +1,7 @@
 .plain-button__button:link, .plain-button__button:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
   color: #fff;
   font-size: 1.45rem;
   padding: 1.5rem;
@@ -9,11 +12,12 @@
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.1rem;
-  text-decoration: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background-color: #af0061;
   font-family: inherit; }
+  .plain-button__button:link:focus, .plain-button__button:visited:focus {
+    outline-color: green !important; }
 .plain-button__button:hover, .plain-button__button:active {
   background-color: #0099a8; }
 

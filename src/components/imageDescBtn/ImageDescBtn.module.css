@@ -34,6 +34,9 @@
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%; }
     .image-description-button__container__button-container__button:link, .image-description-button__container__button-container__button:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -47,9 +50,10 @@
       height: 100%;
       color: #fff;
       font-size: 1.7rem;
-      text-decoration: none;
       background-color: gray;
       -webkit-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out; }
+      .image-description-button__container__button-container__button:link:focus, .image-description-button__container__button-container__button:visited:focus {
+        outline-color: green !important; }
 
 /*# sourceMappingURL=ImageDescBtn.module.css.map */

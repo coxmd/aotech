@@ -2,7 +2,13 @@
   width: 2.5rem;
   aspect-ratio: 16/16; }
   .close-icon__container__button {
-    all: unset;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    background: none;
+    border: none;
+    line-height: 1;
     display: inline-block;
     font-family: inherit;
     width: 100%;
@@ -10,5 +16,7 @@
     background-position: 50% 50% !important;
     background-size: cover !important;
     background-repeat: no-repeat !important; }
+    .close-icon__container__button:focus {
+      outline-color: green !important; }
 
 /*# sourceMappingURL=CloseIcon.module.css.map */

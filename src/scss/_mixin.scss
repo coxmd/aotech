@@ -23,9 +23,28 @@
 
 //general button mixins
 @mixin button-reset() {
-  all: unset;
+  appearance: none;
+  background-color: transparent;
+  background: none;
+  border: none;
+  line-height: 1;
   display: inline-block;
   font-family: inherit;
+
+  &:focus {
+    outline-color: green !important;
+  }
+}
+
+@mixin invertColorsButtons($color, $background) {
+  color: $color;
+  background-color: $background;
+
+  &:hover,
+  &:active {
+    color: $background;
+    background-color: $color;
+  }
 }
 
 //unordered list mixins
@@ -38,6 +57,24 @@
   display: inline-block;
   text-decoration: none;
   color: inherit;
+
+  &:focus {
+    outline-color: green !important;
+  }
+}
+
+@mixin invertColorsLinks($color, $background) {
+  &:link,
+  &:visited {
+    color: $color;
+    background-color: $background;
+  }
+
+  &:hover,
+  &:active {
+    color: $background;
+    background-color: $color;
+  }
 }
 
 //flex mixins

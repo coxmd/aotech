@@ -1,4 +1,5 @@
 @import "../scss/variables";
+@import "../scss/mixin";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 
 *,
@@ -39,6 +40,19 @@ body {
 
   ::selection {
     background-color: transparent;
+  }
+}
+
+a:link,
+a:visited {
+  @include link-reset();
+}
+
+button {
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
   }
 }
 

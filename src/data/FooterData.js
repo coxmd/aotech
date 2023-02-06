@@ -102,7 +102,7 @@ export const footerBottomOptions = [
   },
 ];
 
-export const collapsibleFooterData = [
+export const footerTopOptions = [
   {
     id: 0,
     heading: { text: "Industries We Serve" },
@@ -142,9 +142,9 @@ export const collapsibleFooterData = [
     id: 3,
     heading: { text: "Careers" },
     options: [
-      { text: "Digital Marketing Jobs", link: "#" },
-      { text: "Design Jobs", link: "#" },
-      { text: "Development Jobs", link: "#" },
+      { text: "Digital Marketing", link: "careers/digital-marketing" },
+      { text: "Design", link: "careers/design" },
+      { text: "Development", link: "careers/development" },
     ],
   },
 ];

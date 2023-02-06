@@ -6,7 +6,7 @@ export const navigationOptions = [
       { text: "Services", id: 1, nextMenu: "services", link: undefined },
       { text: "About", id: 2, nextMenu: "about", link: undefined },
       { text: "Blog", id: 3, nextMenu: undefined, link: "blog" },
-      { text: "Careers", id: 4, nextMenu: undefined, link: "careers" },
+      { text: "Careers", id: 4, nextMenu: "careers", link: undefined },
       { text: "Contact", id: 5, nextMenu: undefined, link: "contact" },
     ],
   },
@@ -71,6 +71,30 @@ export const navigationOptions = [
       },
     ],
   },
+  {
+    id: "careers",
+    heading: { text: "Careers", link: undefined },
+    options: [
+      {
+        text: "Digital Marketing",
+        id: 0,
+        nextMenu: undefined,
+        link: "careers/digital-marketing",
+      },
+      {
+        text: "Design",
+        id: 1,
+        nextMenu: undefined,
+        link: "careers/design",
+      },
+      {
+        text: "Development",
+        id: 2,
+        nextMenu: undefined,
+        link: "careers/development",
+      },
+    ],
+  },
 ];
 
 export const notFinishedPaths = [
@@ -86,6 +110,9 @@ export const notFinishedPaths = [
   "about-us",
   "why-choose-us",
   "how-we-work",
+  "careers/digital-marketing",
+  "careers/design",
+  "careers/development",
 ];
 
 export const additionalButtons = [

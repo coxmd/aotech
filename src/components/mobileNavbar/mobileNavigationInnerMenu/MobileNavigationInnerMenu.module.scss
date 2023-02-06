@@ -33,6 +33,7 @@
       font-size: 1.5rem;
       font-weight: 300 !important;
       color: $white;
+      cursor: pointer;
 
       img {
         display: block;
@@ -52,17 +53,12 @@
     &__heading,
     &__single-option,
     &__single-option--main-list {
-      a:link,
-      a:visited {
-        text-decoration: none;
-        text-transform: capitalize;
-      }
-
       // for <span> css rules see below
       span,
       a:link,
       a:visited {
-        display: flex;
+        @include link-reset();
+        display: flex !important;
         align-items: center;
         justify-content: space-between;
         letter-spacing: 0.18rem;
@@ -74,6 +70,7 @@
       span,
       a:link,
       a:visited {
+        @include link-reset();
         font-size: 2.4rem;
         font-weight: 500;
         text-transform: capitalize;
@@ -86,19 +83,23 @@
       span,
       a:link,
       a:visited {
+        @include link-reset();
         line-height: 1.5;
         font-size: 1.5rem;
         font-weight: 400 !important;
         color: $white;
+        cursor: pointer;
       }
 
       &--main-list {
         span,
         a:link,
         a:visited {
+          @include link-reset();
           color: $white;
           font-size: 2rem;
           font-weight: 400;
+          cursor: pointer;
         }
       }
     }
@@ -111,10 +112,12 @@
     &__buttons {
       button {
         @include button-reset();
-        color: $white;
+        @include invertColorsButtons($white, $primary);
         border: 1px solid $white;
         padding: 1.5rem;
         font-size: 1.5rem;
+        cursor: pointer;
+        transition: $basic;
       }
     }
   }
@@ -126,4 +129,10 @@
 
 .previously-shown {
   transform: translateX(-100%) !important;
+}
+
+@media (min-width: 77em) {
+  .mobile-navigation-innermenu {
+    padding: 1rem 3.5rem 3rem;
+  }
 }

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAIE,yDACkB;EAChB,KAAK,ECFD,IAAI;EDGR,SAAS,EAAE,OAAO;EAClB,OAAO,EAAE,MAAM;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,IAAI;EACrB,UAAU,EAAE,QAAQ;EACpB,gBAAgB,ECbV,OAAO;EDcb,WAAW,EAAE,OAAO;AAGtB,yDACiB;EACf,gBAAgB,EClBR,OAAO",
-"sources": ["PlainButton.module.scss","../../scss/_variables.scss"],
+"mappings": "AAIE,yDACkB;ECmDlB,OAAO,EAAE,YAAY;EACrB,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,OAAO;EDnDZ,KAAK,EEHD,IAAI;EFIR,SAAS,EAAE,OAAO;EAClB,OAAO,EAAE,MAAM;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;EACtB,UAAU,EAAE,QAAQ;EACpB,gBAAgB,EEbV,OAAO;EFcb,WAAW,EAAE,OAAO;EC6CtB,qEAAQ;IACN,aAAa,EAAE,gBAAgB;AD3CjC,yDACiB;EACf,gBAAgB,EElBR,OAAO",
+"sources": ["PlainButton.module.scss","../../scss/_mixin.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "PlainButton.module.css"
 }

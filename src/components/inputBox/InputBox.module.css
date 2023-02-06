@@ -76,7 +76,7 @@
     .inputbox-container input[type="text"]:focus,
     .inputbox-container input[type="email"]:focus,
     .inputbox-container input[type="tel"]:focus, .inputbox-container__input:focus {
-      outline: none;
+      outline-color: green;
       opacity: 1; }
 
 /*# sourceMappingURL=InputBox.module.css.map */

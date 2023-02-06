@@ -26,7 +26,7 @@ import {
   logoButtonDataPrimary,
   logoButtonDataDarktext,
   footerBottomOptions,
-  collapsibleFooterData,
+  footerTopOptions,
   addressData,
 } from "./data/FooterData";
 
@@ -50,7 +50,7 @@ export default function App() {
           }
         />
 
-        <LoginSignup onlyLogin={false} />
+        <LoginSignup onlyLogin={true} />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -68,7 +68,7 @@ export default function App() {
             developer={"Nashiuz Zaman"}
             bottomOptionsArray={footerBottomOptions}
             logoButtonsArray={logoButtonDataPrimary}
-            normalOptionsArray={collapsibleFooterData}
+            normalOptionsArray={footerTopOptions}
             addressData={addressData}
             imageSource={buildingsSmall}
             companyName={
@@ -86,7 +86,7 @@ export default function App() {
             developer={"Nashiuz Zaman"}
             bottomOptionsArray={footerBottomOptions}
             logoButtonsArray={logoButtonDataDarktext}
-            normalOptionsArray={collapsibleFooterData}
+            normalOptionsArray={footerTopOptions}
             addressData={addressData}
             imageSource={buildingsLarge}
             companyName={

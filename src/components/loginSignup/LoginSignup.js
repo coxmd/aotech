@@ -5,10 +5,11 @@ import styles from "./LoginSignup.module.css";
 import InputBox from "../inputBox/InputBox";
 import SubmitButton from "../submitButton/SubmitButton";
 import CloseIcon from "../closeIcon/CloseIcon";
+import BackdropBlur from "../backdropBlur/BackdropBlur";
 
 //custom hook
 import useLoginSignupContext from "../../hooks/useLoginSignupContext";
-import BackdropBlur from "../backdropBlur/BackdropBlur";
+import useCapitalize from "../../hooks/useCapitalizeStr";
 
 export default function LoginSignup({ onlyLogin = false }) {
   const {
@@ -18,7 +19,10 @@ export default function LoginSignup({ onlyLogin = false }) {
     closeForm,
     collectData,
     changeFormType,
+    checkData,
   } = useLoginSignupContext();
+
+  const { capitalizeStr } = useCapitalize();
 
   return (
     <>
@@ -57,11 +61,25 @@ export default function LoginSignup({ onlyLogin = false }) {
           </h2>
         )}
 
-        <form noValidate className={styles["login-signup-main__form"]}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const formTypeCapitalized = capitalizeStr(
+              loginSignupFinalState.formType,
+              " ",
+              ""
+            );
+
+            checkData(`check${formTypeCapitalized}FormInfo`);
+          }}
+          noValidate
+          className={styles["login-signup-main__form"]}
+        >
           <div className={styles["login-signup-main__form__inputs-container"]}>
             {loginSignupFinalState.formType === "login" && (
               <InputBox
                 value={loginSignupFinalState.employeeId}
+                errorText={loginSignupFinalState.employeeIdError}
                 onChange={(e) => collectData(e, "changeEmployeeId")}
                 type={"number"}
                 labelText={"Employee ID"}
@@ -72,6 +90,7 @@ export default function LoginSignup({ onlyLogin = false }) {
             {loginSignupFinalState.formType !== "login" && (
               <InputBox
                 value={loginSignupFinalState.email}
+                errorText={loginSignupFinalState.emailError}
                 onChange={(e) => collectData(e, "changeEmail")}
                 type={"email"}
                 labelText={"Email"}
@@ -82,6 +101,7 @@ export default function LoginSignup({ onlyLogin = false }) {
             {loginSignupFinalState.formType === "signup" && (
               <InputBox
                 value={loginSignupFinalState.username}
+                errorText={loginSignupFinalState.usernameError}
                 onChange={(e) => collectData(e, "changeUsername")}
                 type={"text"}
                 labelText={"Username"}
@@ -92,6 +112,7 @@ export default function LoginSignup({ onlyLogin = false }) {
             {loginSignupFinalState.formType !== "recoverAccount" && (
               <InputBox
                 value={loginSignupFinalState.password}
+                errorText={loginSignupFinalState.passwordError}
                 onChange={(e) => collectData(e, "changePassword")}
                 type={"password"}
                 labelText={"Password"}
@@ -102,6 +123,7 @@ export default function LoginSignup({ onlyLogin = false }) {
             {loginSignupFinalState.formType === "signup" && (
               <InputBox
                 value={loginSignupFinalState.confirmedPassword}
+                errorText={loginSignupFinalState.confirmedPasswordError}
                 onChange={(e) => collectData(e, "changeConfirmedPassword")}
                 type={"password"}
                 labelText={"Confirm Password"}
@@ -110,7 +132,7 @@ export default function LoginSignup({ onlyLogin = false }) {
             )}
           </div>
 
-          {/* switch to different form buttons */}
+          {/* switch to different form types */}
           <div
             className={
               styles["login-signup-main__form__switch-button-container"]
@@ -131,15 +153,29 @@ export default function LoginSignup({ onlyLogin = false }) {
             )}
 
             {loginSignupFinalState.formType === "signup" && (
-              <button onClick={() => changeFormType("login")}>
-                Already a user? Login
-              </button>
+              <>
+                <button onClick={() => changeFormType("login")}>
+                  Already a user? Login
+                </button>
+
+                <button onClick={() => changeFormType("recoverAccount")}>
+                  Forgot password?
+                </button>
+              </>
             )}
 
             {loginSignupFinalState.formType === "recoverAccount" && (
-              <button onClick={() => changeFormType("login")}>
-                I have a password
-              </button>
+              <>
+                <button onClick={() => changeFormType("login")}>
+                  I have a password
+                </button>
+
+                {!onlyLogin && (
+                  <button onClick={() => changeFormType("signup")}>
+                    Not a user? Sign up
+                  </button>
+                )}
+              </>
             )}
           </div>
 
