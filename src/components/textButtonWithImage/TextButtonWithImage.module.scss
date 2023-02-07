@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.text-button-with-image {
+  &__container {
+    @include flexColumn();
+    gap: 1.5rem;
+  }
+
+  &__button {
+    &:link,
+    &:visited {
+      @include link-reset();
+      @include flexRow();
+      color: $white;
+      gap: 2rem;
+      font-weight: inherit;
+      font-size: 1.5rem;
+      letter-spacing: inherit;
+      align-items: center;
+    }
+
+    img {
+      display: block;
+      height: 1.5rem;
+    }
+  }
+}

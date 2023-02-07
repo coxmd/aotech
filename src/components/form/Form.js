@@ -5,6 +5,7 @@ import { useContext } from "react";
 import InputBox from "../inputBox/InputBox";
 import SelectBox from "../selectBox/SelectBox";
 import SubmitButton from "../submitButton/SubmitButton";
+import SuccessCheckMark from "../successCheckMark/SuccessCheckMark";
 
 //styles
 import styles from "./Form.module.css";
@@ -12,9 +13,6 @@ import styles from "./Form.module.css";
 //context
 import { FormReducerContext } from "../../contexts/FormReducerContext";
 import { MediaQueryContext } from "../../contexts/MediaQueryContext";
-
-//image source
-import check from "../../assets/check.svg";
 
 export default function Form({
   imageSource = "",
@@ -115,7 +113,11 @@ export default function Form({
                 placeholder={"i.e. 9001234567"}
                 errorText={formFinalState.phoneError}
               />
-              <SubmitButton onClick={submit} buttonText={"Get Started"} />
+              <SubmitButton
+                extraClass={[styles["form-container__form__submit-button"]]}
+                onClick={submit}
+                buttonText={"Get Started"}
+              />
             </div>
 
             <div
@@ -142,7 +144,11 @@ export default function Form({
                   );
                 })}
 
-              <SubmitButton onClick={submit} buttonText={"Submit"} />
+              <SubmitButton
+                extraClass={[styles["form-container__form__submit-button"]]}
+                onClick={submit}
+                buttonText={"Submit"}
+              />
             </div>
 
             <div
@@ -152,13 +158,11 @@ export default function Form({
                   : styles["hidden"]
               }`}
             >
-              <div
-                className={
-                  styles["form-container__form__success-message__checkbox"]
-                }
-              >
-                <img src={check} alt={"check mark"} />
-              </div>
+              <SuccessCheckMark
+                extraClass={[
+                  styles["form-container__form__success-message__checkbox"],
+                ]}
+              />
 
               <p
                 className={
@@ -177,7 +181,11 @@ export default function Form({
                 {formFinalState.service} has been received. We will reach out to
                 you tomorrow between {formFinalState.time}.
               </p>
-              <SubmitButton onClick={reset} buttonText={"Close"} />
+              <SubmitButton
+                extraClass={[styles["form-container__form__submit-button"]]}
+                onClick={reset}
+                buttonText={"Close"}
+              />
             </div>
           </form>
         </div>

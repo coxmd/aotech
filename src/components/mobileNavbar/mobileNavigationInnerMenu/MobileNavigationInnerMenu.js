@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 //components
 import CloseIcon from "../../closeIcon/CloseIcon";
+import TextButtonWithImage from "../../textButtonWithImage/TextButtonWithImage";
 
 //image source
 import rightcaret from "../../../assets/caret-right.svg";
@@ -22,6 +23,7 @@ export default function MobileNavigationInnerMenu({
   handleMenuChangeBackward,
   previousMenuArray,
   buttonInfoArray = undefined,
+  textButtonWithImageInfoArray = undefined,
 }) {
   const { openForm, setBackdropOpen } = useLoginSignupContext();
 
@@ -157,6 +159,15 @@ export default function MobileNavigationInnerMenu({
             );
           })}
         </div>
+      )}
+
+      {singleMenuOptions.id === "main" && textButtonWithImageInfoArray && (
+        <TextButtonWithImage
+          textButtonWithImageInfoArray={textButtonWithImageInfoArray}
+          extraClass={[
+            styles["mobile-navigation-innermenu__text-image-buttons"],
+          ]}
+        />
       )}
     </div>
   );

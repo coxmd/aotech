@@ -14,14 +14,16 @@ import { MediaQueryContext } from "./contexts/MediaQueryContext";
 
 //image source
 import buildingsSmall from "./assets/buildings-small.webp";
-import buildingsLarge from "./assets/buildings.jpg";
+import buildingsLarge from "./assets/buildings.webp";
 
 //data
 import {
   navigationOptions,
   notFinishedPaths,
   additionalButtons,
+  textButtonWithImageInfoArray,
 } from "./data/NavigationMenuData";
+
 import {
   logoButtonDataPrimary,
   logoButtonDataDarktext,
@@ -43,6 +45,7 @@ export default function App() {
         <MobileNavigation
           navigationOptionsArray={navigationOptions}
           buttonInfoArray={additionalButtons}
+          textButtonWithImageInfoArray={textButtonWithImageInfoArray}
           brandName={
             <>
               Web<span className="highlighted">Lab</span>

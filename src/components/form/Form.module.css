@@ -1,7 +1,7 @@
 .form-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/21;
+  aspect-ratio: 16/22;
   padding: 2.5rem; }
   .form-container__imgbox {
     width: 100%;
@@ -56,6 +56,12 @@
       top: 0;
       left: 0;
       padding: 5.5rem 3rem; }
+    .form-container__form__submit-button {
+      margin-top: 1.5rem !important; }
+      .form-container__form__submit-button button:hover, .form-container__form__submit-button button:active {
+        background-color: #0099a8;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out; }
     .form-container__form__success-message {
       gap: 0 !important;
       color: #fff;
@@ -63,25 +69,7 @@
           -ms-flex-align: center;
               align-items: center; }
       .form-container__form__success-message__checkbox {
-        width: 5rem;
-        aspect-ratio: 16/16;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        border-radius: 50%;
-        overflow: hidden;
-        background-color: #af0061;
         margin-bottom: 2.5rem; }
-        .form-container__form__success-message__checkbox img {
-          display: block;
-          width: 100%;
-          padding: 1rem; }
       .form-container__form__success-message__heading {
         font-size: 2rem;
         font-weight: 600;
@@ -115,18 +103,18 @@
 
 @media (max-width: 24em) {
   .form-container {
-    aspect-ratio: 16/22.7; } }
+    aspect-ratio: 16/23.7; } }
 @media (min-width: 27em) {
   .form-container {
-    aspect-ratio: 16/19 !important; } }
+    aspect-ratio: 16/19.7 !important; } }
 @media (min-width: 30em) {
   .form-container {
-    aspect-ratio: 16/17 !important; }
+    aspect-ratio: 16/17.7 !important; }
     .form-container__form__basic-information, .form-container__form__additional-information, .form-container__form__success-message {
       padding: 5.5rem 4rem; } }
 @media (min-width: 37em) {
   .form-container {
-    aspect-ratio: 16/14 !important; }
+    aspect-ratio: 16/15 !important; }
     .form-container__form label span {
       font-size: 1.7rem; }
     .form-container__form label input::-webkit-input-placeholder {
@@ -142,10 +130,10 @@
       font-size: 1.5rem !important; } }
 @media (min-width: 45em) {
   .form-container {
-    aspect-ratio: 16/12 !important; } }
+    aspect-ratio: 16/12.3 !important; } }
 @media (min-width: 48em) {
   .form-container {
-    aspect-ratio: 16/11 !important;
+    aspect-ratio: 16/11.5 !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -205,16 +193,16 @@
       letter-spacing: 0.02rem; } }
 @media (min-width: 50em) {
   .form-container {
-    aspect-ratio: 16/10 !important; } }
+    aspect-ratio: 16/10.6 !important; } }
 @media (min-width: 62em) {
   .form-container {
-    aspect-ratio: 16/8.2 !important;
+    aspect-ratio: 16/8.5 !important;
     gap: 5rem; }
     .form-container__imgbox {
       background-position: 0% 80% !important; } }
 @media (min-width: 64em) {
   .form-container {
-    aspect-ratio: 16/8 !important;
+    aspect-ratio: 16/8.5 !important;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -232,7 +220,7 @@
       background-position: 0% 50% !important; } }
 @media (min-width: 65em) {
   .form-container {
-    aspect-ratio: 16/7.5 !important; } }
+    aspect-ratio: 16/8.3 !important; } }
 @media (min-width: 77em) {
   .form-container {
     aspect-ratio: 16/6.7 !important;

@@ -6,7 +6,7 @@
   -webkit-transform: translate(-150%, -50%);
           transform: translate(-150%, -50%);
   z-index: 1001;
-  background-color: rgba(34, 34, 34, 0.95);
+  background-color: #222222;
   padding: 0 3rem 3rem;
   visibility: collapse;
   opacity: 0;
@@ -49,7 +49,7 @@
       font-size: 1.4rem; }
       .login-signup-main__form__inputs-container label p[class*="inputbox-container__error"] {
         font-size: 1.3rem;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.4; }
       .login-signup-main__form__inputs-container label span {
         font-weight: 500;
@@ -83,5 +83,23 @@
       letter-spacing: 0.02rem; }
       .login-signup-main__form__switch-button-container button:focus {
         outline-color: green !important; }
+  .login-signup-main__form__submit-button button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    background: none;
+    border: none;
+    line-height: 1;
+    display: inline-block;
+    font-family: inherit;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: rgba(34, 34, 34, 0.95); }
+    .login-signup-main__form__submit-button button:focus {
+      outline-color: green !important; }
+    .login-signup-main__form__submit-button button:hover, .login-signup-main__form__submit-button button:active {
+      color: rgba(34, 34, 34, 0.95);
+      background-color: #fff; }
 
 /*# sourceMappingURL=LoginSignup.module.css.map */

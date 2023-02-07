@@ -181,13 +181,22 @@ export default function LoginSignup({ onlyLogin = false }) {
 
           {/* submit buttons */}
           {loginSignupFinalState.formType === "recoverAccount" && (
-            <SubmitButton buttonText={"Recover Account"} />
+            <SubmitButton
+              extraClass={[styles["login-signup-main__form__submit-button"]]}
+              buttonText={"Recover Account"}
+            />
           )}
           {loginSignupFinalState.formType === "login" && (
-            <SubmitButton buttonText={"Login"} />
+            <SubmitButton
+              extraClass={[styles["login-signup-main__form__submit-button"]]}
+              buttonText={"Login"}
+            />
           )}
           {loginSignupFinalState.formType === "signup" && (
-            <SubmitButton buttonText={"Sign Up"} />
+            <SubmitButton
+              extraClass={[styles["login-signup-main__form__submit-button"]]}
+              buttonText={"Sign Up"}
+            />
           )}
         </form>
       </div>

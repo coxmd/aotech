@@ -6,9 +6,14 @@ export default function SubmitButton({
   type = undefined,
   onClick = null,
   disabledStatus = false,
+  extraClass = [],
 }) {
   return (
-    <div className={styles["submit-button"]}>
+    <div
+      className={`${styles["submit-button"]} ${
+        extraClass.length > 0 ? extraClass.join(" ") : ""
+      }`}
+    >
       {type !== undefined && (
         <button
           onClick={onClick}

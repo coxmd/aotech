@@ -8,7 +8,8 @@
   left: 50%;
   transform: translate(-150%, -50%);
   z-index: 1001;
-  background-color: rgba($darkText, 0.95);
+  background-color: rgba($darkText, 1);
+
   padding: 0 3rem 3rem;
   visibility: collapse;
   opacity: 0;
@@ -46,8 +47,9 @@
 
         p[class*="inputbox-container__error"] {
           font-size: 1.3rem;
-          font-weight: 400;
+          font-weight: 500;
           line-height: 1.4;
+          // color: $white;
         }
 
         span {
@@ -69,6 +71,14 @@
         font-size: 1.4rem;
         font-weight: 500;
         letter-spacing: 0.02rem;
+      }
+    }
+
+    &__submit-button {
+      button {
+        @include button-reset();
+        border: 1px solid $white;
+        @include invertColorsButtons($white, rgba($darkText, 0.95));
       }
     }
   }

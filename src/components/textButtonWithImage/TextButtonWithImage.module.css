@@ -1,0 +1,35 @@
+.text-button-with-image__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem; }
+.text-button-with-image__button:link, .text-button-with-image__button:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #fff;
+  gap: 2rem;
+  font-weight: inherit;
+  font-size: 1.5rem;
+  letter-spacing: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .text-button-with-image__button:link:focus, .text-button-with-image__button:visited:focus {
+    outline-color: green !important; }
+.text-button-with-image__button img {
+  display: block;
+  height: 1.5rem; }
+
+/*# sourceMappingURL=TextButtonWithImage.module.css.map */

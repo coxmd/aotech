@@ -4,7 +4,7 @@
 .form-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/21;
+  aspect-ratio: 16/22;
 
   padding: 2.5rem;
 
@@ -65,25 +65,24 @@
       padding: 5.5rem 3rem;
     }
 
+    &__submit-button {
+      margin-top: 1.5rem !important;
+      button {
+        &:hover,
+        &:active {
+          background-color: $secondary;
+          transition: $basic;
+        }
+      }
+    }
+
     &__success-message {
       gap: 0 !important;
       color: $white;
       align-items: center;
 
       &__checkbox {
-        width: 5rem;
-        aspect-ratio: 16/16;
-        @include flex-all-center();
-        border-radius: 50%;
-        overflow: hidden;
-        background-color: $primary;
         margin-bottom: 2.5rem;
-
-        img {
-          display: block;
-          width: 100%;
-          padding: 1rem;
-        }
       }
 
       &__heading {
@@ -124,18 +123,18 @@
 
 @media (max-width: 24em) {
   .form-container {
-    aspect-ratio: 16/22.7;
+    aspect-ratio: 16/23.7;
   }
 }
 
 @media (min-width: 27em) {
   .form-container {
-    aspect-ratio: 16/19 !important;
+    aspect-ratio: 16/19.7 !important;
   }
 }
 @media (min-width: 30em) {
   .form-container {
-    aspect-ratio: 16/17 !important;
+    aspect-ratio: 16/17.7 !important;
 
     &__form {
       &__basic-information,
@@ -149,7 +148,7 @@
 
 @media (min-width: 37em) {
   .form-container {
-    aspect-ratio: 16/14 !important;
+    aspect-ratio: 16/15 !important;
 
     &__form {
       label {
@@ -172,13 +171,13 @@
 
 @media (min-width: 45em) {
   .form-container {
-    aspect-ratio: 16/12 !important;
+    aspect-ratio: 16/12.3 !important;
   }
 }
 
 @media (min-width: 48em) {
   .form-container {
-    aspect-ratio: 16/11 !important;
+    aspect-ratio: 16/11.5 !important;
     @include flexRow();
     align-items: center;
     gap: 2.5rem;
@@ -252,13 +251,13 @@
 
 @media (min-width: 50em) {
   .form-container {
-    aspect-ratio: 16/10 !important;
+    aspect-ratio: 16/10.6 !important;
   }
 }
 
 @media (min-width: 62em) {
   .form-container {
-    aspect-ratio: 16/8.2 !important;
+    aspect-ratio: 16/8.5 !important;
     gap: 5rem;
 
     &__imgbox {
@@ -269,7 +268,7 @@
 
 @media (min-width: 64em) {
   .form-container {
-    aspect-ratio: 16/8 !important;
+    aspect-ratio: 16/8.5 !important;
     justify-content: space-evenly;
     gap: 2rem;
 
@@ -295,7 +294,7 @@
 }
 @media (min-width: 65em) {
   .form-container {
-    aspect-ratio: 16/7.5 !important;
+    aspect-ratio: 16/8.3 !important;
   }
 }
 @media (min-width: 77em) {

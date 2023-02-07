@@ -23,6 +23,7 @@ export default function MobileNavigation({
   navigationOptionsArray = [],
   brandName = "",
   buttonInfoArray = undefined,
+  textButtonWithImageInfoArray = undefined,
 }) {
   const { backdropOpen, closeBackdrop, openBackdrop } = useBackdrop();
   const {
@@ -70,6 +71,9 @@ export default function MobileNavigation({
               handleMenuChangeForward={goToNext}
               handleMenuChangeBackward={goToPrevious}
               buttonInfoArray={buttonInfoArray && buttonInfoArray}
+              textButtonWithImageInfoArray={
+                textButtonWithImageInfoArray && textButtonWithImageInfoArray
+              }
             />
           );
         })}
