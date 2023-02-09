@@ -12,9 +12,7 @@ import HeadingDescBtn from "../../components/headingDescBtn/HeadingDescBtn";
 import Testimonial from "../../components/testimonial/Testimonial";
 import Form from "../../components/form/Form";
 import SubscribeMailingList from "../../components/subscribeMailingList/SubscribeMailingList";
-
-// styles
-import styles from "./Home.module.css";
+import OnlyDesignDiv from "../../components/onlyDesignDiv/OnlyDesignDiv";
 
 //context
 import { FormContextProvider } from "../../contexts/FormContext";
@@ -35,7 +33,9 @@ import { selectBoxData } from "../../data/FormData";
 import hero from "../../assets/hero.webp";
 import formImage from "../../assets/form.webp";
 import engineer from "../../assets/engineer.webp";
-import OnlyDesignDiv from "../../components/onlyDesignDiv/OnlyDesignDiv";
+
+// styles
+import styles from "./Home.module.css";
 
 export default function Home() {
   useEffect(() => {
