@@ -1,11 +1,8 @@
-//react
-import { useContext } from "react";
-
 //components
 import HeadingDescBtn from "../headingDescBtn/HeadingDescBtn";
 
-//context
-import { MediaQueryContext } from "../../contexts/MediaQueryContext";
+//custom hooks
+import useMediaQueryContext from "../../hooks/useMediaQueryContext";
 
 //styles
 import styles from "./Hero.module.css";
@@ -20,11 +17,11 @@ export default function Hero({
   subheading = "",
   shortIntroduction = "",
 }) {
-  const { mediaQueryState } = useContext(MediaQueryContext);
+  const { mediaQueryFinalState } = useMediaQueryContext();
   return (
     <div className={styles["hero-container"]}>
-      {(mediaQueryState.mobileMatches ||
-        mediaQueryState.smallTabletMatches) && (
+      {(mediaQueryFinalState.mobileMatches ||
+        mediaQueryFinalState.smallTabletMatches) && (
         <div
           style={{
             backgroundImage: `linear-gradient(
@@ -36,8 +33,8 @@ export default function Hero({
         ></div>
       )}
 
-      {(mediaQueryState.computerScreenMatches ||
-        mediaQueryState.largeTabletMatches) && (
+      {(mediaQueryFinalState.computerScreenMatches ||
+        mediaQueryFinalState.largeTabletMatches) && (
         <div
           style={{
             backgroundImage: `url(${imageSource})`,

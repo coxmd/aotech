@@ -67,8 +67,7 @@ export default function DesktopFooter({
                 styles["desktop-footer__bottom__copyright-info--details"]
               }
             >
-              &#169;{" "}
-              {`${currentYear} ${appName} App, developed by ${developer}`}
+              &#169; {`${currentYear} ${appName}, developed by ${developer}`}
             </p>
           </div>
         </div>

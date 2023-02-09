@@ -66,7 +66,7 @@ export default function MobileFooter({
           <p
             className={styles["mobile-footer__bottom__copyright-info--details"]}
           >
-            &#169; {`${currentYear} ${appName} App, developed by ${developer}`}
+            &#169; {`${currentYear} ${appName}, developed by ${developer}`}
           </p>
         </div>
       </div>

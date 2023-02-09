@@ -118,6 +118,8 @@ export const notFinishedPaths = [
   "careers/design",
   "careers/development",
   "help",
+  "industry-standards",
+  "industry-experts",
 ];
 
 export const additionalButtons = [

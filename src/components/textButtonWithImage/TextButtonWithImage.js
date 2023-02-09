@@ -7,6 +7,7 @@ import styles from "./TextButtonWithImage.module.css";
 export default function TextButtonWithImage({
   textButtonWithImageInfoArray = undefined,
   extraClass = [],
+  onClick = null,
 }) {
   return (
     <div
@@ -17,6 +18,7 @@ export default function TextButtonWithImage({
       {textButtonWithImageInfoArray.map((single) => {
         return (
           <Link
+            onClick={onClick}
             to={`/${single.toUrl}`}
             key={single.id}
             className={styles["text-button-with-image__button"]}

@@ -163,6 +163,9 @@ export default function MobileNavigationInnerMenu({
 
       {singleMenuOptions.id === "main" && textButtonWithImageInfoArray && (
         <TextButtonWithImage
+          onClick={() => {
+            handleCloseClick();
+          }}
           textButtonWithImageInfoArray={textButtonWithImageInfoArray}
           extraClass={[
             styles["mobile-navigation-innermenu__text-image-buttons"],

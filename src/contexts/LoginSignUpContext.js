@@ -17,6 +17,8 @@ export function LoginSignupContextProvider({ children }) {
     collectData,
     changeFormType,
     checkData,
+    checkDatabaseData,
+    dispatch,
   } = useLoginSignupReducer();
 
   const { backdropOpen, setBackdropOpen } = useBackdrop();
@@ -32,6 +34,8 @@ export function LoginSignupContextProvider({ children }) {
         collectData,
         changeFormType,
         checkData,
+        checkDatabaseData,
+        dispatch,
       }}
     >
       {children}

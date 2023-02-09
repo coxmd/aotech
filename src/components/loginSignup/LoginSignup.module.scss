@@ -8,12 +8,10 @@
   left: 50%;
   transform: translate(-150%, -50%);
   z-index: 1001;
-  background-color: rgba($darkText, 1);
-
-  padding: 0 3rem 3rem;
+  background-color: $darkText;
+  padding: 3rem;
   visibility: collapse;
   opacity: 0;
-
   transition: $basic;
 
   &__open {
@@ -25,7 +23,7 @@
   &__close-icon-container {
     @include flexRow();
     justify-content: flex-end;
-    margin: 2.5rem 0 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   &__form-heading {
@@ -81,5 +79,18 @@
         @include invertColorsButtons($white, rgba($darkText, 0.95));
       }
     }
+  }
+
+  &__success {
+    &__success-message-and-button {
+      @include flexColumn();
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 37em) {
+  .login-signup-main {
+    width: 50rem;
   }
 }

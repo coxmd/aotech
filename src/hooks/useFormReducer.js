@@ -1,5 +1,19 @@
 //react
-import { createContext, useReducer } from "react";
+import { useReducer } from "react";
+
+const formState = {
+  name: "",
+  nameError: "",
+  email: "",
+  emailError: "",
+  phone: "",
+  phoneError: "",
+  service: "Please select",
+  serviceError: "",
+  time: "Please select",
+  timeError: "",
+  processStage: "basic",
+};
 
 //reducer function
 const formReducer = (state, action) => {
@@ -54,6 +68,8 @@ const formReducer = (state, action) => {
         };
       }
 
+      return state;
+
     case "changeStage":
       if (state.processStage === "basic") {
         if (
@@ -70,6 +86,8 @@ const formReducer = (state, action) => {
         }
       }
 
+      return state;
+
     case "reset":
       return { ...state, ...action.payload };
 
@@ -77,24 +95,7 @@ const formReducer = (state, action) => {
       return state;
   }
 };
-
-const formState = {
-  name: "",
-  nameError: "",
-  email: "",
-  emailError: "",
-  phone: "",
-  phoneError: "",
-  service: "Please select",
-  serviceError: "",
-  time: "Please select",
-  timeError: "",
-  processStage: "basic",
-};
-
-export const FormReducerContext = createContext();
-
-export function FormReducerContextProvider({ children }) {
+export default function useFormReducer() {
   const [formFinalState, dispatch] = useReducer(formReducer, formState);
 
   const selectBoxResetFunctions = [
@@ -134,20 +135,14 @@ export function FormReducerContextProvider({ children }) {
     dispatch({ type: "reset", payload: { ...formState } });
   };
 
-  return (
-    <FormReducerContext.Provider
-      value={{
-        formFinalState,
-        dispatch,
-        selectBoxErrors,
-        selectBoxFunctions,
-        selectBoxValues,
-        selectBoxResetFunctions,
-        submit,
-        reset,
-      }}
-    >
-      {children}
-    </FormReducerContext.Provider>
-  );
+  return {
+    formFinalState,
+    dispatch,
+    selectBoxErrors,
+    selectBoxFunctions,
+    selectBoxValues,
+    selectBoxResetFunctions,
+    submit,
+    reset,
+  };
 }

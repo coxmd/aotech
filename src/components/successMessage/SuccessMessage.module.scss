@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.success-message {
+  padding: 2rem 0;
+  @include flexColumn();
+  gap: 2.5rem;
+  align-items: center;
+
+  &__message {
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02rem;
+    text-align: center;
+  }
+}

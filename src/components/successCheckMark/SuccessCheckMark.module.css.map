@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,4BAA6B;EAC3B,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,OAAO;EAChB,YAAY,EAAE,KAAK;EACnB,aAAa,EAAE,GAAG;EAClB,QAAQ,EAAE,MAAM;EAChB,gBAAgB,ECGR,OAAO;ECoFf,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EFtFnB,gCAAI;IACF,OAAO,EAAE,KAAK;IACd,KAAK,EAAE,IAAI",
-"sources": ["SuccessCheckMark.module.scss","../../scss/_variables.scss","../../scss/_mixin.scss"],
-"names": [],
-"file": "SuccessCheckMark.module.css"
-}

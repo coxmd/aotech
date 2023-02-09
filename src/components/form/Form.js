@@ -1,18 +1,15 @@
-//react
-import { useContext } from "react";
-
 //components
 import InputBox from "../inputBox/InputBox";
 import SelectBox from "../selectBox/SelectBox";
 import SubmitButton from "../submitButton/SubmitButton";
-import SuccessCheckMark from "../successCheckMark/SuccessCheckMark";
+import SuccessIcon from "../successIcon/SuccessIcon";
+
+//custom hook
+import useFormContext from "../../hooks/useFormContext";
+import useMediaQueryContext from "../../hooks/useMediaQueryContext";
 
 //styles
 import styles from "./Form.module.css";
-
-//context
-import { FormReducerContext } from "../../contexts/FormReducerContext";
-import { MediaQueryContext } from "../../contexts/MediaQueryContext";
 
 export default function Form({
   imageSource = "",
@@ -29,16 +26,16 @@ export default function Form({
     selectBoxResetFunctions,
     submit,
     reset,
-  } = useContext(FormReducerContext);
+  } = useFormContext();
 
-  const { mediaQueryState } = useContext(MediaQueryContext);
+  const { mediaQueryFinalState } = useMediaQueryContext();
 
   return (
     <>
       {/* this is displayed only when viewing on mobile or small tablet */}
       {(sectionTitle || description) &&
-        (mediaQueryState.mobileMatches ||
-          mediaQueryState.smallTabletMatches) && (
+        (mediaQueryFinalState.mobileMatches ||
+          mediaQueryFinalState.smallTabletMatches) && (
           <div className={styles["section-title-and-description"]}>
             {sectionTitle}
             {description}
@@ -48,8 +45,8 @@ export default function Form({
       <div className={styles["form-container"]}>
         {/* this is displayed only when viewing on large tablet or computers */}
         {(sectionTitle || description) &&
-          (mediaQueryState.largeTabletMatches ||
-            mediaQueryState.computerScreenMatches) && (
+          (mediaQueryFinalState.largeTabletMatches ||
+            mediaQueryFinalState.computerScreenMatches) && (
             <div className={styles["section-title-and-description"]}>
               {sectionTitle}
               {description}
@@ -158,7 +155,7 @@ export default function Form({
                   : styles["hidden"]
               }`}
             >
-              <SuccessCheckMark
+              <SuccessIcon
                 extraClass={[
                   styles["form-container__form__success-message__checkbox"],
                 ]}

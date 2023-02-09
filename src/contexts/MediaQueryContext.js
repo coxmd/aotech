@@ -17,6 +17,14 @@ const largeTabletQuery = window.matchMedia(largeTablet);
 const computerScreen = "(min-width: 1025px)";
 const computerScreenQuery = window.matchMedia(computerScreen);
 
+//initial state
+const mediaQueryStartState = {
+  mobileMatches: mobileQuery.matches,
+  smallTabletMatches: smallTabletQuery.matches,
+  largeTabletMatches: largeTabletQuery.matches,
+  computerScreenMatches: computerScreenQuery.matches,
+};
+
 //mediaquery reducer
 const mediaQueryReducer = (state, action) => {
   switch (action.type) {
@@ -38,12 +46,10 @@ const mediaQueryReducer = (state, action) => {
 };
 
 export function MediaQueryContextProvider({ children }) {
-  const [mediaQueryState, dispatch] = useReducer(mediaQueryReducer, {
-    mobileMatches: mobileQuery.matches,
-    smallTabletMatches: smallTabletQuery.matches,
-    largeTabletMatches: largeTabletQuery.matches,
-    computerScreenMatches: computerScreenQuery.matches,
-  });
+  const [mediaQueryFinalState, dispatch] = useReducer(
+    mediaQueryReducer,
+    mediaQueryStartState
+  );
 
   const setMobileMatched = (e) => {
     if (e.matches) {
@@ -122,7 +128,7 @@ export function MediaQueryContextProvider({ children }) {
   }, []);
 
   return (
-    <MediaQueryContext.Provider value={{ mediaQueryState: mediaQueryState }}>
+    <MediaQueryContext.Provider value={{ mediaQueryFinalState }}>
       {children}
     </MediaQueryContext.Provider>
   );

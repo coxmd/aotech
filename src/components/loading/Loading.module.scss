@@ -1,0 +1,23 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+@import "../../scss/animation";
+
+.loading-container {
+  padding: 3.5rem 0 6rem;
+  @include flex-all-center();
+
+  img {
+    display: block;
+    width: 5rem;
+    animation: rotate360 1s linear infinite;
+  }
+
+  &__spinner {
+    width: 5rem;
+    aspect-ratio: 16/16;
+    border: 2px solid $secondary;
+    border-right: none;
+    border-radius: 50%;
+    animation: rotate360 1s linear infinite;
+  }
+}

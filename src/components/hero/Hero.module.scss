@@ -1,5 +1,6 @@
 @import "../../scss/variables";
 @import "../../scss/mixin";
+@import "../../scss/animation";
 
 .hero-container {
   position: relative;
@@ -22,6 +23,7 @@
     transform: translateY(-15%);
     left: 2.5rem;
     color: $white;
+    animation: fadeIn 1s linear;
 
     p[class*="short-introduction"] {
       text-transform: uppercase;

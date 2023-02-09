@@ -7,7 +7,7 @@
           transform: translate(-150%, -50%);
   z-index: 1001;
   background-color: #222222;
-  padding: 0 3rem 3rem;
+  padding: 3rem;
   visibility: collapse;
   opacity: 0;
   -webkit-transition: all 0.2s ease-out;
@@ -28,7 +28,7 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin: 2.5rem 0 2.5rem; }
+    margin-bottom: 2.5rem; }
   .login-signup-main__form-heading {
     color: #fff;
     font-size: 2.4rem;
@@ -101,5 +101,20 @@
     .login-signup-main__form__submit-button button:hover, .login-signup-main__form__submit-button button:active {
       color: rgba(34, 34, 34, 0.95);
       background-color: #fff; }
+  .login-signup-main__success__success-message-and-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+@media (min-width: 37em) {
+  .login-signup-main {
+    width: 50rem; } }
 
 /*# sourceMappingURL=LoginSignup.module.css.map */

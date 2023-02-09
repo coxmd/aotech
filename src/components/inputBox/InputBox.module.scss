@@ -65,8 +65,27 @@
     }
 
     &:focus {
-      outline-color: green;
+      outline: none;
       opacity: 1;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@media (min-width: 62em) {
+  .inputbox-container {
+    &__error {
+      font-size: 1.45rem !important;
+      font-weight: 400 !important;
     }
   }
 }

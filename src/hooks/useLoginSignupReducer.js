@@ -1,5 +1,24 @@
 //react
-import { useReducer } from "react";
+import { useReducer, useCallback } from "react";
+import useCapitalizeStr from "./useCapitalizeStr";
+
+// All error states start as NULL and then after every check (initial and replicated database checks) they are either "" (an empty string) or the error message as a string. They start as NULL because then when they become either of those two values then I can understand that the checks have happened for the data and now either they passed or failed WHICH MEANS THEY ARE IN A DIFFERENT STAGE.
+const loginSignupStartState = {
+  formOpen: false,
+  formType: "login",
+  isPending: false,
+  isSuccess: false,
+  email: "",
+  emailError: null,
+  password: "",
+  passwordError: null,
+  confirmedPassword: "",
+  confirmedPasswordError: null,
+  employeeId: "",
+  employeeIdError: null,
+  username: "",
+  usernameError: null,
+};
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -19,18 +38,14 @@ const reducer = (state, action) => {
       return { ...state, employeeId: action.payload };
     case "changeUsername":
       return { ...state, username: action.payload };
-    case "checkRecoverAccountFormInfo":
-      return {
-        ...state,
-        emailError:
-          state.email === "" ||
-          !state.email.includes("@") ||
-          !state.email.includes(".com")
-            ? "Required"
-            : "",
-      };
 
-    case "checkLoginFormInfo":
+    case "changeIsPending":
+      return { ...state, isPending: action.payload };
+
+    // All error states start as NULL and then after every check (initial and replicated database checks) they are either "" (an empty string) or the error message as a string. They start as NULL because then when they become either of those two values then I can understand that the checks have happened for the data and now either they passed or failed WHICH MEANS THEY ARE IN A DIFFERENT STAGE.
+
+    //  PLEASE NOTE THESE DATA CHECKS ARE JUST EXAMPLE DATA CHECKS PERFORMED TO REPLICATE A FETCH TO THE DATABASE
+    case "checkLoginInitialInfo":
       return {
         ...state,
         employeeIdError: state.employeeId === "" ? "Required" : "",
@@ -41,7 +56,7 @@ const reducer = (state, action) => {
             : ""),
       };
 
-    case "checkSignupFormInfo":
+    case "checkSignupInitialInfo":
       return {
         ...state,
         emailError:
@@ -64,6 +79,100 @@ const reducer = (state, action) => {
             : ""),
       };
 
+    case "checkRecoverAccountInitialInfo":
+      return {
+        ...state,
+        emailError:
+          state.email === "" ||
+          !state.email.includes("@") ||
+          !state.email.includes(".com")
+            ? "Required"
+            : "",
+      };
+
+    // All error states start as NULL and then after every check (initial and replicated database checks) they are either "" (an empty string) or the error message as a string. They start as NULL because then when they become either of those two values then I can understand that the checks have happened for the data and now either they passed or failed WHICH MEANS THEY ARE IN A DIFFERENT STAGE.
+
+    //  PLEASE NOTE THESE DATA CHECKS ARE JUST EXAMPLE DATA CHECKS PERFORMED TO REPLICATE A FETCH TO THE DATABASE
+    case "checkLoginFormDatabaseErrors":
+      return {
+        ...state,
+        employeeIdError:
+          state.employeeId !== "111" ? "Incorrect Employee ID" : "",
+        passwordError: state.password !== "123456" ? "Incorrect password" : "",
+      };
+
+    case "checkSignupFormDatabaseErrors":
+      return {
+        ...state,
+        usernameError:
+          state.username === "Test User"
+            ? "Username alredy exists, try another one"
+            : "",
+      };
+
+    case "checkRecoverAccountFormDatabaseErrors":
+      return {
+        ...state,
+        emailError:
+          state.email !== "test@example.com"
+            ? "No email address found, try again"
+            : "",
+      };
+
+    // Change to pending state if no basic errors
+    case "changeToPendingWhenNoError":
+      if (state.formType === "login") {
+        if (state.employeeIdError === "" && state.passwordError === "") {
+          return { ...state, isPending: true };
+        }
+      }
+
+      if (state.formType === "signup") {
+        if (
+          state.emailError === "" &&
+          state.usernameError === "" &&
+          state.passwordError === "" &&
+          state.confirmedPasswordError === ""
+        ) {
+          return { ...state, isPending: true };
+        }
+      }
+
+      if (state.formType === "recoverAccount") {
+        if (state.emailError === "") {
+          return { ...state, isPending: true };
+        }
+      }
+
+      return state;
+
+    // Change to success state if no database errors
+    case "changeToSuccessWhenNoFinalError":
+      if (state.formType === "login") {
+        if (state.employeeIdError === "" && state.passwordError === "") {
+          return { ...state, isSuccess: true };
+        }
+      }
+
+      if (state.formType === "signup") {
+        if (
+          state.emailError === "" &&
+          state.usernameError === "" &&
+          state.passwordError === "" &&
+          state.confirmedPasswordError === ""
+        ) {
+          return { ...state, isSuccess: true };
+        }
+      }
+
+      if (state.formType === "recoverAccount") {
+        if (state.emailError === "") {
+          return { ...state, isSuccess: true };
+        }
+      }
+
+      return state;
+
     case "resetData":
       return {
         ...state,
@@ -72,11 +181,19 @@ const reducer = (state, action) => {
         confirmedPassword: "",
         employeeId: "",
         username: "",
-        emailError: "",
-        passwordError: "",
-        confirmedPasswordError: "",
-        employeeIdError: "",
-        usernameError: "",
+      };
+
+    case "resetFormProgressState":
+      return { ...state, isPending: false, isSuccess: false };
+
+    case "resetErrorData":
+      return {
+        ...state,
+        emailError: null,
+        passwordError: null,
+        confirmedPasswordError: null,
+        employeeIdError: null,
+        usernameError: null,
       };
 
     case "resetFormType":
@@ -84,24 +201,14 @@ const reducer = (state, action) => {
         ...state,
         formType: "login",
       };
+
+    case "resetAllStates":
+      return {
+        ...loginSignupStartState,
+      };
     default:
       return state;
   }
-};
-
-const loginSignupStartState = {
-  formOpen: false,
-  formType: "login",
-  email: "",
-  emailError: "",
-  password: "",
-  passwordError: "",
-  confirmedPassword: "",
-  confirmedPasswordError: "",
-  employeeId: "",
-  employeeIdError: "",
-  username: "",
-  usernameError: "",
 };
 
 export default function useLoginSignupReducer() {
@@ -109,6 +216,7 @@ export default function useLoginSignupReducer() {
     reducer,
     loginSignupStartState
   );
+  const { capitalizeStr } = useCapitalizeStr();
 
   // function to open the form
   const openForm = () => {
@@ -117,14 +225,14 @@ export default function useLoginSignupReducer() {
 
   // function to close the form
   const closeForm = () => {
-    dispatch({ type: "resetData" });
-    dispatch({ type: "resetFormType" });
-    dispatch({ type: "closeForm" });
+    dispatch({ type: "resetAllStates" });
   };
 
   // function to change the form type
   const changeFormType = (formType) => {
+    dispatch({ type: "resetFormProgressState" });
     dispatch({ type: "resetData" });
+    dispatch({ type: "resetErrorData" });
     dispatch({
       type: "changeFormType",
       payload: formType,
@@ -140,9 +248,16 @@ export default function useLoginSignupReducer() {
   };
 
   //function to check form data
-  const checkData = (typeOfCheck) => {
-    dispatch({ type: typeOfCheck });
+  const checkData = (formType) => {
+    dispatch({ type: `check${capitalizeStr(formType)}InitialInfo` });
   };
+
+  const checkDatabaseData = useCallback(
+    (formType) => {
+      dispatch({ type: `check${capitalizeStr(formType)}FormDatabaseErrors` });
+    },
+    [capitalizeStr]
+  );
 
   return {
     loginSignupFinalState,
@@ -152,5 +267,6 @@ export default function useLoginSignupReducer() {
     collectData,
     changeFormType,
     checkData,
+    checkDatabaseData,
   };
 }

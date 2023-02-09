@@ -1,3 +1,27 @@
+@-webkit-keyframes rotate360 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes rotate360 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .hero-container {
   position: relative;
   max-width: 140rem;
@@ -17,7 +41,9 @@
     -webkit-transform: translateY(-15%);
             transform: translateY(-15%);
     left: 2.5rem;
-    color: #fff; }
+    color: #fff;
+    -webkit-animation: fadeIn 1s linear;
+            animation: fadeIn 1s linear; }
     .hero-container div[class*="textbox"] p[class*="short-introduction"] {
       text-transform: uppercase;
       font-weight: 600; }

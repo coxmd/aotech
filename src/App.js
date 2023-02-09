@@ -1,6 +1,5 @@
 //react
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useContext } from "react";
 
 //components
 import MobileNavigation from "./components/mobileNavbar/mobileNavigation/MobileNavigation";
@@ -8,9 +7,10 @@ import Home from "./pages/Home/Home";
 import NoContent from "./components/noContent/NoContent";
 import MobileFooter from "./components/mobileFooter/MobileFooter";
 import DesktopFooter from "./components/desktopFooter/DesktopFooter";
+import LoginSignup from "./components/loginSignup/LoginSignup";
 
-//context
-import { MediaQueryContext } from "./contexts/MediaQueryContext";
+//custom hooks
+import useMediaQueryContext from "./hooks/useMediaQueryContext";
 
 //image source
 import buildingsSmall from "./assets/buildings-small.webp";
@@ -34,10 +34,9 @@ import {
 
 //styles
 import "./basicStyles/App.css";
-import LoginSignup from "./components/loginSignup/LoginSignup";
 
 export default function App() {
-  const { mediaQueryState } = useContext(MediaQueryContext);
+  const { mediaQueryFinalState } = useMediaQueryContext();
 
   return (
     <div className="App">
@@ -64,8 +63,8 @@ export default function App() {
           })}
         </Routes>
 
-        {(mediaQueryState.mobileMatches ||
-          mediaQueryState.smallTabletMatches) && (
+        {(mediaQueryFinalState.mobileMatches ||
+          mediaQueryFinalState.smallTabletMatches) && (
           <MobileFooter
             appName={"WebLab"}
             developer={"Nashiuz Zaman"}
@@ -82,8 +81,8 @@ export default function App() {
           />
         )}
 
-        {(mediaQueryState.largeTabletMatches ||
-          mediaQueryState.computerScreenMatches) && (
+        {(mediaQueryFinalState.largeTabletMatches ||
+          mediaQueryFinalState.computerScreenMatches) && (
           <DesktopFooter
             appName={"WebLab"}
             developer={"Nashiuz Zaman"}

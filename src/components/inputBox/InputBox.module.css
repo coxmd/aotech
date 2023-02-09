@@ -76,7 +76,18 @@
     .inputbox-container input[type="text"]:focus,
     .inputbox-container input[type="email"]:focus,
     .inputbox-container input[type="tel"]:focus, .inputbox-container__input:focus {
-      outline-color: green;
+      outline: none;
       opacity: 1; }
+  .inputbox-container input::-webkit-outer-spin-button,
+  .inputbox-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .inputbox-container input[type="number"] {
+    -moz-appearance: textfield; }
+
+@media (min-width: 62em) {
+  .inputbox-container__error {
+    font-size: 1.45rem !important;
+    font-weight: 400 !important; } }
 
 /*# sourceMappingURL=InputBox.module.css.map */

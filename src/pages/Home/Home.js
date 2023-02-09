@@ -1,5 +1,5 @@
 //react
-import { React, useRef, useEffect, useContext } from "react";
+import { React, useRef, useEffect } from "react";
 
 // components
 import Hero from "../../components/hero/Hero";
@@ -17,13 +17,13 @@ import SubscribeMailingList from "../../components/subscribeMailingList/Subscrib
 import styles from "./Home.module.css";
 
 //context
-import { NavbarThemeContext } from "../../contexts/NavbarThemeContext";
-import { FormReducerContextProvider } from "../../contexts/FormReducerContext";
-import { MediaQueryContext } from "../../contexts/MediaQueryContext";
+import { FormContextProvider } from "../../contexts/FormContext";
 
 //custom hook
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import useMultipleIntersectionObserver from "../../hooks/useMultipleIntersectionObserver";
+import useNavbarThemeContext from "../../hooks/useNavbarThemeContext";
+import useMediaQueryContext from "../../hooks/useMediaQueryContext";
 
 //data
 import { industryExpertSectionData } from "../../data/ImageDescriptionData";
@@ -38,6 +38,9 @@ import engineer from "../../assets/engineer.webp";
 import OnlyDesignDiv from "../../components/onlyDesignDiv/OnlyDesignDiv";
 
 export default function Home() {
+  const { setHeroVisible } = useNavbarThemeContext();
+  const { mediaQueryFinalState } = useMediaQueryContext();
+
   //create a ref for the hero image
   const heroRef = useRef();
   const servicesRefs = useRef([]);
@@ -60,10 +63,6 @@ export default function Home() {
   //use custom observer hook to check if form section is becoming visible on the viewport
   const { entry: formSectionEntry, observer: formSectionObserver } =
     useIntersectionObserver(formSectionRef, 0.3);
-
-  //extract value from the context
-  const { setHeroVisible } = useContext(NavbarThemeContext);
-  const { mediaQueryState } = useContext(MediaQueryContext);
 
   // based on entries data toggle navbar background color theme
   useEffect(() => {
@@ -205,8 +204,8 @@ export default function Home() {
                     }
                   />
                 </div>
-                {(mediaQueryState.largeTabletMatches ||
-                  mediaQueryState.computerScreenMatches) &&
+                {(mediaQueryFinalState.largeTabletMatches ||
+                  mediaQueryFinalState.computerScreenMatches) &&
                   i !== ourServicesData.length - 1 && <OnlyDesignDiv />}
               </div>
             );
@@ -238,7 +237,7 @@ export default function Home() {
                 details={single.details}
                 extraClass={single.extraClass}
                 extraInlineStyle={
-                  mediaQueryState.computerScreenMatches
+                  mediaQueryFinalState.computerScreenMatches
                     ? {
                         transition: `all 0.4s ${0.2 + i * 0.3}s ease-out`,
                       }
@@ -252,15 +251,15 @@ export default function Home() {
         </div>
       </section>
 
-      {(mediaQueryState.largeTabletMatches ||
-        mediaQueryState.computerScreenMatches) && <OnlyDesignDiv />}
+      {(mediaQueryFinalState.largeTabletMatches ||
+        mediaQueryFinalState.computerScreenMatches) && <OnlyDesignDiv />}
 
       <section
         ref={formSectionRef}
         id={"signup-form"}
         className={styles["form-section"]}
       >
-        <FormReducerContextProvider>
+        <FormContextProvider>
           <Form
             additionalData={{ selectBoxData }}
             imageSource={formImage}
@@ -279,7 +278,7 @@ export default function Home() {
               </div>
             }
           />
-        </FormReducerContextProvider>
+        </FormContextProvider>
       </section>
 
       <section className={styles["subscribe-mailing-list"]}>
