@@ -29,7 +29,7 @@
     position: relative; }
     .form-container__form label span {
       font-size: 1.5rem; }
-    .form-container__form label p[class*="inputbox-container__error"] {
+    .form-container__form label p[class*="error"] {
       color: #fff; }
     .form-container__form label input {
       font-size: 1.4rem !important; }
