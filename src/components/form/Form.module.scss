@@ -39,6 +39,10 @@
         font-size: 1.5rem;
       }
 
+      p[class*="inputbox-container__error"] {
+        color: $white;
+      }
+
       input {
         font-size: 1.4rem !important;
 

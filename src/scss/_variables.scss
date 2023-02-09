@@ -1,6 +1,8 @@
 //color
 $primary: #af0061;
 $primaryLight: lighten($primary, 5%);
+$filterForPrimary: invert(12%) sepia(88%) saturate(6890%) hue-rotate(319deg)
+  brightness(70%) contrast(102%);
 $primaryTrans: rgba($primary, 0.9);
 $primaryLightTrans: rgba($primaryLight, 0.9);
 $secondary: #0099a8;

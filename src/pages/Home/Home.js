@@ -38,6 +38,10 @@ import engineer from "../../assets/engineer.webp";
 import OnlyDesignDiv from "../../components/onlyDesignDiv/OnlyDesignDiv";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { setHeroVisible } = useNavbarThemeContext();
   const { mediaQueryFinalState } = useMediaQueryContext();
 

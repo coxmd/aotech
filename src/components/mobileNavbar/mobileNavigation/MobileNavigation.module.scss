@@ -12,6 +12,16 @@
         color: $darkText;
       }
     }
+
+    div[class*="user-main"] {
+      img {
+        filter: $filterForPrimary;
+      }
+
+      p {
+        color: $darkText;
+      }
+    }
   }
 }
 

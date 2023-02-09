@@ -29,6 +29,8 @@
     position: relative; }
     .form-container__form label span {
       font-size: 1.5rem; }
+    .form-container__form label p[class*="inputbox-container__error"] {
+      color: #fff; }
     .form-container__form label input {
       font-size: 1.4rem !important; }
       .form-container__form label input::-webkit-input-placeholder {

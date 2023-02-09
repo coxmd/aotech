@@ -1,16 +1,9 @@
-//react
-// import { useEffect, useState } from "react";
-
-import { useContext } from "react";
-
 //components
 import MobileNavigationInnerMenu from "../mobileNavigationInnerMenu/MobileNavigationInnerMenu";
 import BackdropBlur from "../../backdropBlur/BackdropBlur";
 import BrandName from "../../brandName/BrandName";
 import HamburgerMenu from "../../hamburgerMenu/HamburgerMenu";
-
-//context
-import { NavbarThemeContext } from "../../../contexts/NavbarThemeContext";
+import User from "../../user/User";
 
 //styles
 import styles from "./MobileNavigation.module.css";
@@ -18,6 +11,8 @@ import styles from "./MobileNavigation.module.css";
 //custom hooks
 import useMobileNavigation from "../../../hooks/useMobileNavigation";
 import useBackdrop from "../../../hooks/useBackdrop";
+import useNavbarThemeContext from "../../../hooks/useNavbarThemeContext";
+import useAuthContext from "../../../hooks/useAuthContext";
 
 export default function MobileNavigation({
   navigationOptionsArray = [],
@@ -34,7 +29,9 @@ export default function MobileNavigation({
     goToPrevious,
   } = useMobileNavigation({ closeBackdrop, openBackdrop });
 
-  const { heroVisible } = useContext(NavbarThemeContext);
+  const { heroVisible } = useNavbarThemeContext();
+
+  const { user, loggedIn } = useAuthContext();
 
   const closeBackdropAndEverything = () => {
     handleCloseMobileNavigation();
@@ -48,6 +45,9 @@ export default function MobileNavigation({
     >
       <div className={styles["mobile-nav__brand-and-toggles"]}>
         <BrandName title={brandName} toUrl={"/"} />
+
+        {loggedIn && <User username={user} />}
+
         <HamburgerMenu
           clickHandler={handleOpenMobileNavigation}
           dark={!heroVisible ? true : false}
@@ -55,6 +55,7 @@ export default function MobileNavigation({
       </div>
 
       <BackdropBlur open={backdropOpen} onClick={closeBackdropAndEverything} />
+
       <div
         className={`${styles["mobile-nav__container"]} ${
           state.containerOpen ? styles["mobile-nav__container--open"] : ""
@@ -63,6 +64,7 @@ export default function MobileNavigation({
         {navigationOptionsArray.map((option) => {
           return (
             <MobileNavigationInnerMenu
+              loggedIn={loggedIn}
               key={option.id}
               singleMenuOptions={option}
               handleCloseClick={handleCloseMobileNavigation}

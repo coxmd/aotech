@@ -24,11 +24,13 @@ const formReducer = (state, action) => {
           email: "",
         };
       }
+
+      return state;
     case "changeDisable":
       if (state.success) {
         return { ...state, disabled: true };
       }
-
+      return state;
     case "reset":
       return { ...state, ...action.payload };
     default:

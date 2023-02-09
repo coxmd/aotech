@@ -1,0 +1,37 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.user-main {
+  margin-left: auto;
+  margin-right: 0.5rem;
+
+  &__container {
+    @include flexRow();
+    align-items: center;
+    gap: 0.5rem;
+
+    &__image {
+      display: block;
+      width: 2rem;
+      aspect-ratio: 16/16;
+      filter: invert(100%) sepia(0%) saturate(4%) hue-rotate(181deg)
+        brightness(104%) contrast(100%);
+    }
+
+    &__username {
+      color: $white;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .user-main {
+    margin-right: 1.5rem;
+
+    &__container {
+      gap: 1rem;
+    }
+  }
+}

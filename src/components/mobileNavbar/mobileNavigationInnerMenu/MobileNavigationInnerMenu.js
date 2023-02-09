@@ -11,6 +11,7 @@ import leftcaret from "../../../assets/caret-left.svg";
 
 //hooks
 import useLoginSignupContext from "../../../hooks/useLoginSignupContext";
+import useAuthContext from "../../../hooks/useAuthContext";
 
 //styles
 import styles from "./MobileNavigationInnerMenu.module.css";
@@ -26,6 +27,7 @@ export default function MobileNavigationInnerMenu({
   textButtonWithImageInfoArray = undefined,
 }) {
   const { openForm, setBackdropOpen } = useLoginSignupContext();
+  const { loggedIn, setUser, setLoggedIn } = useAuthContext();
 
   return (
     <div
@@ -148,13 +150,18 @@ export default function MobileNavigationInnerMenu({
             return (
               <button
                 onClick={() => {
-                  handleCloseClick();
-                  setBackdropOpen(true);
-                  openForm();
+                  if (loggedIn) {
+                    setUser("");
+                    setLoggedIn(false);
+                  } else {
+                    handleCloseClick();
+                    setBackdropOpen(true);
+                    openForm();
+                  }
                 }}
                 key={single.id}
               >
-                {single.buttonText}
+                {loggedIn ? "Logout" : single.buttonText}
               </button>
             );
           })}
