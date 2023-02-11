@@ -32,7 +32,6 @@ import { selectBoxData } from "../../data/FormData";
 // image source
 import hero from "../../assets/hero.webp";
 import formImage from "../../assets/form.webp";
-import engineer from "../../assets/engineer.webp";
 
 // styles
 import styles from "./Home.module.css";
@@ -286,7 +285,7 @@ export default function Home() {
       </section>
 
       <section className={styles["subscribe-mailing-list"]}>
-        <SubscribeMailingList imageSource={engineer} />
+        <SubscribeMailingList />
       </section>
     </div>
   );
