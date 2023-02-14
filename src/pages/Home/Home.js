@@ -120,7 +120,7 @@ export default function Home() {
           shortIntroduction={"Welcome"}
           heading={"Truly the best expertise for your digital growth"}
           subheading={
-            "Technological solutions that integrete human touch with digital proficiency."
+            "Technological solutions that integrate human touch with digital proficiency."
           }
           button={
             <PlainButton
