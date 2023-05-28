@@ -440,3 +440,23 @@
     }
   }
 }
+
+@media (min-width: 88em) {
+  .our-services {
+    &__service-container {
+      max-width: 135rem;
+    }
+  }
+
+  .form-section {
+    max-width: 160rem;
+  }
+}
+
+@media (min-width: 95em) {
+  .our-services {
+    &__service-container {
+      max-width: 145rem;
+    }
+  }
+}

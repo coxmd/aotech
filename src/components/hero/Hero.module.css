@@ -24,7 +24,7 @@
     opacity: 1; } }
 .hero-container {
   position: relative;
-  max-width: 140rem;
+  max-width: 200rem;
   aspect-ratio: 16/22; }
   .hero-container .hero-background-image {
     width: 100%;

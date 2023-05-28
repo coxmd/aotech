@@ -360,5 +360,14 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; } }
+@media (min-width: 88em) {
+  .our-services__service-container {
+    max-width: 135rem; }
+
+  .form-section {
+    max-width: 160rem; } }
+@media (min-width: 95em) {
+  .our-services__service-container {
+    max-width: 145rem; } }
 
 /*# sourceMappingURL=Home.module.css.map */
