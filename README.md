@@ -8,3 +8,7 @@ This a sample website for an IT company providing software development services.
 
 - React JS
 - Sass
+
+# Features
+
+This is a homepage only project. It contains a simple login form and functionality.
