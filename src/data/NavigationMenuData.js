@@ -1,16 +1,17 @@
 //image source
-import help from "../assets/help.png";
-import contact from "../assets/contact.png";
+//import help from "../assets/help.png";
+//import contact from "../assets/contact.png";
 
 export const navigationOptions = [
   {
     id: "main",
     options: [
       { text: "Home", id: 0, nextMenu: undefined, link: "" },
-      { text: "Services", id: 1, nextMenu: "services", link: undefined },
-      { text: "About", id: 2, nextMenu: "about", link: undefined },
-      { text: "Blog", id: 3, nextMenu: undefined, link: "blog" },
-      { text: "Careers", id: 4, nextMenu: "careers", link: undefined },
+      { text: "Services", id: 1, nextMenu: undefined, link: "" },
+      { text: "About", id: 2, nextMenu: undefined, link: "" },
+      { text: "Contact", id: 3, nextMenu: undefined, link: "" },
+      //{ text: "Blog", id: 3, nextMenu: undefined, link: "" },
+      //{ text: "Careers", id: 4, nextMenu: undefined, link: undefined },
       // { text: "Contact", id: 5, nextMenu: undefined, link: "contact" },
     ],
   },
@@ -130,6 +131,6 @@ export const additionalButtons = [
 ];
 
 export const textButtonWithImageInfoArray = [
-  { text: "Contact", imageSource: contact, id: 0, toUrl: "contact" },
-  { text: "Help", imageSource: help, id: 1, toUrl: "help" },
+  { text: "Contact", /*imageSource: contact,*/ id: 0, toUrl: "contact" },
+  { text: "Help", /*imageSource: help,*/ id: 1, toUrl: "help" },
 ];

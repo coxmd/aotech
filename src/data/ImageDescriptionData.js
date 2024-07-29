@@ -6,7 +6,7 @@ export const industryExpertSectionData = [
   {
     id: 0,
     description:
-      "Amet consectetur adipisicing elit. Facilis minima suscipit amet voluptatum iste! Nesciunt assumenda magni accusamus laboriosam voluptatum, quae adipisci neque sequi quam, reiciendis repudiandae. Similique totam eum eaque nisi.",
+      "Our commitment to maintaining industry standards ensures that we deliver cutting-edge IT solutions. We stay up-to-date with the latest technologies, best practices, and compliance requirements to provide reliable and efficient services to our clients.",
     imageSource: industryStandard,
     buttonPresent: true,
     rightArrow: false,
@@ -17,7 +17,7 @@ export const industryExpertSectionData = [
   {
     id: 1,
     description:
-      "Nobis eligendi suscipit distinctio et non, deleniti ducimus, sit neque, doloribus culpa quibusdam voluptatem nam! Delectus atque, dolore error veritatis reprehenderit inventore, deleniti quo officia perspiciatis modi et harum. Debitis assumenda sint.",
+      "Our team of industry expert engineers brings decades of IT experience to every project. With specialized knowledge in cutting-edge technologies and best practices, we deliver innovative solutions tailored to meet your unique business challenges and drive digital transformation.",
     imageSource: industryExperts,
     buttonPresent: true,
     rightArrow: false,

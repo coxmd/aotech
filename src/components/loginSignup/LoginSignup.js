@@ -16,8 +16,8 @@ import SuccessMessage from "../successMessage/SuccessMessage";
 import styles from "./LoginSignup.module.css";
 
 //image source
-import mailIcon from "../../assets/email.svg";
-import loginIcon from "../../assets/login.svg";
+//import mailIcon from "../../assets/email.svg";
+//import loginIcon from "../../assets/login.svg";
 
 export default function LoginSignup({
   onlyLogin = false,
@@ -300,7 +300,7 @@ export default function LoginSignup({
                 }
               >
                 <SuccessMessage
-                  imageSource={loginIcon}
+                  //imageSource={loginIcon}
                   message={"Login successful."}
                 />
               </div>
@@ -349,7 +349,7 @@ export default function LoginSignup({
                 }
               >
                 <SuccessMessage
-                  imageSource={mailIcon}
+                  //imageSource={mailIcon}
                   message={
                     <>
                       Please check the email address{" "}

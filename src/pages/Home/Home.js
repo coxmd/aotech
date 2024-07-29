@@ -145,7 +145,7 @@ export default function Home() {
 
           <PlainDescriptionBox
             description={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores itaque qui consequuntur aut unde, fugiat deleniti."
+              "Our team of industry experts brings years of experience and cutting-edge knowledge to deliver innovative IT solutions tailored to your business needs."
             }
           />
         </div>
@@ -178,7 +178,7 @@ export default function Home() {
         />
 
         <div className={styles["desktop-center"]}>
-          <PlainDescriptionBox description="Veniam saepe ipsum rerum expedita, iste enim unde quas delectus hic amet impedit sit deserunt explicabo:" />
+          <PlainDescriptionBox description="We offer a comprehensive range of IT services to help your business thrive in the digital age, including:" />
         </div>
 
         <div className={styles["our-services__services"]}>
@@ -277,7 +277,7 @@ export default function Home() {
             }
             description={
               <div className={styles["desktop-center"]}>
-                <PlainDescriptionBox description="Perspiciatis nemo officia commodi saepe laudantium  tempora." />
+                <PlainDescriptionBox description="Get expert advice and personalized solutions with our free consultation service." />
               </div>
             }
           />

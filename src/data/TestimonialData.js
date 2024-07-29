@@ -10,16 +10,16 @@ export const testimonialData = [
     imageSource: richard,
     oneLiner: "Very professional.",
     details:
-      "Quia ipsa recusandae sed delectus explicabo consequatur laudantium! Quibusdam.",
-    personName: "Richard Parker",
+      "The team provided exceptional IT services, ensuring our systems were always up and running smoothly. Their professionalism and expertise are unmatched.",
+    personName: "Richard",
     extraClass: [],
   },
   {
     id: 1,
     imageSource: tamara,
     oneLiner: "They're amazing!",
-    details: "Voluptatibus maxime dolore consequuntur neque, assumenda.",
-    personName: "Tamara Bellis",
+    details: "Their innovative solutions and prompt support have significantly improved our business operations. We couldn't be happier with their service.",
+    personName: "Tamara",
     extraClass: ["reverse"],
   },
   {
@@ -27,8 +27,8 @@ export const testimonialData = [
     imageSource: christina,
     oneLiner: "Life became easier.",
     details:
-      "Possimus nobis esse dignissimos, laboriosam ipsa labore officia, sint.",
-    personName: "Christina Lopez",
+      "Thanks to their comprehensive IT services, we can now focus on our core business without worrying about technical issues. They truly made our lives easier.",
+    personName: "Christina",
     extraClass: [],
   },
   {
@@ -36,8 +36,8 @@ export const testimonialData = [
     imageSource: akachi,
     oneLiner: "Excellent staff!",
     details:
-      "Labore accusamus porro laborum eveniet consequatur explicabo at totam Dignissimo.",
-    personName: "Prince Akachi",
+      "The staff is knowledgeable and always ready to help. Their IT support has been invaluable in keeping our operations running smoothly.",
+    personName: "Daniel",
     extraClass: ["reverse"],
   },
 ];

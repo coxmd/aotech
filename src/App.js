@@ -19,8 +19,8 @@ import buildingsLarge from "./assets/buildings.webp";
 //data
 import {
   navigationOptions,
-  notFinishedPaths,
-  additionalButtons,
+  //notFinishedPaths,
+  //additionalButtons,
   textButtonWithImageInfoArray,
 } from "./data/NavigationMenuData";
 
@@ -43,11 +43,11 @@ export default function App() {
       <BrowserRouter>
         <MobileNavigation
           navigationOptionsArray={navigationOptions}
-          buttonInfoArray={additionalButtons}
+          //buttonInfoArray={additionalButtons}
           textButtonWithImageInfoArray={textButtonWithImageInfoArray}
           brandName={
             <>
-              Web<span className="highlighted">Lab</span>
+              Ao<span className="highlighted">Tech</span>
             </>
           }
         />
@@ -56,18 +56,18 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          {notFinishedPaths.map((path) => {
+          {/* {notFinishedPaths.map((path) => {
             return (
               <Route key={path} path={`/${path}`} element={<NoContent />} />
             );
-          })}
+          })} */}
         </Routes>
 
         {(mediaQueryFinalState.mobileMatches ||
           mediaQueryFinalState.smallTabletMatches) && (
           <MobileFooter
-            appName={"WebLab"}
-            developer={"Nashiuz Zaman"}
+            appName={"AoTech"}
+            developer={"Cox"}
             bottomOptionsArray={footerBottomOptions}
             logoButtonsArray={logoButtonDataPrimary}
             normalOptionsArray={footerTopOptions}
@@ -75,7 +75,7 @@ export default function App() {
             imageSource={buildingsSmall}
             companyName={
               <>
-                Web<span className="highlighted">Lab</span>
+                Ao<span className="highlighted">Tech</span>
               </>
             }
           />
@@ -84,8 +84,8 @@ export default function App() {
         {(mediaQueryFinalState.largeTabletMatches ||
           mediaQueryFinalState.computerScreenMatches) && (
           <DesktopFooter
-            appName={"WebLab"}
-            developer={"Nashiuz Zaman"}
+            appName={"AoTech"}
+            developer={"Cox"}
             bottomOptionsArray={footerBottomOptions}
             logoButtonsArray={logoButtonDataDarktext}
             normalOptionsArray={footerTopOptions}
@@ -93,7 +93,7 @@ export default function App() {
             imageSource={buildingsLarge}
             companyName={
               <>
-                Web<span className="highlighted">Lab</span>
+                Ao<span className="highlighted">Tech</span>
               </>
             }
           />

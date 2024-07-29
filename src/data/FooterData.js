@@ -1,51 +1,51 @@
-import twitterLogoPrimary from "../assets/twitter-primary.png";
-import facebookLogoPrimary from "../assets/facebook-primary.png";
-import instagramLogoPrimary from "../assets/instagram-primary.png";
-import youtubeLogoPrimary from "../assets/youtube-primary.png";
-import linkedinLogoPrimary from "../assets/linkedin-primary.png";
-import tiktokLogoPrimary from "../assets/tiktok-primary.png";
+// import twitterLogoPrimary from "../assets/twitter-primary.png";
+// import facebookLogoPrimary from "../assets/facebook-primary.png";
+// import instagramLogoPrimary from "../assets/instagram-primary.png";
+// import youtubeLogoPrimary from "../assets/youtube-primary.png";
+// import linkedinLogoPrimary from "../assets/linkedin-primary.png";
+// import tiktokLogoPrimary from "../assets/tiktok-primary.png";
 
-import twitterLogoDarktext from "../assets/twitter-darktext.png";
-import facebookLogoDarktext from "../assets/facebook-darktext.png";
-import instagramLogoDarktext from "../assets/instagram-darktext.png";
-import youtubeLogoDarktext from "../assets/youtube-darktext.png";
-import linkedinLogoDarktext from "../assets/linkedin-darktext.png";
-import tiktokLogoDarktext from "../assets/tiktok-darktext.png";
+//import twitterLogoDarktext from "../assets/twitter-darktext.png";
+// import facebookLogoDarktext from "../assets/facebook-darktext.png";
+// import instagramLogoDarktext from "../assets/instagram-darktext.png";
+// import youtubeLogoDarktext from "../assets/youtube-darktext.png";
+// import linkedinLogoDarktext from "../assets/linkedin-darktext.png";
+// import tiktokLogoDarktext from "../assets/tiktok-darktext.png";
 
 export const logoButtonDataPrimary = [
   {
     id: 0,
-    source: twitterLogoPrimary,
+    //source: twitterLogoPrimary,
     link: "https://twitter.com",
     title: "Link for twitter",
   },
   {
     id: 1,
-    source: facebookLogoPrimary,
+    //source: facebookLogoPrimary,
     link: "https://www.facebook.com",
     title: "Link for facebook",
   },
   {
     id: 2,
-    source: youtubeLogoPrimary,
+    //source: youtubeLogoPrimary,
     link: "https://www.youtube.com",
     title: "Link for youtube",
   },
   {
     id: 3,
-    source: instagramLogoPrimary,
+    //source: instagramLogoPrimary,
     link: "https://www.instagram.com/",
     title: "Link for instagram",
   },
   {
     id: 4,
-    source: linkedinLogoPrimary,
+    //source: linkedinLogoPrimary,
     link: "https://www.linkedin.com/",
     title: "Link for linkedin",
   },
   {
     id: 5,
-    source: tiktokLogoPrimary,
+    //source: tiktokLogoPrimary,
     link: "https://www.tiktok.com/",
     title: "Link for tiktok",
   },
@@ -54,37 +54,37 @@ export const logoButtonDataPrimary = [
 export const logoButtonDataDarktext = [
   {
     id: 0,
-    source: twitterLogoDarktext,
+    //source: twitterLogoDarktext,
     link: "https://twitter.com",
     title: "Link for twitter",
   },
   {
     id: 1,
-    source: facebookLogoDarktext,
+    //source: facebookLogoDarktext,
     link: "https://www.facebook.com",
     title: "Link for facebook",
   },
   {
     id: 2,
-    source: youtubeLogoDarktext,
+    //source: youtubeLogoDarktext,
     link: "https://www.youtube.com",
     title: "Link for youtube",
   },
   {
     id: 3,
-    source: instagramLogoDarktext,
+    //source: instagramLogoDarktext,
     link: "https://www.instagram.com/",
     title: "Link for instagram",
   },
   {
     id: 4,
-    source: linkedinLogoDarktext,
+    //source: linkedinLogoDarktext,
     link: "https://www.linkedin.com/",
     title: "Link for linkedin",
   },
   {
     id: 5,
-    source: tiktokLogoDarktext,
+    //source: tiktokLogoDarktext,
     link: "https://www.tiktok.com/",
     title: "Link for tiktok",
   },
@@ -107,14 +107,9 @@ export const footerTopOptions = [
     id: 0,
     heading: { text: "Industries We Serve" },
     options: [
-      { text: "Beauty & Skincare", link: "#" },
-      { text: "Consumer Electronics", link: "#" },
-      { text: "Entertainment & Media", link: "#" },
-      { text: "Fashion & Footwear", link: "#" },
-      { text: "Sports Equipment & Apparel", link: "#" },
-      { text: "Gaming", link: "#" },
-      { text: "Franchises & Retailers", link: "#" },
-      { text: "Travel", link: "#" },
+      { text: "Health Care Industry", link: "#" },
+      { text: "Hotel Industry", link: "#" },
+      { text: "Education Industry", link: "#" },
     ],
   },
   {
@@ -138,15 +133,15 @@ export const footerTopOptions = [
       { text: "How We Work", link: "how-we-work" },
     ],
   },
-  {
-    id: 3,
-    heading: { text: "Careers" },
-    options: [
-      { text: "Digital Marketing", link: "careers/digital-marketing" },
-      { text: "Design", link: "careers/design" },
-      { text: "Development", link: "careers/development" },
-    ],
-  },
+  // {
+  //   id: 3,
+  //   heading: { text: "Careers" },
+  //   options: [
+  //     { text: "Digital Marketing", link: "careers/digital-marketing" },
+  //     { text: "Design", link: "careers/design" },
+  //     { text: "Development", link: "careers/development" },
+  //   ],
+  // },
 ];
 
 export const addressData = {
