@@ -6,7 +6,7 @@ import App from "./App";
 // context
 import { MediaQueryContextProvider } from "./contexts/MediaQueryContext";
 import { NavbarThemeContextProvider } from "./contexts/NavbarThemeContext";
-import { LoginSignupContextProvider } from "./contexts/LoginSignupContext";
+import { LoginSignupContextProvider } from "./contexts/LoginSignUpContext";
 import { AuthContextProvider } from "./contexts/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

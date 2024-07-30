@@ -2,7 +2,7 @@
 import { useContext } from "react";
 
 //context
-import { LoginSignupContext } from "../contexts/LoginSignupContext";
+import { LoginSignupContext } from "../contexts/LoginSignUpContext";
 
 //the hook
 export default function useLoginSignupContext() {
