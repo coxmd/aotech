@@ -24,7 +24,7 @@ import useNavbarThemeContext from "../../hooks/useNavbarThemeContext";
 import useMediaQueryContext from "../../hooks/useMediaQueryContext";
 
 //data
-import { ourServicesData } from "../../data/ShowcaseDescriptionData";
+import { ourServicesData } from "../../data/ShowCaseDescriptionData";
 import { industryExpertSectionData } from "../../data/ImageDescriptionData";
 import { testimonialData } from "../../data/TestimonialData";
 import { selectBoxData } from "../../data/FormData";
