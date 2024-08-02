@@ -107,9 +107,8 @@ export const footerTopOptions = [
     id: 0,
     heading: { text: "Industries We Serve" },
     options: [
-      { text: "Health Care Industry", link: "#" },
-      { text: "Hotel Industry", link: "#" },
-      { text: "Education Industry", link: "#" },
+      { text: "MicroFinance", link: "#" },
+      { text: "Sacco", link: "#" },
     ],
   },
   {
@@ -145,7 +144,7 @@ export const footerTopOptions = [
 ];
 
 export const addressData = {
-  addressDetails: ["1600 Amphitheatre", "Parkway Mountain View", "CA 94043"],
-  phone: "+16502530000",
-  email: "welcome@weblab.com",
+  addressDetails: [""],
+  phone: "0727290701",
+  email: "info@aotech.com",
 };
